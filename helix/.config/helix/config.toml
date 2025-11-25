@@ -1,0 +1,148 @@
+# theme = "monokai_aqua"
+theme = "tokyonight"
+# theme = "dark_plus_oscar"
+# theme = "pop-dark_oscar"
+
+[editor]
+mouse = true
+true-color = true
+line-number = "relative"
+color-modes = true
+popup-border = "all"
+# rulers = [120]
+end-of-line-diagnostics = "hint"
+path-completion = false
+jump-label-alphabet = "ntesirmghdlpuf"
+bufferline = "always"
+
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = false
+
+[editor.indent-guides]
+render = true 
+character = "⸽"
+skip-levels = 1
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"
+
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+# [keys.normal]
+
+# Open the file(s) in the current window
+# C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
+# Open the file(s) in a vertical pane
+# v = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh vsplit"
+# Open the file(s) in a horizontal pane
+# h = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh hsplit"
+
+
+[keys.normal]
+tab.m = ":buffer-previous"
+tab.i = ":buffer-next"
+tab.c = ":bc"
+tab.r = ":reload"
+
+# for colemak
+"m"  = "move_char_left"
+"n"  = "move_visual_line_down"
+"e"  = "move_visual_line_up"
+"i"  = "move_char_right"
+"l" = "move_next_word_end"
+"j" = "insert_mode"
+"J" = "insert_at_line_start"
+"k" = "search_next"
+"K" = "search_prev"
+
+
+# delete from cursor to end of line 
+"D" = ["extend_to_line_end" , "delete_selection"]
+
+
+# F2 = [":write lazysql.sql", ":sh sqlrun.sh"]
+# C-e = ":sh ~/.config/helix/sqlrun.sh"
+C-n = "@hiw*/<up><ret>" #find the next word under the cursor
+C-y = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh open"
+C-k = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/rfvh open"
+C-l = ":sh zellij run -c -f --width 80%% --height 80%% -- lazygit"
+C-t = ":sh zellij action toggle-floating-panes"
+C-s = [":write"]
+C-b = ["save_selection"]
+ret = ["goto_word"]
+d = "delete_selection_noyank"
+# A-d = "delete_selection"
+# c = "change_selection_noyank"
+# A-c = "change_selection"
+C-space = "insert_at_line_end"
+
+S-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+S-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.insert]
+C-s = ["normal_mode", ":write"]
+C-space = "normal_mode"
+
+F2 = [":write", ":sh sqlrun.sh"]
+# [keys.normal.b]
+# c = ":bc"
+
+# [keys.normal.space]
+# [keys.normal."]"]
+# "]" = [":bn"]
+# [keys.normal."["]
+# "[" = [":bp"]
+
+# for colemak
+[keys.normal."h"]
+"m" = "match_brackets"
+"s" = "surround_add"
+"r" = "surround_replace"
+"d" = "surround_delete"
+"a" = "select_textobject_around"
+"i" = "select_textobject_inner"
+"u" = "@hi\""
+"U" = "@ha\""
+e.c = "@ha{"
+
+
+
+# for colemak
+
+[keys.select]
+"m"  = "extend_char_left"
+"n"  = "extend_visual_line_down"
+"e"  = "extend_visual_line_up"
+"i"  = "extend_char_right"
+"l" = "extend_next_word_end"
+"j" = "insert_mode"
+"J" = "insert_at_line_start"
+"k" = "extend_search_next"
+"K" = "extend_search_prev"
+
+
+[keys.normal.";"]
+q = ":q!"
+c.o = ":config-open"
+c.r = ":config-reload"
+c.l = ":o ~/.config/helix/languages.toml"
+w = ":toggle soft-wrap.enable"
+
+
+
