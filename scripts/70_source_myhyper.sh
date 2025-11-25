@@ -2,7 +2,7 @@
 
 # Configuration
 LINE_TO_ADD="source = ~/.config/hypr/myhyper.conf"
-TARGET_FILE="~/.config/hypr/hyprland.conf" # Target file is passed as the first argument
+TARGET_FILE=~/.config/hypr/hyprland.conf # Target file is passed as the first argument
 
 # --- Function to check and add the line ---
 add_line_if_missing() {
