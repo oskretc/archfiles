@@ -35,7 +35,7 @@ echo "--------------------------------------------------------"
 # The 'find' command locates all files ending in '.sh' recursively.
 # We use -print0 and 'while IFS= read -r -d $'\0' ...' for safe handling
 # of file names that contain spaces or special characters.
-find "$TARGET_DIR" -type f -name "*.sh" -print0 | while IFS= read -r -d $'\0' SCRIPT_PATH; do
+find "$TARGET_DIR" -type f -name "*.sh" -print0 | sort -z | while IFS= read -r -d $'\0' SCRIPT_PATH; do
     
     echo "-> Sourcing: $SCRIPT_PATH"
     

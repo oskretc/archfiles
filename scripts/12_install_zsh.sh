@@ -2,8 +2,6 @@
 
 yay -S --noconfirm --needed zsh
 
-#!/bin/bash
-
 # --- Shell Change Script ---
 # This script checks the current default shell for the user and changes it to zsh
 # only if it is not already set to zsh.
