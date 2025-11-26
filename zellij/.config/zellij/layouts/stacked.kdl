@@ -6,6 +6,7 @@ layout {
             plugin location="tab-bar"
         }
         pane split_direction="horizontal" size="80%" stacked=true {
+            lg name="lazygit"
             filepicker size=12 name="picker"
             editor
             
@@ -18,6 +19,10 @@ layout {
     }
 
     // TEMPLATES
+
+    pane_template name="lg" {
+        command "lazygit"
+    }
     pane_template name="filepicker" {
         command "yaziii.sh"
     }
