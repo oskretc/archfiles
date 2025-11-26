@@ -64,3 +64,5 @@ alias nl='f() { zellij action new-tab --layout stacked --name $1 };f'
 # alias nln='f() { zellij a --create $1 --layout stacked };f'
 alias nln='f() { zellij a develop --create && zellij action new-tab --layout stacked --name $1 };f'
 alias l='eza -1 -l --color=always --icons=always -a --group-directories-first --smart-group -h --git'
+alias -g ...=../..
+alias -g ....=../../..
