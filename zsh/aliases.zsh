@@ -66,3 +66,6 @@ alias nln='f() { zellij a develop --create && zellij action new-tab --layout sta
 alias l='eza -1 -l --color=always --icons=always -a --group-directories-first --smart-group -h --git'
 alias -g ...=../..
 alias -g ....=../../..
+alias za='zellij action toggle-floating-panes'
+alias zls='zellij ls'
+alias zt='zellij action new-tab'

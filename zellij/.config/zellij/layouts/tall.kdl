@@ -1,0 +1,45 @@
+layout {
+    tab {
+        // pane borderless=true
+        
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        pane split_direction="horizontal" size="80%" {
+            filepicker size=12 name="picker"
+            editor
+            
+        }
+        pane split_direction="vertical" {
+            terminal size="70%" name="terminal" borderless=true 
+            tailing  name="tailing" borderless=true 
+        }
+        compact_bar size=1
+    }
+
+    // TEMPLATES
+    pane_template name="filepicker" {
+        command "yaziii.sh"
+    }
+
+    pane_template name="editor" {
+        command "$EDITOR"
+    }
+    pane_template name="terminal" {
+    }
+    pane_template name="tailing" cwd="$HOME" command="tail" {
+                args "-f" ".cache/helix/helix.log"
+    }
+
+    pane_template name="compact_bar" {
+        borderless true
+        plugin location="status-bar"
+    }
+
+    pane_template name="zide_rename" command="zide-rename" close_on_exit=true
+
+    new_tab_template {
+        pane
+        compact_bar size=1
+    }
+}

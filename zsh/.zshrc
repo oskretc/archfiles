@@ -146,3 +146,10 @@ fzf_helix() {
 # zoxide, better cd
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
+# eval "$(zellij setup --generate-completion zsh)"
+zellij_toggle() {
+	za
+}
+zle -N zellij_toggle_widget zellij_toggle
+
+bindkey "^j" zellij_toggle_widget
