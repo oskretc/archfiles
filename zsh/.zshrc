@@ -88,7 +88,6 @@ function dre() {
 	fi #if close
 }
 source_if_exists ~/aliases.zsh
-source_if_exists  "$HOME/.atuin/bin/env"
 
 
 
@@ -146,3 +145,4 @@ fzf_helix() {
 }
 # zoxide, better cd
 eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
