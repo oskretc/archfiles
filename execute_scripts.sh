@@ -65,5 +65,3 @@ echo "All files processed. Environment updates from sourced scripts are now acti
 # Exit with success status
 exit 0
 
-
-
