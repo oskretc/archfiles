@@ -22,23 +22,26 @@ fi
 # 2. Check if the current shell is already the target shell
 if [ "$CURRENT_SHELL" = "$TARGET_SHELL" ]; then
     echo "Success: The default shell is already set to $TARGET_SHELL ($ZSH_PATH). No changes made."
-    exit 0
-fi
-
-# 3. Perform the shell change
-echo "Attempting to change default shell to $TARGET_SHELL ($ZSH_PATH)..."
-echo "Note: This will require your user password."
-
-# 'chsh' modifies the user's entry in /etc/passwd.
-# The -s option specifies the new login shell.
-chsh -s "$ZSH_PATH"
-
-# Check the exit status of the chsh command
-if [ $? -eq 0 ]; then
-    echo "Successfully updated the default shell to $TARGET_SHELL."
-    echo "The change will take effect the next time you log in or open a new terminal session."
+    # exit 0
 else
-    echo "Error: Failed to change the default shell using 'chsh'."
-    echo "This might be due to incorrect password or permissions."
-    exit 1
+
+    # 3. Perform the shell change
+    echo "Attempting to change default shell to $TARGET_SHELL ($ZSH_PATH)..."
+    echo "Note: This will require your user password."
+
+    # 'chsh' modifies the user's entry in /etc/passwd.
+    # The -s option specifies the new login shell.
+    chsh -s "$ZSH_PATH"
+
+    # Check the exit status of the chsh command
+    if [ $? -eq 0 ]; then
+        echo "Successfully updated the default shell to $TARGET_SHELL."
+        echo "The change will take effect the next time you log in or open a new terminal session."
+    else
+        echo "Error: Failed to change the default shell using 'chsh'."
+        echo "This might be due to incorrect password or permissions."
+        exit 1
+    fi
+
 fi
+

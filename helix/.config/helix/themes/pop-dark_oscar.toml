@@ -1,0 +1,8 @@
+inherits = "pop-dark"
+"ui.background" ={}
+"ui.virtual.jump-label"="red"
+
+"ui.bufferline"              = { fg = "text", bg = "widget" }
+"ui.bufferline.active"       = { fg = "white", bg = "brownN" , modifiers = ["bold"]}
+"ui.bufferline.background"   = { bg = "background" }
+'ui.gutter' = { bg = 'background' }
