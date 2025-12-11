@@ -69,3 +69,4 @@ alias -g ....=../../..
 alias za='zellij action toggle-floating-panes'
 alias zls='zellij ls'
 alias zt='zellij action new-tab'
+alias ghc="gh repo list --limit 1000 | fzf | awk '{print $1}' | xargs -r gh repo clone"
