@@ -1,0 +1,51 @@
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(defvar
+  tap-time 200
+  hold-time 250
+)
+
+(defalias
+  ;; --- Layer Toggles ---
+  ;; Tap: Win key, Hold: Navigation Layer
+  nav (tap-hold 200 200 tab (layer-toggle navigation))
+  
+
+  ;; --- Home Row Mods (Left Hand) ---
+  ;; Tap: s, Hold: Alt
+  a_s (tap-hold 200 200 s lalt)
+  ;; Tap: d, Hold: Ctrl
+  a_d (tap-hold 200 200 d lctl)
+  ;; Tap: f, Hold: Shift
+  a_f (tap-hold 200 200 f lsft)
+
+  ;; --- Home Row Mods (Right Hand) ---
+  ;; Tap: j, Hold: Shift
+  a_j (tap-hold 200 200 j rsft)
+  ;; Tap: k, Hold: Ctrl
+  a_k (tap-hold 200 200 k rctl)
+  ;; Tap: l, Hold: Alt
+  a_l (tap-hold 200 200 l ralt)
+)
+
+(deflayer base
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    @a_s @a_d @a_f g    h    @a_j @a_k @a_l ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl @nav ret           spc            bspc rmet rctl
+)
+
+(deflayer navigation
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    home pgup end    _    _    _    _    _
+  _    _    _    _    _    _    left down up right _    _    _
+  _    _    _    _    _    del  pgdn    _    _    _    _    _
+  _    _    _              _              _    _    _
+)
