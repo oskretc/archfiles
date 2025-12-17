@@ -1,0 +1,10 @@
+
+binds {
+    
+    // MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
+    MOD+SHIFT+ESCAPE                     { spawn-sh "dms ipc call keybinds toggle niri"; }
+    SUPER+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+    SUPER+TAB                               repeat=false { toggle-overview; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    // dms keybinds remove niri "Mod+T"
+}
