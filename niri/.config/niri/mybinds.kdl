@@ -2,9 +2,23 @@
 binds {
     
     // MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
-    MOD+SHIFT+ESCAPE                     { spawn-sh "dms ipc call keybinds toggle niri"; }
-    SUPER+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
-    SUPER+TAB                               repeat=false { toggle-overview; }
-    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "dms ipc call keybinds toggle niri"; }
+    Super+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Super+Tab                               repeat=false { toggle-overview; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     // dms keybinds remove niri "Mod+T"
+    // dms keybinds remove niri "Mod+Tab"
+    // dms keybinds remove niri "Mod+Alt+L"
+    Mod+6 hotkey-overlay-title="Focus Monitor Left" { focus-monitor-left; }
+    Mod+7 hotkey-overlay-title="Focus Monitor Right" { focus-monitor-right; }
+
+    Mod+F4 hotkey-overlay-title="Close window"  { close-window; }
+    Mod+Shift+a hotkey-overlay-title="Move WS Left" { move-workspace-to-monitor-left; }
+    Mod+Shift+f hotkey-overlay-title="Move WS Right" { move-workspace-to-monitor-right; }
+    Mod+Shift+j  { move-workspace-down; }
+    Mod+Shift+k  { move-workspace-up; }
+    Mod+j  { focus-workspace-down; }
+    Mod+k  { focus-workspace-up; }
+    Mod+T { toggle-window-floating; }
+
 }
