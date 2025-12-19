@@ -20,5 +20,6 @@ binds {
     Mod+j  { focus-workspace-down; }
     Mod+k  { focus-workspace-up; }
     Mod+T { toggle-window-floating; }
+    Mod+F12 { spawn "dms" "ipc" "call" "powermenu" "toggle";}
 
 }

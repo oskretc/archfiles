@@ -32,6 +32,7 @@
   a_k (tap-hold 200 200 k rctl)
   ;; Tap: l, Hold: Alt
   a_l (tap-hold 200 200 l ralt)
+  en_al (tap-hold 200 200 ret ralt)
 )
 
 (deflayer base
@@ -39,7 +40,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    @a_s @a_d @a_f g    h    @a_j @a_k @a_l ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl @nav ret           spc            bspc rmet rctl
+  lctl @nav @en_al           spc            bspc rmet rctl
 )
 
 (deflayer navigation
