@@ -1,0 +1,205 @@
+
+# https://github.com/netmute/ctags-lsp
+[language-server.ctags-lsp]
+command = "ctags-lsp"
+
+# introduce new language server
+# https://github.com/estin/simple-completion-language-server
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 20            # set max completion results len for each group: words, snippets, unicode-input
+feature_words = true                 # enable completion by word
+feature_snippets = true              # enable snippets
+snippets_first = true                # completions will return before snippets by default
+snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false         # enable "unicode input"
+feature_paths = false                 # enable path completion
+feature_citations = false            # enable citation completion (only on `citation` feature enabled)
+
+
+# write logs to /tmp/completion.log
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-language-server=info"
+LOG_FILE = "/tmp/completion.log"
+
+# append language server to existed languages
+[[language]]
+name = "rust"
+language-servers = [ "scls", "rust-analyzer" ]
+
+[[language]]
+name = "toml"
+# language-servers = ["scls"]
+language-servers = ["ctags-lsp"]
+
+[[language]]
+name = "xml"
+file-types = ["nxml", "xml", "svg", "xsd", "xslt", "xsl" ]
+# auto-format = true
+# formatter = { command = "xmllint", args = ["--format", "-"] }
+language-servers = [ "xml" ]
+# language-servers = [ "xml","ctags-lsp" ]
+[language-server.xml]
+command = "lemminx"
+
+[[language]]
+name = "c-sharp"
+scope = "source.csharp"
+injection-regex = "c-?sharp"
+file-types = ["cs", "csx", "cake"]
+roots = ["sln", "csproj"]
+# comment-tokens = ["//", "///"]
+# block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 4, unit = "\t" }
+language-servers = [ "omnisharp" ]
+[language-server.omnisharp]
+command = "/home/osto/tmp/omnisharp/OmniSharp"
+args = [ "--languageserver" ]
+
+[[language]]
+name = "c"
+language-servers = ["scls","ctags-sp"]
+
+
+
+[[language]]
+name= "php"
+scope = "source.php"
+injection-regex = "php"
+file-types = ["php", "inc", "php4", "php5", "phtml", "ctp"]
+shebangs = ["php"]
+roots = ["composer.json", "index.php"]
+comment-token = "//"
+language-servers = ["scls", "intelephense" ]
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "sql"
+scope = "source.sql"
+language-servers = ["sqls"]
+
+
+[language-server.sqls]
+command = "sqls"
+# args = ["-t", "-l", "/home/osto/tmp/sqls.log"]
+
+
+######## GO #####################
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+# language-servers = ["scls", "gopls"]
+language-servers = ["scls", "gopls", "llm-lsp"]
+# language-servers = ["gopls"]
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+#################################
+#################################
+# https://github.com/rosarp/llm-lsp
+[language-server.llm-lsp]
+command = "llm-lsp"
+args = ["server", "-p", "codeium"]
+#################################
+
+[[language]]
+name = "make"
+scope = "source.make"
+file-types = [{ glob = "Makefile" }, { glob = "makefile" }, "make", "mk", "mak", {glob = "GNUmakefile" }, { glob = "OCamlMakefile" }]
+shebangs = ["make", "gmake"]
+injection-regex = "(make|makefile|Makefile|mk)"
+comment-token = "#"
+indent = { tab-width = 4, unit = "\t" }
+language-servers = ["ctags-lsp", "scls"]
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+language-servers = ["lsp-ai"]
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+language-servers = ["ctags-lsp"]
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+language-servers = ["ctags-lsp", "lsp-ai"]
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+language-servers = ["ctags-lsp"]
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+language-servers = ["ctags-lsp"]
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+language-servers = ["ctags-lsp"]
+
+[[language]]
+name = "tsx"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+language-servers = ["ctags-lsp"]
+
+[[language]]
+name = "yaml"
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+auto-format = true
+language-servers = ["ctags-lsp"]
+
+[[language]]
+name = "python"
+language-servers = ["scls", "pylsp", "llm-lsp"]
+
+
+##############################
+## Configuration for lsp-ai ##
+##############################
+
+[language-server.lsp-ai]
+command = "lsp-ai"
+args = ["--config","/home/osto/.config/helix/lsp-ai-gemini.json"]
+
+
+[[language]]
+name = "groovy"
+language-id = "groovy"
+scope = "source.groovy"
+file-types = ["gradle", "groovy", "jenkinsfile", { glob = "Jenkinsfile" },  { glob = "Jenkinsfile.*" }]
+shebangs = ["groovy"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "groovy"
+source = { git = "https://github.com/murtaza64/tree-sitter-groovy", rev = "235009aad0f580211fc12014bb0846c3910130c1" }
+
+[[language]]
+name = "csv"
+file-types = ["csv"]
+scope = "source.csv"
+
+[[grammar]]
+name = "csv"
+source.git = "https://github.com/weartist/rainbow-csv-tree-sitter"
+source.rev = "896e6d09b23a1b0d87e45bf97ca34a249f41495c"
