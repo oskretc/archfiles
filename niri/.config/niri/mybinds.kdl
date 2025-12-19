@@ -5,7 +5,7 @@ binds {
     Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "dms ipc call keybinds toggle niri"; }
     Super+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Super+Tab                               repeat=false { toggle-overview; }
-    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "wezterm"; }
     // dms keybinds remove niri "Mod+T"
     // dms keybinds remove niri "Mod+Tab"
     // dms keybinds remove niri "Mod+Alt+L"
