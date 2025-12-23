@@ -154,3 +154,5 @@ zellij_toggle() {
 zle -N zellij_toggle_widget zellij_toggle
 
 bindkey "^j" zellij_toggle_widget
+
+source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh

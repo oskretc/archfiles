@@ -1,5 +1,6 @@
 
 binds {
+    Mod+b { spawn "google-chrome-stable"; }
     
     // MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
     Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "dms ipc call keybinds toggle niri"; }
@@ -15,8 +16,8 @@ binds {
     Mod+F4 hotkey-overlay-title="Close window"  { close-window; }
     Mod+Shift+a hotkey-overlay-title="Move WS Left" { move-workspace-to-monitor-left; }
     Mod+Shift+f hotkey-overlay-title="Move WS Right" { move-workspace-to-monitor-right; }
-    Mod+Shift+j  { move-workspace-down; }
-    Mod+Shift+k  { move-workspace-up; }
+    Mod+Shift+j  { move-column-to-workspace-down; }
+    Mod+Shift+k  { move-column-to-workspace-up; }
     Mod+j  { focus-workspace-down; }
     Mod+k  { focus-workspace-up; }
     Mod+T { toggle-window-floating; }

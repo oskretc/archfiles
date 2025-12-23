@@ -58,9 +58,10 @@ tabline.apply_to_config(config)
 config.disable_default_key_bindings = false
 
 
--- config.font = wezterm.font 'Fira Code'
-config.font = wezterm.font 'Hack Nerd Font'
-config.font_size = 13.5
+config.font = wezterm.font 'Fira Code'
+-- config.font = wezterm.font 'monospace'
+-- config.font = wezterm.font 'Hack Nerd Font'
+config.font_size = 12.25
 -- config.font = wezterm.font("MesloLGS NF")
 config.window_padding = {
   left=2,
