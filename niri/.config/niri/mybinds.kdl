@@ -11,16 +11,22 @@ binds {
     // dms keybinds remove niri "Mod+Tab"
     // dms keybinds remove niri "Mod+Alt+L"
     Mod+6 hotkey-overlay-title="Focus Monitor Left" { focus-monitor-left; }
+    Mod+Shift+6 hotkey-overlay-title="Focus Monitor Left" { move-workspace-to-monitor-left; }
     Mod+7 hotkey-overlay-title="Focus Monitor Right" { focus-monitor-right; }
+    Mod+Shift+7 hotkey-overlay-title="Focus Monitor Right" { move-workspace-to-monitor-right; }
 
     Mod+F4 hotkey-overlay-title="Close window"  { close-window; }
-    Mod+Shift+a hotkey-overlay-title="Move WS Left" { move-workspace-to-monitor-left; }
-    Mod+Shift+f hotkey-overlay-title="Move WS Right" { move-workspace-to-monitor-right; }
+    // Mod+Shift+a hotkey-overlay-title="Move WS Left" { move-workspace-to-monitor-left; }
+    Mod+Shift+a hotkey-overlay-title="Move WS Left" { focus-monitor-left; }
+    // Mod+Shift+f hotkey-overlay-title="Move WS Right" { move-workspace-to-monitor-right; }
+    Mod+Shift+f hotkey-overlay-title="Move WS Right" { focus-monitor-right; }
     Mod+Shift+j  { move-column-to-workspace-down; }
     Mod+Shift+k  { move-column-to-workspace-up; }
     Mod+j  { focus-workspace-down; }
     Mod+k  { focus-workspace-up; }
     Mod+T { toggle-window-floating; }
     Mod+F12 { spawn "dms" "ipc" "call" "powermenu" "toggle";}
+    Mod+Ctrl+Shift+m { move-column-to-monitor-left; }
+    Mod+Ctrl+Shift+i { move-column-to-monitor-right; }
 
 }

@@ -4,9 +4,9 @@ x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
-text/x-log=helix.desktop
+text/x-log=Helix.desktop
 inode/directory=yazi.desktop
-application/xml=helix.desktop
+application/xml=Helix.desktop
 application/x-shellscript=alacritty.desktop
 
 [Added Associations]
