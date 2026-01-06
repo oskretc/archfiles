@@ -1,20 +1,52 @@
 # Arch Linux Dotfiles
 
+<!--toc:start-->
+- [Arch Linux Dotfiles](#arch-linux-dotfiles)
+  - [🎯 Overview](#🎯-overview)
+  - [📦 Prerequisites](#📦-prerequisites)
+  - [🚀 Installation](#🚀-installation)
+    - [Quick Start](#quick-start)
+    - [Manual Installation](#manual-installation)
+    - [Using GNU Stow (Recommended)](#using-gnu-stow-recommended)
+  - [📁 Structure](#📁-structure)
+  - [🧩 Components](#🧩-components)
+    - [Shell: Zsh](#shell-zsh)
+    - [Editor: Helix](#editor-helix)
+    - [Terminal: WezTerm](#terminal-wezterm)
+    - [Window Manager: Niri](#window-manager-niri)
+    - [File Manager: Yazi](#file-manager-yazi)
+    - [Terminal Multiplexer: Zellij](#terminal-multiplexer-zellij)
+    - [Git Tools](#git-tools)
+    - [Other Tools](#other-tools)
+  - [⚙️ Configuration](#️-configuration)
+    - [Environment Variables](#environment-variables)
+    - [Personal Information](#personal-information)
+    - [Package List](#package-list)
+  - [💡 Usage](#💡-usage)
+    - [Shell](#shell)
+    - [Helix Editor](#helix-editor)
+    - [Yazi File Manager](#yazi-file-manager)
+    - [Zellij Sessions](#zellij-sessions)
+    - [WezTerm](#wezterm)
+  - [🎨 Customization](#🎨-customization)
+    - [Zsh Prompt](#zsh-prompt)
+    - [Helix Theme](#helix-theme)
+    - [WezTerm Colors](#wezterm-colors)
+    - [Niri Configuration](#niri-configuration)
+  - [🔧 Troubleshooting](#🔧-troubleshooting)
+    - [Installation Scripts Fail](#installation-scripts-fail)
+    - [Zsh Not Default Shell](#zsh-not-default-shell)
+    - [Helix Language Servers Not Working](#helix-language-servers-not-working)
+    - [WezTerm Not Starting](#wezterm-not-starting)
+    - [Permission Issues](#permission-issues)
+  - [🤝 Contributing](#🤝-contributing)
+  - [📝 Notes](#📝-notes)
+  - [🔒 Security & Privacy](#🔒-security-privacy)
+  - [📄 License](#📄-license)
+<!--toc:end-->
+
 A comprehensive collection of dotfiles and configuration files for Arch Linux, featuring modern terminal tools, window managers, and development environments.
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Structure](#structure)
-- [Components](#components)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Customization](#customization)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## 🎯 Overview
 
