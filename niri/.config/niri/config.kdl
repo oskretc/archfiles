@@ -17,7 +17,7 @@ gestures {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 input {
 	mod-key "Alt"
-	focus-follows-mouse
+	// focus-follows-mouse  // Disabled to prevent column focus from following mouse cursor
 	workspace-auto-back-and-forth
     keyboard {
         xkb {

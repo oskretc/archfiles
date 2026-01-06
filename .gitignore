@@ -1,2 +1,24 @@
 yazi/.config/yazi/plugins
 yazi/.config/yazi/flavors
+
+# Sensitive files
+*.env
+*.secret
+*.key
+*.pem
+*.p12
+*.pfx
+*password*
+*token*
+*credential*
+*secret*
+
+# Personal configuration files that may contain sensitive data
+lsp-ai-gemini.json
+*.bak
+*.backup
+
+# Cache and temporary files
+*.log
+*.tmp
+.cache/

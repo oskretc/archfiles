@@ -1,11 +1,13 @@
 7zip
 accountsservice
+aichat
 alacritty
 arch-install-scripts
 atuin
 base
 base-devel
 bat
+bluez
 broot
 btop
 cli11
@@ -34,10 +36,12 @@ helix-git
 imv
 intel-ucode
 intelli-shell
+jdbrowser-git
 jemalloc
 kanata
 keepassxc
 lazygit
+less
 linux-firmware
 linux-lts
 matugen
@@ -45,6 +49,7 @@ mimeo
 mtpaint
 nautilus
 nautilus-open-any-terminal
+neofetch
 networkmanager
 ninja
 niri
@@ -63,6 +68,7 @@ qt6-declarative
 qt6-shadertools
 qt6-svg
 quickshell-git
+rclone
 reflector
 restic
 resvg
@@ -89,6 +95,7 @@ yay-bin
 yay-bin-debug
 yazi
 zellij
+zen-browser-bin
 zinit
 zoxide
 zsh

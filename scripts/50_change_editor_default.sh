@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the configuration file path
-CONFIG_FILE="/home/osto/.config/uwsm/default"
+CONFIG_FILE="${HOME}/.config/uwsm/default"
 
 # Define the pattern to search for (nvim) and the replacement line (helix)
 SEARCH_PATTERN="export EDITOR=nvim"

@@ -45,7 +45,7 @@ unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/osto/.zshrc'
+zstyle :compinstall filename "${HOME}/.zshrc"
 zstyle ':completion:*' menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'

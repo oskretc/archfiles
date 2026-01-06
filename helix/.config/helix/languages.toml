@@ -55,7 +55,7 @@ roots = ["sln", "csproj"]
 indent = { tab-width = 4, unit = "\t" }
 language-servers = [ "omnisharp" ]
 [language-server.omnisharp]
-command = "/home/osto/tmp/omnisharp/OmniSharp"
+command = "${HOME}/tmp/omnisharp/OmniSharp"
 args = [ "--languageserver" ]
 
 [[language]]
@@ -178,7 +178,7 @@ language-servers = ["scls", "pylsp", "llm-lsp"]
 
 [language-server.lsp-ai]
 command = "lsp-ai"
-args = ["--config","/home/osto/.config/helix/lsp-ai-gemini.json"]
+args = ["--config","${HOME}/.config/helix/lsp-ai-gemini.json"]
 
 
 [[language]]
