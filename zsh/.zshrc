@@ -155,5 +155,11 @@ zle -N zellij_toggle_widget zellij_toggle
 
 bindkey "^j" zellij_toggle_widget
 
+# this enables to edit command buffer in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^e^e' edit-command-line
+
+
 source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
 export EDITOR='hx'
