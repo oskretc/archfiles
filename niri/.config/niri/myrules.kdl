@@ -1,0 +1,7 @@
+// Custom window rules
+// Chrome opens in fullscreen mode
+window-rule {
+    match app-id=r#"^google-chrome$"#
+    match app-id=r#"^com\.google\.Chrome$"#
+    open-fullscreen true
+}
