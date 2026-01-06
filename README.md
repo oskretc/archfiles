@@ -20,7 +20,7 @@ A comprehensive collection of dotfiles and configuration files for Arch Linux, f
 
 This repository contains dotfiles and installation scripts for a modern Arch Linux setup, including:
 
-- **Shell**: Zsh with Powerlevel10k, Zinit, and various plugins
+- **Shell**: Zsh with Powerlevel10k, Zinit, zsh-ai-cmd, and various plugins
 - **Terminal**: WezTerm with custom themes
 - **Window Manager**: Niri (Wayland compositor)
 - **File Manager**: Yazi
@@ -105,6 +105,7 @@ archfiles/
 │   ├── 11_install_skm.sh
 │   ├── 12_install_zsh.sh
 │   ├── 40_install_cursor-agent-cli.sh
+│   ├── 41_install_zsh-ai-cmd.sh
 │   └── ...
 ├── systemd/            # Systemd user services
 ├── wezterm/            # WezTerm terminal configuration
@@ -135,6 +136,7 @@ archfiles/
   - `fzf-tab`: Fuzzy completion
   - `zoxide`: Smart directory jumping
   - `atuin`: Enhanced shell history
+  - `zsh-ai-cmd`: AI-powered command assistance
 
 **Key Aliases**:
 - `ls` → `eza` (better ls)

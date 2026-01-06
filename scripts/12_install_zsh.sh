@@ -38,9 +38,11 @@ else
         echo "Successfully updated the default shell to $TARGET_SHELL."
         echo "The change will take effect the next time you log in or open a new terminal session."
     else
-        echo "Error: Failed to change the default shell using 'chsh'."
-        echo "This might be due to incorrect password or permissions."
-        exit 1
+        echo "Warning: Failed to change the default shell using 'chsh'."
+        echo "This might be due to incorrect password, cancelled prompt, or permissions."
+        echo "zsh is installed, but you can change the default shell manually later with:"
+        echo "  chsh -s $(which zsh)"
+        # Don't exit with error - zsh is installed, shell change can be done manually
     fi
 
 fi

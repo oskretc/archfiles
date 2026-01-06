@@ -28,8 +28,10 @@ add_line_if_missing() {
         if [ $? -eq 0 ]; then
             echo "✨ Successfully added the line to $file."
         else
-            echo "❌ Error: Could not write to $file."
-            return 1
+            echo "⚠️  Warning: Could not write to $file. Check file permissions."
+            echo "   You can manually add this line to $file:"
+            echo "   $line"
+            # Don't return error - allow script to continue
         fi
     fi
 }

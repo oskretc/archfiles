@@ -147,6 +147,7 @@ fzf_helix() {
 # zoxide, better cd
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
+eval "$(niri completions zsh)"
 # eval "$(zellij setup --generate-completion zsh)"
 zellij_toggle() {
 	za

@@ -14,8 +14,9 @@ NEW_LINE="kb_options = compose:caps,altwin:swap_alt_win # ,grp:shifts_toggle"
 
 # 1. Check if the target file exists
 if [ ! -f "$TARGET_FILE" ]; then
-    echo "❌ Error: Target file not found at $TARGET_FILE. Please verify the path."
-    exit 1
+    echo "⚠️  Warning: Target file not found at $TARGET_FILE."
+    echo "   This script is for Hyprland configuration. Skipping if you're not using Hyprland."
+    exit 0
 fi
 
 echo "Target configuration file: $TARGET_FILE"
@@ -40,12 +41,12 @@ if grep -qF "$OLD_PATTERN" "$TARGET_FILE"; then
         echo "   FROM: $OLD_PATTERN"
         echo "   TO:   $NEW_LINE"
     else
-        echo "❌ Error: Substitution failed. Check file permissions."
-        exit 1
+        echo "⚠️  Warning: Substitution failed. Check file permissions."
+        echo "   You can manually edit $TARGET_FILE if needed."
     fi
 else
-    echo "⚠️ Warning: The original line '$OLD_PATTERN' was not found."
+    echo "⚠️  Warning: The original line '$OLD_PATTERN' was not found."
     echo "   The file may already be configured differently, or the line might have been modified."
-    echo "   Please check $TARGET_FILE manually."
-    exit 1
+    echo "   Please check $TARGET_FILE manually if needed."
+    # Don't exit with error - configuration might already be correct
 fi

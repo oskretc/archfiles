@@ -9,8 +9,9 @@ REPLACE_LINE="export EDITOR=helix"
 
 # Check if the configuration file exists
 if [[ ! -f "$CONFIG_FILE" ]]; then
-    echo "Error: Configuration file not found at $CONFIG_FILE"
-    exit 1
+    echo "Warning: Configuration file not found at $CONFIG_FILE"
+    echo "Skipping editor default change. This is non-critical."
+    exit 0
 fi
 
 echo "Attempting to change editor setting in: $CONFIG_FILE"
@@ -30,6 +31,6 @@ if [[ $? -eq 0 ]]; then
         echo "Warning: Sed executed, but verification failed. Check the file manually."
     fi
 else
-    echo "Error: Failed to execute sed command."
-    exit 1
+    echo "Warning: Failed to execute sed command. The file may be read-only or have permission issues."
+    echo "This is non-critical - continuing with installation."
 fi
