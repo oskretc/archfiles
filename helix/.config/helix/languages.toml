@@ -172,7 +172,8 @@ language-servers = ["ctags-lsp"]
 
 [[language]]
 name = "python"
-language-servers = ["scls", "pylsp", "llm-lsp"]
+language-servers = ["ruff", "jedi", "llm-lsp"]
+
 
 
 ##############################
