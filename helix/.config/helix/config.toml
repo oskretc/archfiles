@@ -59,6 +59,8 @@ tab.m = ":buffer-previous"
 tab.i = ":buffer-next"
 tab.c = ":bc"
 tab.r = ":reload"
+tab.w = "@<space>ww"
+
 
 # for colemak
 "m"  = "move_char_left"
