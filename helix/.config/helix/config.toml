@@ -143,6 +143,9 @@ c.o = ":config-open"
 c.r = ":config-reload"
 c.l = ":o ~/.config/helix/languages.toml"
 w = ":toggle soft-wrap.enable"
-
+# splits the current window with the same file at the same location and goes to definition
+d = "@<space>wvgd"
+# close the curret split, if no splits, it quits
+p = "@<space>wq"
 
 
