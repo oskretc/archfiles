@@ -147,7 +147,10 @@ fzf_helix() {
 # zoxide, better cd
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
-eval "$(niri completions zsh)"
+# eval "$(niri completions zsh)"
+if (($+commands[niri] )); then
+	source <(niri completions zsh)
+fi
 # eval "$(zellij setup --generate-completion zsh)"
 zellij_toggle() {
 	za
@@ -164,3 +167,4 @@ bindkey '^e^e' edit-command-line
 
 source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
 export EDITOR='hx'
+
