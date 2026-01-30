@@ -298,3 +298,5 @@ include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 include "mybinds.kdl"
 include "myrules.kdl"
+
+spawn-sh-at-startup "vicinae server"

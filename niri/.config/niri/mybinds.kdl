@@ -30,5 +30,6 @@ binds {
     Mod+Ctrl+Shift+i { move-column-to-monitor-right; }
     Mod+2 { focus-workspace "browser"; }
     Mod+5 { focus-workspace "terminal"; }
+    Mod+Space { spawn "vicinae" "toggle";}
 
 }
