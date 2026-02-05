@@ -4,7 +4,7 @@ open = [
 ]
 [open]
 rules = [
-	{ name = "*", use = "open" },
-	{ name = "*/", use = "open" },
+	{ url = "*", use = "open" },
+	{ url = "*/", use = "open" },
 
 ]
