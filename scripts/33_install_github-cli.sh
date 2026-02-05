@@ -1,5 +1,5 @@
 #!/bin/sh
 
-pacman -S --noconfirm --needed github-cli
+sudo pacman -S --noconfirm --needed github-cli
 
 

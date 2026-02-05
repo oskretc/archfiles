@@ -1,5 +1,5 @@
 #!/bin/sh
 
-pacman -S --noconfirm --needed btop
+sudo pacman -S --noconfirm --needed btop
 
 
