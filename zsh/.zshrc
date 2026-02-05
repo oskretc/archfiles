@@ -166,5 +166,19 @@ bindkey '^e^e' edit-command-line
 
 
 source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
-export EDITOR='hx'
+export EDITOR='helix'
+GPG_TTY=$(tty)
+export GPG_TTY
 
+
+
+# IntelliShell
+export INTELLI_HOME="/home/osto/.local/share/intelli-shell"
+# export INTELLI_SEARCH_HOTKEY='^@'
+# export INTELLI_VARIABLE_HOTKEY='^l'
+# export INTELLI_BOOKMARK_HOTKEY='^b'
+# export INTELLI_FIX_HOTKEY='^x'
+# export INTELLI_SKIP_ESC_BIND=0
+# alias is="intelli-shell"
+export PATH="$INTELLI_HOME/bin:$PATH"
+eval "$(intelli-shell init zsh)"

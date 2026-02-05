@@ -1,59 +1,59 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "19dc890"
+rev = "230b9c6"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "llanosrocas/githead"
-rev = "76fe4b8"
-hash = "10c3bc6cd6f3223e18f2483320a9e24a"
+rev = "317d09f"
+hash = "41dc37a724b2afd21da4f1ea6c1182d8"
 
 [[plugin.deps]]
 use = "AnirudhG07/rich-preview"
-rev = "831234e"
-hash = "ed3363e256e210593f0f8e4cec3e36a9"
+rev = "573b275"
+hash = "c3e2871c9ef244fd181f203791f9b0d2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mime-ext"
-rev = "19dc890"
-hash = "4c49c446328c4553a4ccab7facc10b21"
+rev = "230b9c6"
+hash = "7b7dc677b58371da6fc63e4fcd134651"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "19dc890"
+rev = "230b9c6"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "19dc890"
-hash = "4ee57085277d616acfa0ef1fef37dc00"
+rev = "230b9c6"
+hash = "f69e4737c2fb8ceec58a2950faf13c46"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "19dc890"
-hash = "82376c3381ae915fd799d40f4dd4c6cd"
+rev = "230b9c6"
+hash = "2f08b8249b57737e7257298a3b2a2edc"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "19dc890"
+rev = "230b9c6"
 hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "19dc890"
-hash = "27ca02f49fd236b5cc7bf03c243859fe"
+rev = "230b9c6"
+hash = "270915fa8282a19908449530ff66f7e2"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-frappe"
-rev = "ffe6e3a"
-hash = "90a866c034553e2d3bfdf536940733df"
+rev = "9e053d0"
+hash = "e25fb61c14484de843b52430a72b5196"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-latte"
-rev = "ffe6e3a"
-hash = "b7f67b15a9f94f408d94b9630465c37a"
+rev = "9e053d0"
+hash = "c6b710b2aa0fb9c6c7f1ec4db6146104"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "ffe6e3a"
-hash = "8d7799e4598ff079fa5ee5c770d9bc08"
+rev = "9e053d0"
+hash = "8eabb4e88096f10905a6df62cfaadbf4"

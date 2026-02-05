@@ -39,7 +39,7 @@ alias cd="z"
 alias cat="bat"
 
 alias fuzz="rg . | fzf "
-# alias hx="helix"
+alias hx="helix"
 # alias wezterm='flatpak run org.wezfurlong.wezterm'
 alias cz="chezmoi edit"
 alias cua="chezmoi update -a -x=encrypted"
