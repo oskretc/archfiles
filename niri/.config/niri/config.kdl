@@ -300,3 +300,6 @@ include "mybinds.kdl"
 include "myrules.kdl"
 
 spawn-sh-at-startup "vicinae server"
+
+spawn-sh-at-startup "google-chrome-stable"
+spawn-sh-at-startup "wezterm"
