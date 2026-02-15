@@ -1,5 +1,4 @@
 #!/bin/sh
+. "${REPO_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}/lib/distro.sh"
 
-yay -S --noconfirm --needed ddgr
-
-
+pkg_install ddgr

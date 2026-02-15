@@ -22,7 +22,15 @@ zinit light Aloxaf/fzf-tab
 
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
+
+# Load distro-specific OMZ plugin
+if [ -f /etc/arch-release ]; then
+    zinit snippet OMZP::archlinux
+elif [ -f /etc/debian_version ]; then
+    zinit snippet OMZP::debian
+elif [ -f /etc/fedora-release ]; then
+    zinit snippet OMZP::dnf
+fi
 
 
 

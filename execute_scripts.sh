@@ -28,6 +28,15 @@ if [ ! -d "$TARGET_DIR" ]; then
     exit 1
 fi
 
+# Export REPO_ROOT so sourced scripts can find lib/distro.sh
+REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
+export REPO_ROOT
+
+# Source the distro detection library if available
+if [ -f "$REPO_ROOT/lib/distro.sh" ]; then
+    . "$REPO_ROOT/lib/distro.sh"
+fi
+
 echo "Searching for and sourcing .sh files in: $TARGET_DIR"
 echo "--------------------------------------------------------"
 

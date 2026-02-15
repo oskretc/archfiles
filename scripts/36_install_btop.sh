@@ -1,5 +1,4 @@
 #!/bin/sh
+. "${REPO_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}/lib/distro.sh"
 
-sudo pacman -S --noconfirm --needed btop
-
-
+pkg_install btop

@@ -1,10 +1,10 @@
 #!/bin/sh
 
+# Source the distro detection library
+. "$(cd "$(dirname "$0")" && pwd)/lib/distro.sh"
 
-# . ./scripts/20_install_helix.sh
-# . ./scripts/21_install_yazi.sh
-# . ./scripts/22_install_stow.sh
-# . ./scripts/23_install_googlechrome.sh
+# Refresh package database once before running all scripts
+pkg_update
 
-# . ./scripts/50_change_editor_default.sh
+# Run all installation scripts
 ./execute_scripts.sh ./scripts

@@ -1,7 +1,7 @@
-# Arch Linux Dotfiles
+# Linux Dotfiles
 
 <!--toc:start-->
-- [Arch Linux Dotfiles](#arch-linux-dotfiles)
+- [Linux Dotfiles](#linux-dotfiles)
   - [🎯 Overview](#🎯-overview)
   - [📦 Prerequisites](#📦-prerequisites)
   - [🚀 Installation](#🚀-installation)
@@ -45,12 +45,12 @@
   - [📄 License](#📄-license)
 <!--toc:end-->
 
-A comprehensive collection of dotfiles and configuration files for Arch Linux, featuring modern terminal tools, window managers, and development environments.
+A comprehensive collection of dotfiles and configuration files for Linux, supporting **Arch Linux**, **Debian/Ubuntu**, and **Fedora** distributions. Features modern terminal tools, window managers, and development environments.
 
 
 ## 🎯 Overview
 
-This repository contains dotfiles and installation scripts for a modern Arch Linux setup, including:
+This repository contains dotfiles and installation scripts for a modern Linux setup. All installation scripts auto-detect your distribution and use the appropriate package manager (`pacman`/`yay`, `apt`, or `dnf`). Includes:
 
 - **Shell**: Zsh with Powerlevel10k, Zinit, zsh-ai-cmd, and various plugins
 - **Terminal**: WezTerm with custom themes
@@ -63,10 +63,14 @@ This repository contains dotfiles and installation scripts for a modern Arch Lin
 
 ## 📦 Prerequisites
 
-- Arch Linux (or an Arch-based distribution)
-- `yay` AUR helper installed
+- **Arch Linux** (or derivatives: EndeavourOS, Manjaro, etc.) with `yay` or `paru` AUR helper
+- **Debian/Ubuntu** (or derivatives: Linux Mint, Pop!_OS, etc.)
+- **Fedora** (or derivatives: Nobara, etc.)
 - Git
+- `curl` and `wget` (for downloading packages not in repos)
 - Basic knowledge of shell scripting
+
+> **Note:** On Arch, packages are installed via `yay`/`paru`/`pacman`. On Debian, via `apt`. On Fedora, via `dnf`. Some tools not available in standard repos are installed from GitHub releases, COPR, or official third-party repositories.
 
 ## 🚀 Installation
 
@@ -148,9 +152,11 @@ archfiles/
 │   ├── .zshrc
 │   ├── .p10k.zsh
 │   └── aliases.zsh
+├── lib/                # Shared libraries
+│   └── distro.sh       # Distro detection & package management
 ├── execute_scripts.sh  # Script executor utility
 ├── master_installation.sh  # Main installation script
-└── pkglist.txt         # List of installed packages
+└── pkglist.txt         # List of installed packages (Arch names)
 ```
 
 ## 🧩 Components
@@ -288,11 +294,22 @@ export SVNPASS="your-svn-password"
 
 ### Package List
 
-The `pkglist.txt` file contains all packages installed via `yay`. To install all packages:
+The `pkglist.txt` file contains Arch Linux package names as a reference. To install all packages on Arch:
 
 ```bash
 yay -S --needed - < pkglist.txt
 ```
+
+For Debian and Fedora, use the individual installation scripts in `scripts/` which handle package name differences automatically.
+
+### Multi-Distro Architecture
+
+The `lib/distro.sh` library provides:
+- **Automatic distro detection** via `/etc/os-release`
+- **`pkg_install`** - installs packages using the correct package manager
+- **`pkg_name`** - maps canonical names to distro-specific names (e.g., `fd` -> `fd-find` on Debian)
+- **`ensure_symlink`** - creates compatibility symlinks (e.g., `batcat` -> `bat` on Debian)
+- **`install_github_binary`** - downloads and installs binaries from GitHub releases
 
 ## 💡 Usage
 
@@ -372,7 +389,9 @@ Edit `niri/.config/niri/config.kdl` for window management settings.
 
 ### Installation Scripts Fail
 
-- Ensure `yay` is installed and configured
+- **Arch**: Ensure `yay` or `paru` is installed and configured
+- **Debian**: Ensure you have `sudo` privileges and `curl`/`wget` installed
+- **Fedora**: Ensure you have `sudo` privileges; some packages may need COPR repos
 - Check internet connection
 - Review script output for specific errors
 
@@ -411,7 +430,9 @@ Contributions are welcome! Please:
 
 ## 📝 Notes
 
-- These dotfiles are configured for Arch Linux. Some adjustments may be needed for other distributions.
+- These dotfiles support Arch Linux, Debian/Ubuntu, and Fedora. The installation scripts auto-detect your distro.
+- On Debian, `bat` is symlinked from `batcat` and `fd` from `fdfind` automatically.
+- Some tools (skm, scooter) may require `go` or `cargo` on non-Arch distros.
 - Always review scripts before executing them.
 - Backup your existing dotfiles before installation.
 - Some configurations include personal paths that need to be updated.
