@@ -11,3 +11,4 @@ application/x-shellscript=alacritty.desktop
 
 [Added Associations]
 inode/directory=yazi.desktop;
+text/markdown=Helix.desktop;

@@ -6,6 +6,7 @@ local act = wezterm.action
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 -- mydomains.apply_to_config(config)
+-- config.color_scheme = "dank-theme"
 ----------------------------------------------------------------------------------------------------
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup({
@@ -53,6 +54,7 @@ tabline.apply_to_config(config)
 -- For example, changing the color scheme:
 -- config.color_scheme = 'Batman'
 -- config.color_scheme = 'Later This Evening (Gogh)'
+config.color_scheme = 'dank-theme'
 
 -- DIsable all bindings for debugging
 config.disable_default_key_bindings = false
@@ -82,6 +84,7 @@ end
 
 config.command_palette_font_size = 12.0
 config.command_palette_bg_color = "#1f1f1f"
+config.command_palette_bg_color = white
 
 config.command_palette_rows = 10
 config.window_decorations = "RESIZE"
@@ -148,21 +151,22 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   }
   
 else 
-  
-  config.background = {
-    {
-      -- source = { File = '.config/wezterm/bg.jpg'},
-      source = { File = '.config/wezterm/wpl2.jpg'},
 
-      repeat_x = 'Mirror',
-      hsb = dimmer,
-      -- When the viewport scrolls, move this layer 10% of the number of
-      -- pixels moved by the main viewport. This makes it appear to be
-      -- further behind the text.
-      -- attachment = { Parallax = 0.1 },    
-    },
+
+  -- config.background = {
+  --   {
+  --     -- source = { File = '.config/wezterm/bg.jpg'},
+  --     source = { File = '.config/wezterm/wpl2.jpg'},
+
+  --     repeat_x = 'Mirror',
+  --     hsb = dimmer,
+  --     -- When the viewport scrolls, move this layer 10% of the number of
+  --     -- pixels moved by the main viewport. This makes it appear to be
+  --     -- further behind the text.
+  --     -- attachment = { Parallax = 0.1 },    
+  --   },
     
-  }
+  -- }
 
 end
 
