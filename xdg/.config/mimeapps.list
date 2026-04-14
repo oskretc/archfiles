@@ -8,6 +8,7 @@ text/x-log=Helix.desktop
 inode/directory=yazi.desktop
 application/xml=Helix.desktop
 application/x-shellscript=alacritty.desktop
+x-scheme-handler/wifiman-desktop-dl=wifiman-desktop-handler.desktop
 
 [Added Associations]
 inode/directory=yazi.desktop;
