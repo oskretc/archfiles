@@ -25,8 +25,8 @@ binds {
     Mod+Shift+k  { move-column-to-workspace-up; }
     Mod+j  { focus-workspace-down; }
     Mod+k  { focus-workspace-up; }
-    Mod+Up              { focus-workspace-down; }
-    Mod+Down              { focus-workspace-up; }
+    Mod+Down { focus-workspace-down; }
+    Mod+Up              { focus-workspace-up; }
     Mod+T { toggle-window-floating; }
     Mod+F12 { spawn "dms" "ipc" "call" "powermenu" "toggle";}
     Mod+Ctrl+Shift+m { move-column-to-monitor-left; }

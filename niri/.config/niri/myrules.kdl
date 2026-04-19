@@ -10,14 +10,13 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 window-rule {
-    match app-id=r#"^google-chrome$"#
-    match app-id=r#"^helium$"#
+    // match app-id=r#"^com\.google\.Chrome$"# 
+    // match app-id=r#"^helium$"#
     
-    match at-startup=true
+    match at-startup=true app-id=r#"^google-chrome$"#
     open-on-workspace "browser"
 }
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    match at-startup=true
+    match at-startup=true app-id=r#"^org\.wezfurlong\.wezterm$"#
     open-on-workspace "terminal"
 }
