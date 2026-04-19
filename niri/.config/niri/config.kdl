@@ -9,21 +9,21 @@ config-notification {
 }
 // Outputs from existing configuration
 
-output "DP-1" {
-    mode "1920x1200@59.950"
-    scale 1
-    position x=0 y=0
-}
-output "DP-2" {
-    mode "1920x1200@59.950"
-    scale 1
-    position x=0 y=0
-}
-output "eDP-1" {
-    mode "1920x1080@60.002"
-    scale 1.4
-    position x=1920 y=0
-}
+// output "DP-1" {
+//     mode "1920x1200@59.950"
+//     scale 1
+//     position x=0 y=0
+// }
+// output "DP-2" {
+//     mode "1920x1200@59.950"
+//     scale 1
+//     position x=0 y=0
+// }
+// output "eDP-1" {
+//     mode "1920x1080@60.002"
+//     scale 1.4
+//     position x=1920 y=0
+// }
 
 
 gestures {
@@ -303,3 +303,6 @@ spawn-sh-at-startup "vicinae server"
 
 spawn-sh-at-startup "google-chrome-stable"
 spawn-sh-at-startup "wezterm"
+spawn-sh-at-startup "wayvnc 0.0.0.0 5900"
+
+include "dms/windowrules.kdl"

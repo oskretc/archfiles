@@ -3,5 +3,21 @@
 window-rule {
     match app-id=r#"^google-chrome$"#
     match app-id=r#"^com\.google\.Chrome$"#
-    open-fullscreen true
+    open-fullscreen false
+}
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+window-rule {
+    match app-id=r#"^google-chrome$"#
+    match app-id=r#"^helium$"#
+    
+    match at-startup=true
+    open-on-workspace "browser"
+}
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match at-startup=true
+    open-on-workspace "terminal"
 }
