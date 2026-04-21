@@ -1,0 +1,92 @@
+{
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://earth.oystr.one/plugins/dynamix.vm.manager*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://192.168.1.53:6989/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://t.oystr.one/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://teams.microsoft.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://outlook.office.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://192.168.1.53:8083/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://fbe.teoxoy.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://config.qmk.fm/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://launcher.keychron.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://jaroslaw-weber.github.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.pixilart.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://192.168.16.131:9090/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://127.0.0.1:8006/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://key-test.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://keyboardchecker.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.iobit.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://ter.oystr.one/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://coterm-panel.shrp.no/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://keydown.io/*"
+    }
+  ],
+  "keyMappings": "map gp previousTab\nmap gn nextTab\nmap [ previousTab\nmap ] nextTab\nmap ga visitPreviousTab\nmap n scrollDown\nmap e scrollUp\nmap ge scrollToBottom\nmap k performFind\nmap K performBackwardsFind\nmap M goBack\nmap O Vomnibar.activate\nmap o Vomnibar.activateInNewTab\nmap B Vomnibar.activateBookmarks\nmap b Vomnibar.activateBookmarksInNewTab\nmap t Vomnibar.activateTabSelection\nmap T createTab",
+  "linkHintCharacters": "ienrstgmalpuf",
+  "regexFindMode": true,
+  "settingsVersion": "2.4.2"
+}
