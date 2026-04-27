@@ -166,7 +166,7 @@ bindkey '^e^e' edit-command-line
 
 
 source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
-export EDITOR='hx'
+export EDITOR='helix'
 GPG_TTY=$(tty)
 export GPG_TTY
 

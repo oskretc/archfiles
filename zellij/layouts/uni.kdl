@@ -1,0 +1,20 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="tab-bar"
+    }
+    pane split_direction="vertical" size="70%" {
+        pane 
+        pane size="40%"
+    }
+    pane split_direction="vertical" size="30%" {
+        pane         
+        pane cwd="$HOME" command="tail" size="30%" {
+                args "-f" ".cache/helix/helix.log"
+            }
+    }
+    
+    pane size=1 borderless=true {
+        plugin location="status-bar"
+    }
+}
+

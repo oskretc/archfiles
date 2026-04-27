@@ -1,0 +1,81 @@
+stores:
+    atuin:
+        target: ~/.config/atuin
+        files:
+            - config.toml
+    eza:
+        target: ~/.config/eza
+        files:
+            - theme.yml
+    gnupg:
+        target: ~/.gnupg
+        files:
+            - gpg-agent.conf
+    helix:
+        target: ~/.config/helix
+        files:
+            - config.toml
+            - languages.toml
+            - rfvh
+            - yazi-picker.sh
+            - themes/pop-dark_oscar.toml
+    lazygit:
+        target: ~/.config/lazygit
+        files:
+            - config.yml
+    localbin:
+        target: ~/.local/bin
+        files:
+            - yazi-picker_fromyazi.sh
+            - yaziii.sh
+    niri:
+        target: ~/.config/niri
+        files:
+            - config.kdl
+            - mybinds.kdl
+            - myrules.kdl
+            - myws.kdl
+    wezterm:
+        target: ~/.config/wezterm
+        files:
+            - bg.jpg
+            - over.png
+            - wezterm.lua
+            - wp46.jpg
+            - wpaperture.jpg
+            - wpl1.jpg
+            - wpl2.jpg
+            - wpl3.jpg
+            - colors/dank-theme.toml
+    yazi:
+        target: ~/.config/yazi
+        files:
+            - init.lua
+            - keymap.toml
+            - package.toml
+            - theme.toml
+    yazi-alt:
+        target: ~/.config/yazi-alt
+        files:
+            - keymap.toml
+            - yazi.toml
+    zellij:
+        target: ~/.config/zellij
+        files:
+            - config.kdl
+            - layouts/newr.kdl
+            - layouts/rustdev.kdl
+            - layouts/stacked.kdl
+            - layouts/tall.kdl
+            - layouts/uni.kdl
+    zsh:
+        target: "~"
+        files:
+            - .zshrc
+            - .p10k.zsh
+            - aliases.zsh
+    gitconfig:
+        target: "~"
+        files:
+            - .gitconfig
+            

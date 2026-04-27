@@ -1,0 +1,4 @@
+
+workspace "browser"
+workspace "comms"
+workspace "terminal"
