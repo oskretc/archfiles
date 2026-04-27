@@ -1,7 +1,9 @@
 packages:
     core: 
         pacman: [atuin, eza, duf, helix, yazi, git-delta, intelli-shell, lazygit, pass, python-pip, python-pipx, skm, restic, scooter, stow, zoxide  ] 
-        apt: [atuin, eza, duf, helix, yazi, git-delta, intelli-shell, lazygit, pass, python-pip, python-pipx, skm, restic, scooter, stow, zoxide  ] 
+        brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx  ] 
+        apt: [python3-pip]
+        go: [skm]
     gui-linux:
         pacman: [browserpass, browserpass-chromium, google-chrome, helium-browser-bin, nautilus,nautilus-open-any-terminal, vicinae-bin, wezterm, wayvnc]
         when: {distro: [CachyOS]}
