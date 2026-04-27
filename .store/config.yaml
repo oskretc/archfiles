@@ -7,6 +7,10 @@ stores:
         target: ~/.config/eza
         files:
             - theme.yml
+    gitconfig:
+        target: "~"
+        files:
+            - .gitconfig
     gnupg:
         target: ~/.gnupg
         files:
@@ -35,6 +39,10 @@ stores:
             - mybinds.kdl
             - myrules.kdl
             - myws.kdl
+    dms:
+        target: ~/.config/DankMaterialShell
+        files:
+            - settings.json
     wezterm:
         target: ~/.config/wezterm
         files:
@@ -74,8 +82,3 @@ stores:
             - .zshrc
             - .p10k.zsh
             - aliases.zsh
-    gitconfig:
-        target: "~"
-        files:
-            - .gitconfig
-            
