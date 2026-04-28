@@ -39,10 +39,12 @@ stores:
             - mybinds.kdl
             - myrules.kdl
             - myws.kdl
+        when: {distro: [CachyOS]}
     dms:
         target: ~/.config/DankMaterialShell
         files:
             - settings.json
+        when: {distro: [CachyOS]}
     wezterm:
         target: ~/.config/wezterm
         files:
@@ -55,6 +57,7 @@ stores:
             - wpl2.jpg
             - wpl3.jpg
             - colors/dank-theme.toml
+        when: {distro: [CachyOS]}
     yazi:
         target: ~/.config/yazi
         files:
