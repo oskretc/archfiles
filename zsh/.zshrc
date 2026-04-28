@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/go/bin:$HOME/go/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/go/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 
 ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -144,9 +144,10 @@ fzf_helix() {
         hx "$file"
     fi
 }
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
 # zoxide, better cd
 eval "$(zoxide init zsh)"
-eval "$(atuin init zsh)"
 # eval "$(niri completions zsh)"
 if (($+commands[niri] )); then
 	source <(niri completions zsh)
@@ -166,11 +167,11 @@ bindkey '^e^e' edit-command-line
 
 
 source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
-export EDITOR='helix'
+export EDITOR='hx'
 GPG_TTY=$(tty)
 export GPG_TTY
 
-
+source_if_exists ~/.cargo/env
 
 # IntelliShell
 export INTELLI_HOME="/home/osto/.local/share/intelli-shell"
@@ -182,3 +183,5 @@ export INTELLI_HOME="/home/osto/.local/share/intelli-shell"
 # alias is="intelli-shell"
 export PATH="$INTELLI_HOME/bin:$PATH"
 eval "$(intelli-shell init zsh)"
+
+
