@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/go/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/go/bin:$HOME/node_modules/.bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 
 ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -184,4 +184,15 @@ export INTELLI_HOME="/home/osto/.local/share/intelli-shell"
 export PATH="$INTELLI_HOME/bin:$PATH"
 eval "$(intelli-shell init zsh)"
 
+# pnpm                                                                                   
+export PNPM_HOME="/home/oscar/.local/share/pnpm"                                         
+case ":$PATH:" in                                                                        
+  *":$PNPM_HOME:"*) ;;                                                                   
+  *) export PATH="$PNPM_HOME:$PATH" ;;                                                   
+esac                                                                                     
+# pnpm end                                                                               
+                                                                                         
+export NVM_DIR="$HOME/.nvm"                                                              
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm                       
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion 
 
