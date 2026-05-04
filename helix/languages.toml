@@ -11,7 +11,7 @@ command = "simple-completion-language-server"
 [language-server.scls.config]
 max_completion_items = 20            # set max completion results len for each group: words, snippets, unicode-input
 feature_words = true                 # enable completion by word
-feature_snippets = true              # enable snippets
+feature_snippets = false              # enable snippets
 snippets_first = true                # completions will return before snippets by default
 snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
 feature_unicode_input = false         # enable "unicode input"
@@ -23,6 +23,20 @@ feature_citations = false            # enable citation completion (only on `cita
 [language-server.scls.environment]
 RUST_LOG = "info,simple-completion-language-server=info"
 LOG_FILE = "/tmp/completion.log"
+
+[[language]]
+name = "nxml"
+scope = "source.nxml"
+file-types = ["nxml"]
+language-servers = ["nxml-lsp"]
+grammar = "xml"
+
+[language-server.nxml-lsp]
+
+command = "${HOME}/gitrepos/nxml_gounmarshall/nxml-lsp"
+args = ["lsp" , "-l", "${HOME}/gitrepos/nxml_gounmarshall/log_nxml-lsp.txt"]
+# args = ["--stdio"]
+# enviroment = {"NXML-LSP_LOG"= "${HOME}/gitrepos/nxml_gounmarshall/log_nxml-lsp.txt"}
 
 # append language server to existed languages
 [[language]]
@@ -36,7 +50,8 @@ language-servers = ["ctags-lsp"]
 
 [[language]]
 name = "xml"
-file-types = ["nxml", "xml", "svg", "xsd", "xslt", "xsl" ]
+file-types = ["xml", "svg", "xsd", "xslt", "xsl" ]
+# file-types = ["nxml", "xml", "svg", "xsd", "xslt", "xsl" ]
 # auto-format = true
 # formatter = { command = "xmllint", args = ["--format", "-"] }
 language-servers = [ "xml" ]
@@ -83,8 +98,11 @@ language-servers = ["sqls"]
 
 [language-server.sqls]
 command = "sqls"
-# args = ["-t", "-l", "/home/osto/tmp/sqls.log"]
+# args = ["-t", "-l", "${HOME}/tmp/sqls.log"]
 
+# https://github.com/erasin/hx-lsp
+[language-server.hx-lsp]
+command = "hx-lsp"
 
 ######## GO #####################
 [[language]]
@@ -92,7 +110,9 @@ name = "go"
 auto-format = true
 formatter = { command = "goimports" }
 # language-servers = ["scls", "gopls"]
-language-servers = ["scls", "gopls", "llm-lsp"]
+# language-servers = ["scls", "gopls", "llm-lsp"]
+language-servers = ["hx-lsp","scls", "gopls", "llm-lsp"]
+# language-servers = ["hx-lsp","scls", "gopls", "lsp-ai"]
 # language-servers = ["gopls"]
 
 [language-server.gopls]
@@ -126,10 +146,7 @@ language-servers = ["ctags-lsp", "scls"]
 [[language]]
 name = "markdown"
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-language-servers = ["marksman", "lsp-ai"]
-
-[language-server.marksman]
-command = "marksman"
+language-servers = ["markdown-oxide", "lsp-ai"]
 
 [[language]]
 name = "html"
@@ -146,17 +163,44 @@ name = "css"
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 language-servers = ["ctags-lsp"]
 
+# [[language]]
+# name = "javascript"
+# formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+# auto-format = true
+# language-servers = ["ctags-lsp"]
 [[language]]
 name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-language-servers = ["ctags-lsp"]
+scope = "source.js"
+injection-regex = "(js|javascript)"
+language-id = "javascript"
+file-types = ["js", "mjs", "cjs", "rules", "es6", "pac", "gs", { glob = ".node_repl_history" }, { glob = "jakefile" }]
+shebangs = ["node"]
+roots = [ "package.json", "jsconfig.json" ]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "typescript-language-server" ]
+indent = { tab-width = 2, unit = "  " }
+
 
 [[language]]
 name = "typescript"
+scope = "sources.ts"
+injection-regex = "(ts|typescript)"
+language-id = "typescript"
+file-types = ["ts", "mts", "cts"]
+shebangs = ["deno", "bun", "ts-node"]
+roots = [ "package.json", "tsconfig.json" ]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "typescript-language-server" ]
+indent = { tab-width = 2, unit = "  " }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
-language-servers = ["ctags-lsp"]
+# language-servers = ["ctags-lsp"]
+
+[[grammar]]
+name = "typescript"
+source = { git = "https://github.com/tree-sitter/tree-sitter-typescript", rev = "75b3874edb2dc714fb1fd77a32013d0f8699989f", subpath = "typescript" }
 
 [[language]]
 name = "tsx"
@@ -173,7 +217,6 @@ language-servers = ["ctags-lsp"]
 [[language]]
 name = "python"
 language-servers = ["ruff", "jedi", "llm-lsp"]
-
 
 
 ##############################
@@ -207,3 +250,38 @@ scope = "source.csv"
 name = "csv"
 source.git = "https://github.com/weartist/rainbow-csv-tree-sitter"
 source.rev = "896e6d09b23a1b0d87e45bf97ca34a249f41495c"
+
+# svelte
+[language-server.svelteserver]
+command = "svelteserver"
+args = ["--stdio"]
+
+[language-server.svelteserver.config.configuration.typescript]
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+inlayHints.parameterNames.enabled = "all"
+
+[language-server.svelteserver.config.configuration.javascript]
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+inlayHints.parameterNames.enabled = "all"
+[[language]]
+name = "svelte"
+scope = "source.svelte"
+injection-regex = "svelte"
+file-types = ["svelte"]
+indent = { tab-width = 2, unit = "  " }
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "svelteserver" ]
+
+[[grammar]]
+name = "svelte"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-svelte", rev = "ae5199db47757f785e43a14b332118a5474de1a2" }
+
