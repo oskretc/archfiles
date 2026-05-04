@@ -10,16 +10,22 @@ line-number = "relative"
 color-modes = true
 popup-border = "all"
 # rulers = [120]
+
 end-of-line-diagnostics = "hint"
+
 path-completion = false
 jump-label-alphabet = "ntesirmghdlpuf"
+
 bufferline = "always"
 
 
 [editor.inline-diagnostics]
+# cursor-line = "error"
 cursor-line = "hint"
 prefix-len = 10
+
 other-lines = "warning"
+
 
 [editor.file-picker]
 hidden = false
@@ -62,7 +68,7 @@ tab.i = ":buffer-next"
 tab.c = ":bc"
 tab.r = ":reload"
 tab.w = "@<space>ww"
-
+space.n = "buffer_picker"
 
 # for colemak
 "m"  = "move_char_left"
@@ -121,9 +127,11 @@ F2 = [":write", ":sh sqlrun.sh"]
 "d" = "surround_delete"
 "a" = "select_textobject_around"
 "i" = "select_textobject_inner"
+
 e.u = "@hi\""
 e.U = "@ha\""
 e.c = "@ha{"
+
 
 
 
@@ -153,6 +161,9 @@ d = "@<space>wvgd"
 p = "@<space>wq"
 a = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_absolute} %{cursor_line}"
 
+
 [keys.normal.g]
 v = "jump_backward"
+
+
 
