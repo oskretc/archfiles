@@ -1,9 +1,9 @@
 packages:
     core: 
-        pacman: [atuin, eza, duf, helix, yazi, git-delta, intelli-shell, lazygit, pass, python-pip, python-pipx, skm, restic, scooter, stow, zoxide  ] 
+        pacman: [atuin, eza, duf,  yazi, git-delta, intelli-shell, lazygit, pass, python-pip, python-pipx, skm, restic, scooter, stow, zoxide, zellij, dra, television, gopass ] 
         when: {distro: [CachyOS]}
     core-deb:
-        brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx  ] 
+        brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx, dra, television, gopass  ] 
         go: ['github.com/TimothyYe/skm/cmd/skm']
         when: {distro: [debian, ubuntu]}
     gui-linux:

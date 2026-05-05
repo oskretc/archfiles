@@ -32,6 +32,8 @@ stores:
         files:
             - yazi-picker_fromyazi.sh
             - yaziii.sh
+            - gopass_clipboard_copy_cmd.sh
+            - gopass_clipboard_clear_cmd.sh
     niri:
         target: ~/.config/niri
         files:
@@ -85,3 +87,7 @@ stores:
             - .zshrc
             - .p10k.zsh
             - aliases.zsh
+    systemdvars:
+        target: ~/.config/environment.d
+        files:
+            - gopass.conf
