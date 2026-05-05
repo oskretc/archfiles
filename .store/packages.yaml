@@ -4,7 +4,7 @@ packages:
         when: {distro: [CachyOS]}
     core-deb:
         brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx  ] 
-        go: [skm]
+        go: ['github.com/TimothyYe/skm/cmd/skm']
         when: {distro: [debian, ubuntu]}
     gui-linux:
         pacman: [browserpass, browserpass-chromium, google-chrome, helium-browser-bin, nautilus,nautilus-open-any-terminal, vicinae-bin, wezterm, wayvnc]
@@ -13,4 +13,6 @@ packages:
         pacman: [ddcutil, displaylink, i2c-tools]
     deving:
         npm: ['@google/gemini-cli']
+        go: ['golang.org/x/tools/gopls@latest', 'github.com/xaaha/hulak@latest']
+        
     
