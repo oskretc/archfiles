@@ -1,4 +1,4 @@
-require("folder-rules"):setup()
+-- require("folder-rules"):setup()
 require("full-border"):setup()
 require("git"):setup {
 	-- Order of status signs showing in the linemode
