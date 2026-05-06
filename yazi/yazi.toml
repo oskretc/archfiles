@@ -1,0 +1,18 @@
+[opener]
+opencsv = [
+  { run = "tw %s --no-header", block = true, for = "unix", desc = "Open csv with TW"},
+]
+[open]
+prepend_rules = [
+  { url = "*.csv", use = "opencsv" },
+  { url = "*.xlsx", use = "opencsv" },
+]
+# [[plugin.prepend_fetchers]]
+# id  = "git"
+# url = "*"
+# run = "git"
+
+# [[plugin.prepend_fetchers]]
+# id  = "git"
+# url = "*/"
+# run = "git"

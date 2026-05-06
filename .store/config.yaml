@@ -61,12 +61,20 @@ stores:
             - colors/dank-theme.toml
         when: {distro: [CachyOS]}
     yazi:
-        target: ~/.config/yazi
-        files:
-            - init.lua
-            - keymap.toml
-            - package.toml
-            - theme.toml
+        targets:
+            - target: ~/.config/yazi
+              files:
+                - init.lua
+                - keymap.toml
+                - package.toml
+                - theme.toml
+                - yazi.toml
+            - target: ~/.config/yazi-alt
+              files:
+                - init.lua
+                # - keymap.toml
+                - package.toml
+                - theme.toml
     yazi-alt:
         target: ~/.config/yazi-alt
         files:
