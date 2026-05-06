@@ -183,6 +183,7 @@ export INTELLI_HOME="/home/osto/.local/share/intelli-shell"
 # alias is="intelli-shell"
 export PATH="$INTELLI_HOME/bin:$PATH"
 eval "$(intelli-shell init zsh)"
+eval "$(gopass completion zsh)"
 
 # pnpm                                                                                   
 export PNPM_HOME="/home/oscar/.local/share/pnpm"                                         
