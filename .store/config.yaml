@@ -99,3 +99,9 @@ stores:
         target: ~/.config/environment.d
         files:
             - gopass.conf
+    television:
+        target: ~/.config/television
+        files:
+            - config.toml
+            - cable/secondbrain.toml
+

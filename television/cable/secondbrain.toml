@@ -1,0 +1,34 @@
+[metadata]
+name = "secondbrain"
+description = "A channel to select files from secondbrain"
+requirements = ["fd", "bat", "glow", "mdterm"]
+
+[source]
+command = ["fd -t f -e md --exclude '*braindump*' . $HOME/secondbrain/", "fd -t f -H . $HOME/secondbrain/ "]
+
+[preview]
+command = "mdterm '{}'"
+# command = "bat -n --color=always '{}'"
+# env = { BAT_THEME = "ansi" }
+# command = "glow '{}'"
+# env = { BAT_THEME = "ansi" }
+
+[ui]
+preview_panel = { size = 60 }
+[keybindings]
+enter = "actions:edit"
+shortcut = "f5"
+# f12 = "actions:edit"
+ctrl-up = "actions:goto_parent_dir"
+
+[actions.edit]
+description = "Opens the selected entries with the default editor (falls back to vim)"
+command = "${EDITOR:-vim} '{}'"
+shell = "bash"
+# use `mode = "fork"` if you want to return to tv afterwards
+mode = "fork"
+
+[actions.goto_parent_dir]
+description = "Re-opens tv in the parent directory"
+command = "tv files .."
+mode = "execute"
