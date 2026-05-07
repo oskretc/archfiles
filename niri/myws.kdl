@@ -2,3 +2,4 @@
 workspace "browser"
 workspace "comms"
 workspace "terminal"
+workspace "rdp"

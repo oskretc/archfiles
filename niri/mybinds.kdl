@@ -19,7 +19,7 @@ binds {
     Mod+F4 hotkey-overlay-title="Close window"  { close-window; }
     Mod+Shift+a hotkey-overlay-title="Move WS Left" { move-workspace-to-monitor-left; }
     // Mod+Shift+a hotkey-overlay-title="Move WS Left" { focus-monitor-left; }
-    // Mod+Shift+f hotkey-overlay-title="Move WS Right" { move-workspace-to-monitor-right; }
+    Mod+Shift+f hotkey-overlay-title="Move WS Right" { move-workspace-to-monitor-right; }
     // Mod+Shift+f hotkey-overlay-title="Move WS Right" { focus-monitor-right; }
     Mod+Shift+j  { move-column-to-workspace-down; }
     Mod+Shift+k  { move-column-to-workspace-up; }
@@ -33,6 +33,7 @@ binds {
     Mod+Ctrl+Shift+i { move-column-to-monitor-right; }
     Mod+2 { focus-workspace "browser"; }
     Mod+5 { focus-workspace "terminal"; }
+    Mod+4 { focus-workspace "comms"; }
     Mod+Space { spawn "vicinae" "toggle";}
 
 }

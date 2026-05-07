@@ -41,7 +41,7 @@ stores:
             - mybinds.kdl
             - myrules.kdl
             - myws.kdl
-        when: {distro: [CachyOS]}
+        # when: {distro: [CachyOS]}
     dms:
         target: ~/.config/DankMaterialShell
         files:
