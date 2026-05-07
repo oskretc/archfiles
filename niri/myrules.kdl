@@ -20,3 +20,30 @@ window-rule {
     match at-startup=true app-id=r#"^org\.wezfurlong\.wezterm$"#
     open-on-workspace "terminal"
 }
+// // @id=wr_1778004544202118208 @name=LabVIEW64-2022
+// window-rule {
+//     match app-id="^LabVIEW64-2022$" title="^Functions$"
+//     open-floating true
+//     draw-border-with-background true
+// }
+
+// // @id=wr_1778004786496243714 @name=LabVIEW64-2022 controls
+// window-rule {
+//     match app-id="^LabVIEW64-2022$" title="^Controls$"
+//     open-floating true
+// }
+
+// // @id=wr_1778004845926757700 @name=LabVIEW64-2022
+// window-rule {
+//     match app-id="^LabVIEW64-2022$" title="^Quick Drop$"
+//     open-floating true
+//     min-width 200
+//     max-width 400
+//     min-height 100
+//     max-height 200
+// }
+
+// // @id=wr_1778005071532776867 @name=LabVIEW64-2022
+// window-rule {
+//     match app-id="^LabVIEW64-2022$"
+// }
