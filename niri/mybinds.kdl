@@ -35,5 +35,6 @@ binds {
     Mod+5 { focus-workspace "terminal"; }
     Mod+4 { focus-workspace "comms"; }
     Mod+Space { spawn "vicinae" "toggle";}
+    Mod+d { focus-workspace-previous; }
 
 }
