@@ -1,12 +1,12 @@
 {
-  "currentThemeName": "blue",
-  "currentThemeCategory": "generic",
+  "currentThemeName": "dynamic",
+  "currentThemeCategory": "dynamic",
   "customThemeFile": "",
   "registryThemeVariants": {},
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "popupTransparency": 1,
+  "popupTransparency": 0.76,
   "dockTransparency": 1,
   "widgetBackgroundColor": "sch",
   "widgetColorMode": "default",
@@ -31,7 +31,7 @@
   "animationSpeed": 1,
   "customAnimationDuration": 500,
   "syncComponentAnimationSpeeds": true,
-  "popoutAnimationSpeed": 1,
+  "popoutAnimationSpeed": 2,
   "popoutCustomAnimationDuration": 150,
   "modalAnimationSpeed": 1,
   "modalCustomAnimationDuration": 150,
@@ -44,7 +44,7 @@
   "blurBorderOpacity": 0.35,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
-  "blurWallpaperOnOverview": true,
+  "blurWallpaperOnOverview": false,
   "showLauncherButton": true,
   "showWorkspaceSwitcher": true,
   "showFocusedWindow": true,
@@ -141,7 +141,7 @@
   "workspaceOccupiedColorMode": "none",
   "workspaceUnfocusedColorMode": "default",
   "workspaceUrgentColorMode": "default",
-  "workspaceFocusedBorderEnabled": true,
+  "workspaceFocusedBorderEnabled": false,
   "workspaceFocusedBorderColor": "surfaceText",
   "workspaceFocusedBorderThickness": 3,
   "workspaceNameIcons": {
@@ -152,6 +152,14 @@
     "browser": {
       "type": "icon",
       "value": "home"
+    },
+    "comms": {
+      "type": "icon",
+      "value": "forum"
+    },
+    "rdp": {
+      "type": "icon",
+      "value": "desktop_windows"
     }
   },
   "waveProgressEnabled": true,
@@ -177,7 +185,7 @@
   "runningAppsCurrentMonitor": false,
   "appIdSubstitutions": [],
   "centeringMode": "index",
-  "clockDateFormat": "dddd, MMMM d",
+  "clockDateFormat": "yyyy-MM-dd - dddd",
   "lockDateFormat": "dddd, MMMM d",
   "greeterRememberLastSession": true,
   "greeterRememberLastUser": true,
@@ -230,10 +238,10 @@
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
-  "fontFamily": "Inter Variable",
+  "fontFamily": "Cantarell",
   "monoFontFamily": "Fira Code",
-  "fontWeight": 400,
-  "fontScale": 1,
+  "fontWeight": 500,
+  "fontScale": 1.2,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
@@ -435,12 +443,19 @@
       "leftWidgets": [
         "launcherButton",
         "workspaceSwitcher",
-        "focusedWindow"
+        {
+          "id": "focusedWindow",
+          "enabled": true,
+          "focusedWindowCompactMode": true
+        }
       ],
       "centerWidgets": [
         "music",
         "clock",
-        "weather"
+        {
+          "id": "weather",
+          "enabled": false
+        }
       ],
       "rightWidgets": [
         {
@@ -476,22 +491,22 @@
           "enabled": true
         },
         {
-          "id": "vpn",
+          "id": "powerMenuButton",
           "enabled": true
         }
       ],
-      "spacing": 4,
+      "spacing": 5,
       "innerPadding": 4,
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 1,
-      "squareCorners": false,
+      "squareCorners": true,
       "noBackground": false,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
       "removeWidgetPadding": false,
       "widgetPadding": 8,
-      "gothCornersEnabled": false,
+      "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
       "borderEnabled": false,
@@ -502,12 +517,12 @@
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
-      "fontScale": 1,
+      "fontScale": 1.07,
       "iconScale": 1,
       "autoHide": false,
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
-      "openOnOverview": false,
+      "openOnOverview": true,
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
@@ -515,7 +530,7 @@
       "scrollEnabled": true,
       "scrollXBehavior": "column",
       "scrollYBehavior": "workspace",
-      "shadowIntensity": 0,
+      "shadowIntensity": 5,
       "shadowOpacity": 60,
       "shadowColorMode": "text",
       "shadowCustomColor": "#000000",
