@@ -3,6 +3,12 @@ stores:
         target: ~/.config/atuin
         files:
             - config.toml
+    dms:
+        target: ~/.config/DankMaterialShell
+        files:
+            - settings.json
+        when:
+            distro: CachyOS
     eza:
         target: ~/.config/eza
         files:
@@ -41,12 +47,19 @@ stores:
             - mybinds.kdl
             - myrules.kdl
             - myws.kdl
-        # when: {distro: [CachyOS]}
-    dms:
-        target: ~/.config/DankMaterialShell
+    systemdvars:
+        target: ~/.config/environment.d
+        files:
+            - gopass.conf
+    television:
+        target: ~/.config/television
+        files:
+            - config.toml
+            - cable/secondbrain.toml
+    vicinae:
+        target: ~/.config/vicinae
         files:
             - settings.json
-        when: {distro: [CachyOS]}
     wezterm:
         target: ~/.config/wezterm
         files:
@@ -59,7 +72,8 @@ stores:
             - wpl2.jpg
             - wpl3.jpg
             - colors/dank-theme.toml
-        when: {distro: [CachyOS]}
+        when:
+            distro: CachyOS
     yazi:
         targets:
             - target: ~/.config/yazi
@@ -72,7 +86,6 @@ stores:
             - target: ~/.config/yazi-alt
               files:
                 - init.lua
-                # - keymap.toml
                 - package.toml
                 - theme.toml
     yazi-alt:
@@ -89,19 +102,10 @@ stores:
             - layouts/stacked.kdl
             - layouts/tall.kdl
             - layouts/uni.kdl
+            - layouts/newstack.kdl
     zsh:
         target: "~"
         files:
             - .zshrc
             - .p10k.zsh
             - aliases.zsh
-    systemdvars:
-        target: ~/.config/environment.d
-        files:
-            - gopass.conf
-    television:
-        target: ~/.config/television
-        files:
-            - config.toml
-            - cable/secondbrain.toml
-
