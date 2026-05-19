@@ -1,0 +1,15 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 114,
+                "origin_hash": "215c2fc51bb6b80eda4978ce80cbae24"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_LEFTALT+4",
+        "name": "sss",
+        "mapping_type": "key_macro"
+    }
+]

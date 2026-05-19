@@ -17,10 +17,6 @@ stores:
         target: "~"
         files:
             - .gitconfig
-    # gnupg:
-    #     target: ~/.gnupg
-    #     files:
-    #         - gpg-agent.conf
     helix:
         target: ~/.config/helix
         files:
@@ -29,6 +25,8 @@ stores:
             - rfvh
             - yazi-picker.sh
             - themes/pop-dark_oscar.toml
+    input-remapper-2:
+        target: ~/.config/input-remapper-2
     lazygit:
         target: ~/.config/lazygit
         files:
