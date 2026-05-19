@@ -1,2 +1,4 @@
 #!/bin/sh
 svn status
+printf "%s " "Press enter to continue"
+read ans

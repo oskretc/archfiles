@@ -1,2 +1,4 @@
 #!/bin/sh
-svn log -l 20 | cat
+svn log -l 20 | bat
+# printf "%s " "Press enter to continue"
+# read ans
