@@ -4,6 +4,7 @@ packages:
         when: {distro: [CachyOS]}
     core-deb:
         brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx, dra, television, gopass  ] 
+        apt: [fonts-hack]
         go: ['github.com/TimothyYe/skm/cmd/skm']
         when: {distro: [debian, ubuntu]}
     gui-linux:

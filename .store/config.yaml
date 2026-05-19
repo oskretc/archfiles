@@ -17,10 +17,10 @@ stores:
         target: "~"
         files:
             - .gitconfig
-    gnupg:
-        target: ~/.gnupg
-        files:
-            - gpg-agent.conf
+    # gnupg:
+    #     target: ~/.gnupg
+    #     files:
+    #         - gpg-agent.conf
     helix:
         target: ~/.config/helix
         files:
@@ -40,6 +40,9 @@ stores:
             - yaziii.sh
             - gopass_clipboard_copy_cmd.sh
             - gopass_clipboard_clear_cmd.sh
+            - svnlog
+            - svnst
+            - svnup
     niri:
         target: ~/.config/niri
         files:

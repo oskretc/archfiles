@@ -303,5 +303,5 @@ include "myrules.kdl"
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "google-chrome-stable"
 spawn-sh-at-startup "wezterm"
-spawn-sh-at-startup "wayvnc 0.0.0.0 5900"
+// spawn-sh-at-startup "wayvnc 0.0.0.0 5900"
 

@@ -26,11 +26,14 @@ prepend_keymap = [
 	# custom cmnds
 
 	{ on = ["g", "m"], run = "cd ~/gitrepos", desc = "Go to gitrepos" },
-	{ on = [ ";", "y" ], run = "shell --block '$EDITOR ~/.config/yazi/keymap.toml'",        desc = "Edit yazi keymap config" },
+	{ on = [ ";", "c" ], run = "shell --block '$EDITOR ~/.config/yazi/keymap.toml'",        desc = "Edit yazi keymap config" },
 	{ on = [ ";", "l" ], run = "shell --block lazygit",        desc = "Lazygit in foreground" },
 	{ on = [ ";", "o" ], run = 'shell --block -- ${HOME}/.config/yazi/yazi-picker_fromyazi.sh "$@"',        desc = "open in hx" },
 	{ on = [ ";", "z" ], run = "shell --block 'zellij run -c -f --width 80% --height 80% -- lazygit'",        desc = "Lazygit floating" },
-	{ on = [ ";", "c" ], run = "shell --block 'chezmoi add $0'",        desc = "Chezmoi add" },
+ 	{ on = [ ";", "s" , "s" ], run = "shell --block 'svnst'",        desc = "Svn Status" },
+	{ on = [ ";", "s" , "u" ], run = "shell --block 'svnup'",        desc = "Svn Update" },
+ 	{ on = [ ";", "s" , "l" ], run = "shell --block 'svnlog'",        desc = "Svn Log" },
+	# { on = [ ";", "c" ], run = "shell --block 'chezmoi add $0'",        desc = "Chezmoi add" },
 	{ on = [ ";", "g" ], run = "plugin vcs-files",        desc = "Show Git file changes" },
         { on = [ ";", "d" ], run = "plugin diff",        desc = "Diff the selected with the hovered file" },
 	{ on = [ "T"], run = "plugin toggle-pane min-preview",        desc = "Toggle preview" },

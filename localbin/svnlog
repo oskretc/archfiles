@@ -1,0 +1,2 @@
+#!/bin/sh
+svn log -l 20 | cat
