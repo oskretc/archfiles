@@ -21,6 +21,9 @@
          "name": "tokyo-night-storm"
       }
    },
+   "telemetry": {
+      "system_info": false
+   },
    "providers": {
       "applications": {
          "entrypoints": {
