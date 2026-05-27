@@ -1,0 +1,11 @@
+# Tab show the TOC
+# zoom with +- and =
+# a, s toggles fit view
+map m scroll left
+map n scroll down
+map e scroll up
+map i scroll right
+map k search forward
+map K search backward
+
+

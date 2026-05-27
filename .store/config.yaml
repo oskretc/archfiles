@@ -94,6 +94,10 @@ stores:
         files:
             - keymap.toml
             - yazi.toml
+    zathurarc:
+        target: ~/.config/zathura
+        files:
+            - zathurarc
     zellij:
         target: ~/.config/zellij
         files:
