@@ -2,10 +2,17 @@
 opencsv = [
   { run = "tw %s --no-header", block = true, for = "unix", desc = "Open csv with TW"},
 ]
+
+openvi= [
+  { run = '/bin/sh -c "$(cat /etc/natinst/labview-2026-64/labview.dir)/labview %s"', block = false, for = "unix", desc = "Open csv with TW"},
+]
 [open]
 prepend_rules = [
   { url = "*.csv", use = "opencsv" },
   { url = "*.xlsx", use = "opencsv" },
+  { url = "*.vi", use = "openvi" },
+  { url = "*.lvlib", use = "openvi" },
+  { url = "*.lvproj", use = "openvi" },
 ]
 # [[plugin.prepend_fetchers]]
 # id  = "git"
