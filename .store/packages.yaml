@@ -19,3 +19,5 @@ packages:
         go: ['golang.org/x/tools/gopls@latest', 'github.com/xaaha/hulak@latest']
         
     
+# add rio
+
