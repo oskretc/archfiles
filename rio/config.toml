@@ -1,0 +1,42 @@
+# See the full configuration reference: https://rioterm.com/docs/config
+  # typeset -g POWERLEVEL9K_ASDF_PERL_VISUAL_IDENTIFIER_EXPANSION='⭐'
+
+theme = "Gruvbox_Material_Dark"
+
+[editor]
+program = "hx"
+[fonts]
+size = 16
+features = []
+use-drawable-chars = true
+# symbol-map = [{ start = "2297", end = "2299", font-family = "MesloLGS NF" }]
+disable-warnings-not-found = false
+additional-dirs = []
+hinting = true
+
+
+[fonts.regular]
+family = "Fira Code"
+style = "default"
+
+[fonts.bold]
+family = "Fira Code"
+style = "default"
+
+[fonts.italic]
+family = "Fira Code"
+style = "default"
+
+[fonts.bold-italic]
+family = "Fira Code"
+style = "default"
+
+[window]
+opacity =0.90
+blur = false
+
+[bindings]
+keys = [
+  { key = "tab", with = "control", action = "SelectNextSplitOrTab" },
+  { key = "tab", with = "control | shift", action = "SelectPrevSplitOrTab" }
+]

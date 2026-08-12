@@ -48,6 +48,11 @@ stores:
             - mybinds.kdl
             - myrules.kdl
             - myws.kdl
+    rio:
+        target: ~/.config/rio
+        files:
+            - config.toml
+            - themes/Gruvbox_Material_Dark.toml
     systemdvars:
         target: ~/.config/environment.d
         files:
