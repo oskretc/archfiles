@@ -23,3 +23,6 @@ prepend_rules = [
 # id  = "git"
 # url = "*/"
 # run = "git"
+[[plugin.prepend_previewers]]
+url = "*/"
+run = "eza-preview"

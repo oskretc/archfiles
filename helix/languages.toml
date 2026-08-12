@@ -28,13 +28,17 @@ LOG_FILE = "/tmp/completion.log"
 name = "nxml"
 scope = "source.nxml"
 file-types = ["nxml"]
-language-servers = ["nxml-lsp"]
-grammar = "xml"
+language-servers = ["nxml-lsp" ]
+# language-servers = ["nxml-lsp", "xml"]
+# grammar = "xml"
 
 [language-server.nxml-lsp]
 
-command = "${HOME}/gitrepos/nxml_gounmarshall/nxml-lsp"
-args = ["lsp" , "-l", "${HOME}/gitrepos/nxml_gounmarshall/log_nxml-lsp.txt"]
+# command = "${HOME}/gitrepos/nxml_gounmarshall/nxml-lsp"
+command = "/home/osto/gitrepos/eriksbranch/nxml-lsp"
+# command = "nxml-lsp"
+# args = ["lsp"]
+args = ["lsp" , "-l", "/home/osto/gitrepos/nxml_gounmarshall/log_nxml-lsp.txt"]
 # args = ["--stdio"]
 # enviroment = {"NXML-LSP_LOG"= "${HOME}/gitrepos/nxml_gounmarshall/log_nxml-lsp.txt"}
 
@@ -111,7 +115,7 @@ auto-format = true
 formatter = { command = "goimports" }
 # language-servers = ["scls", "gopls"]
 # language-servers = ["scls", "gopls", "llm-lsp"]
-language-servers = ["hx-lsp","scls", "gopls", "llm-lsp"]
+language-servers = ["hx-lsp","scls", "gopls", "lsp-ai"]
 # language-servers = ["hx-lsp","scls", "gopls", "lsp-ai"]
 # language-servers = ["gopls"]
 
@@ -225,7 +229,7 @@ language-servers = ["ruff", "jedi", "llm-lsp"]
 
 [language-server.lsp-ai]
 command = "lsp-ai"
-args = ["--config","${HOME}/.config/helix/lsp-ai-gemini.json"]
+args = ["--config","/home/osto/.config/helix/lsp-ai-gemini.json"]
 
 
 [[language]]

@@ -18,8 +18,13 @@ window-rule {
 }
 window-rule {
     match at-startup=true app-id=r"^org.wezfurlong.wezterm$"
+    match at-startup=true app-id="rio"
+    match app-id="kitty"
+    match app-id="Alacritty"
+    match app-id="com.mitchellh.ghostty"
     open-on-workspace "terminal"
 }
+
 // // @id=wr_1778004544202118208 @name=LabVIEW64-2022
 // window-rule {
 //     match app-id="^LabVIEW64-2022$" title="^Functions$"
