@@ -1,6 +1,6 @@
 [opener]
 open = [
-	{ run = 'yazi-picker_fromyazi.sh "$@"', desc = "OpenZ" },
+	{ run = 'yazi-picker_fromyazi.sh %s', desc = "OpenZ" },
 ]
 [open]
 rules = [
