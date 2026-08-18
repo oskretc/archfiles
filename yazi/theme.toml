@@ -8,3 +8,7 @@
 # dark = "catppuccin-mocha"
 
 
+
+[flavor]
+dark = "noctalia"
+light = "noctalia"

@@ -289,6 +289,7 @@ web_client {
 // Default: default
 // 
 theme "gruvbox-dark"
+theme "transparent-dynamic"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -559,3 +560,20 @@ show_startup_tips false
 // typically work best. Set to 0 to use the number of (physical) CPU cores.
 // Note: This only applies to web clients at the moment.
 // client_async_worker_tasks 4
+themes {
+    transparent-dynamic {
+        // Leave the bg block empty to inherit terminal transparency
+        fg 255 255 255
+        bg 0 0 0
+        black 0 0 0
+        red 255 0 0
+        green 0 255 0
+        yellow 255 255 0
+        blue 0 0 255
+        magenta 255 0 255
+        cyan 0 255 255
+        white 255 255 255
+        orange 255 165 0
+    }
+}
+

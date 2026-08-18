@@ -53,6 +53,8 @@ stores:
         files:
             - config.toml
             - themes/Gruvbox_Material_Dark.toml
+            - themes/noctalia.toml
+
     systemdvars:
         target: ~/.config/environment.d
         files:

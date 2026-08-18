@@ -1,7 +1,8 @@
+theme = "noctalia"
 # See the full configuration reference: https://rioterm.com/docs/config
   # typeset -g POWERLEVEL9K_ASDF_PERL_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
-theme = "Gruvbox_Material_Dark"
+# theme = "Gruvbox_Material_Dark"
 
 [editor]
 program = "hx"
@@ -33,10 +34,12 @@ style = "default"
 
 [window]
 opacity =0.90
-blur = false
+# blur = false
 
 [bindings]
 keys = [
   { key = "tab", with = "control", action = "SelectNextSplitOrTab" },
-  { key = "tab", with = "control | shift", action = "SelectPrevSplitOrTab" }
+  { key = "tab", with = "control | shift", action = "SelectPrevSplitOrTab" },
+  # Enable VI mode on escape, when not in VI mode.
+  { key = "esc", mode = "vi", action = "ToggleVIMode" }
 ]

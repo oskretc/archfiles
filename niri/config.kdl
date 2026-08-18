@@ -300,6 +300,7 @@ include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 include "dms/windowrules.kdl"
 include "mybinds.kdl"
+include "mybinds_noctalia5.kdl"
 include "myrules.kdl"
 
 spawn-sh-at-startup "vicinae server"
@@ -307,7 +308,10 @@ spawn-sh-at-startup "google-chrome-stable"
 // spawn-sh-at-startup "wezterm"
 // spawn-sh-at-startup "kitty"
 spawn-sh-at-startup "rio"
+spawn-sh-at-startup "noctalia"
 // spawn-sh-at-startup "kitten desktop-ui run-server"
 // spawn-sh-at-startup "kitten quick-access-terminal -o hide_on_focus_loss=yes"
 // spawn-sh-at-startup "wayvnc 0.0.0.0 5900"
 
+
+include "noctalia.kdl"

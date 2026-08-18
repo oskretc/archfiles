@@ -3,9 +3,10 @@ binds {
     Mod+b { spawn "google-chrome-stable"; }
     Super+Ctrl+Left { focus-workspace-down; }    
     Super+Ctrl+Right { focus-workspace-up; }    
-    // MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
-    Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "dms ipc call keybinds toggle niri"; }
-    Super+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+    MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
+    // Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "dms ipc call keybinds toggle niri"; }
+    // Super+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Super+L hotkey-overlay-title="Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
     Super+Tab                               repeat=false { toggle-overview; }
     // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "wezterm"; }
     // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
