@@ -1,0 +1,33 @@
+window-rule {
+      // Rounded corners for a modern look.
+  geometry-corner-radius 20
+
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
+}
+binds {
+    Mod+V hotkey-overlay-title="Clipboard Manager whrt" {
+        spawn-sh "noctalia msg panel-toggle clipboard";
+    }
+    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg  panel-toggle  session"; }
+
+    Mod+N hotkey-overlay-title="Notification Center" { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+    Mod+Comma hotkey-overlay-title="Settings" {
+        spawn-sh "noctalia msg settings-toggle";
+    }
+    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
+}
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
+// // Set transparent workspace background color so the backdrop is visible at all times.
+// layout {
+//   background-color "transparent"
+// }
+
+// // Optionally, disable workspace shadows in the overview.
+// overview {
+//   // Choose your favorite color.
+//   backdrop-color "#000000"
+// }
