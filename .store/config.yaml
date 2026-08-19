@@ -48,6 +48,7 @@ stores:
             - mybinds.kdl
             - myrules.kdl
             - myws.kdl
+            - mybinds_noctalia5.kdl
     rio:
         target: ~/.config/rio
         files:
