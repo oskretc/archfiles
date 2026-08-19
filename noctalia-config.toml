@@ -1,3 +1,9 @@
+[accessibility]
+ui_scale = 1.1000000089406967
+
+[backdrop]
+enabled = true
+
 [bar.default]
 capsule = true
 center = [ "clock", "date" ]
@@ -18,6 +24,10 @@ end = [
 font_family = "0xProto Nerd Font Propo"
 font_weight = 400
 margin_ends = 0
+
+[control_center]
+sidebar = "full"
+sidebar_section = "full"
 
 [desktop_widgets]
 schema_version = 2
@@ -158,8 +168,21 @@ widget_order = [ "lockscreen-login-box@DVI-I-1", "lockscreen-login-box@DP-2", "l
         show_unlock_hint = true
         show_weather = true
 
+[shell]
+font_family = "Fira Code Retina"
+
+    [shell.animation]
+    speed = 1.5000000223517418
+
+    [shell.panel]
+    clipboard_placement = "attached"
+
 [theme]
+builtin = "Dracula"
+community_palette = "Oxocarbon"
+mode = "dark"
 source = "community"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "ghostty", "helix", "kitty", "niri", "wezterm" ]
@@ -169,10 +192,19 @@ source = "community"
 directory = "/home/osto/Downloads"
 
     [wallpaper.default]
-    path = "/home/osto/Downloads/lighting-up-the-sky-desktop-image-only.png"
+    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
 
     [wallpaper.last]
-    path = "/home/osto/Downloads/lighting-up-the-sky-desktop-image-only.png"
+    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
+
+    [wallpaper.monitors.DP-2]
+    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
+
+    [wallpaper.monitors.DVI-I-1]
+    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
 
 [widget.battery]
 enabled = false
