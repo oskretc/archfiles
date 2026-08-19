@@ -98,11 +98,15 @@ stores:
                 - init.lua
                 - package.toml
                 - theme.toml
+            - target: ~/.config/che
+              files:
+                - keymap.toml
     yazi-alt:
         target: ~/.config/yazi-alt
         files:
             - keymap.toml
             - yazi.toml
+    
     zathurarc:
         target: ~/.config/zathura
         files:

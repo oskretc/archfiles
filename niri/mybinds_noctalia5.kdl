@@ -6,16 +6,12 @@ window-rule {
   clip-to-geometry true
 }
 binds {
-    Mod+V hotkey-overlay-title="Clipboard Manager whrt" {
-        spawn-sh "noctalia msg panel-toggle clipboard";
-    }
+    Mod+V hotkey-overlay-title="Clipboard Manager whrt" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg  panel-toggle  session"; }
-
     Mod+N hotkey-overlay-title="Notification Center" { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
-    Mod+Comma hotkey-overlay-title="Settings" {
-        spawn-sh "noctalia msg settings-toggle";
-    }
+    Mod+Comma hotkey-overlay-title="Settings" { spawn-sh "noctalia msg settings-toggle"; }
     Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
+    Mod+M hotkey-overlay-title="Task Manager" { spawn-sh "noctalia msg panel-toggle weinguyen/procmon:panel"; }
 }
 layer-rule {
   match namespace="^noctalia-backdrop"
