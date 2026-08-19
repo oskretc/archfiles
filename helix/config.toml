@@ -1,7 +1,8 @@
 # theme = "monokai_aqua"
 # theme = "tokyonight"
 # theme = "dark_plus_oscar"
-theme = "pop-dark_oscar"
+# theme = "pop-dark_oscar"
+theme = "noctalia"
 
 [editor]
 mouse = true
