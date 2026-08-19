@@ -7,3 +7,32 @@ keybinding:
     prevItem-alt: e
     nextItem-alt: n
     edit: o
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#33b1ff"
+      - bold
+    inactiveBorderColor:
+      - "#42be65"
+    searchingActiveBorderColor:
+      - "#be95ff"
+      - bold
+    optionsTextColor:
+      - "#dde1e6"
+    selectedLineBgColor:
+      - "#dde1e6"
+    inactiveViewSelectedLineBgColor:
+      - bold
+    cherryPickedCommitFgColor:
+      - "#dde1e6"
+    cherryPickedCommitBgColor:
+      - "#be95ff"
+    markedBaseCommitFgColor:
+      - "#be95ff"
+    markedBaseCommitBgColor:
+      - "#ee5396"
+    unstagedChangesColor:
+      - "#ee5396"
+    defaultFgColor:
+      - "#f2f4f8"
