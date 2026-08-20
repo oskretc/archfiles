@@ -158,9 +158,9 @@ layout {
     border {
         off
         width 4
-        active-color   "#707070"      // Neutral gray
+        active-color "#707070"      // Neutral gray
         inactive-color "#d0d0d0"      // Light gray
-        urgent-color   "#cc4444"      // Softer red
+        urgent-color "#cc4444"      // Softer red
     }
     shadow {
         softness 30
@@ -195,7 +195,7 @@ prefer-no-csd true
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
     workspace-switch {
-        spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
+        spring damping-ratio=0.8 stiffness=523 epsilon=0.0001
     }
     window-open {
         duration-ms 150
@@ -234,33 +234,34 @@ window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    match app-id=r"^org\.wezfurlong\.wezterm$"
+    default-column-width {
+    }
 }
 window-rule {
-    match app-id=r#"^org\.gnome\."#
+    match app-id=r"^org\.gnome\."
     draw-border-with-background false
     geometry-corner-radius 12
     clip-to-geometry true
 }
 window-rule {
-    match app-id=r#"^gnome-control-center$"#
-    match app-id=r#"^pavucontrol$"#
-    match app-id=r#"^nm-connection-editor$"#
+    match app-id=r"^gnome-control-center$"
+    match app-id=r"^pavucontrol$"
+    match app-id=r"^nm-connection-editor$"
     default-column-width { proportion 0.5; }
     open-floating false
 }
 window-rule {
-    match app-id=r#"^gnome-calculator$"#
-    match app-id=r#"^galculator$"#
-    match app-id=r#"^blueman-manager$"#
+    match app-id=r"^gnome-calculator$"
+    match app-id=r"^galculator$"
+    match app-id=r"^blueman-manager$"
     // match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^steam$"#
-    match app-id=r#"^xdg-desktop-portal$"#
+    match app-id=r"^steam$"
+    match app-id=r"^xdg-desktop-portal$"
     open-floating true
 }
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id=r"^org\.wezfurlong\.wezterm$"
     match app-id="Alacritty"
     match app-id="zen"
     match app-id="com.mitchellh.ghostty"
@@ -268,17 +269,18 @@ window-rule {
     draw-border-with-background false
 }
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r"firefox$" title="^Picture-in-Picture$"
     match app-id="zoom"
     open-floating true
 }
 // Open dms windows as floating by default
 window-rule {
-    match app-id=r#"org.quickshell$"#
+    match app-id=r"org.quickshell$"
     open-floating true
 }
 debug {
     honor-xdg-activation-with-invalid-serial
+    disable-direct-scanout true
 }
 
 // Override to disable super+tab
@@ -315,3 +317,6 @@ spawn-sh-at-startup "noctalia"
 
 
 include "noctalia.kdl"
+binds {
+    Mod+g hotkey-overlay-title="Open btop" { spawn-sh "antares"; }
+}

@@ -8,11 +8,12 @@ binds {
     // Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "dms ipc call keybinds toggle niri"; }
     Super+L hotkey-overlay-title="Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
     // Super+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
-    Super+Tab                               repeat=false { toggle-overview; }
-    Mod+Space hotkey-overlay-title="Vicinae" { spawn "vicinae" "toggle";}
+    Super+Tab repeat=false { toggle-overview; }
+    Mod+Space hotkey-overlay-title="Vicinae" { spawn "vicinae" "toggle"; }
 
 
     // Applications
+    // #"Applications"
     Mod+b hotkey-overlay-title="Open Chrome" { spawn "google-chrome-stable"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "rio"; }
     // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "wezterm"; }
@@ -50,7 +51,7 @@ binds {
     Mod+5 hotkey-overlay-title="WS: Terminal" { focus-workspace "terminal"; }
     Mod+4 hotkey-overlay-title="WS: Comms" { focus-workspace "comms"; }
     
-    Mod+d hotkey-overlay-title="Previous Workspace"{ focus-workspace-previous; }
+    Mod+d hotkey-overlay-title="Previous Workspace" { focus-workspace-previous; }
     // === Window Management ===
     Mod+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
@@ -121,10 +122,10 @@ binds {
     Mod+Shift+I         { move-workspace-up; }
 
     // === Mouse Wheel Navigation ===
-    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
-    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+Ctrl+WheelScrollUp cooldown-ms=150 { move-column-to-workspace-up; }
 
     Mod+WheelScrollRight      { focus-column-right; }
     Mod+WheelScrollLeft       { focus-column-left; }
@@ -187,5 +188,4 @@ binds {
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
-
 }
