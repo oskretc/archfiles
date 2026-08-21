@@ -1,6 +1,7 @@
 
 binds {
-    // system binds
+
+    // #"System"
     Mod+Shift+E { quit; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Shift+Escape                     { show-hotkey-overlay; }
@@ -12,7 +13,6 @@ binds {
     Mod+Space hotkey-overlay-title="Vicinae" { spawn "vicinae" "toggle"; }
 
 
-    // Applications
     // #"Applications"
     Mod+b hotkey-overlay-title="Open Chrome" { spawn "google-chrome-stable"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "rio"; }
@@ -23,10 +23,7 @@ binds {
     // workspaces
     // === Workspace Navigation ===
     
-    Mod+Ctrl+Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
+    
     
 
     // Mod+6 hotkey-overlay-title="Focus Monitor Left" { focus-monitor-left; }
@@ -58,6 +55,11 @@ binds {
 
     Mod+F4 hotkey-overlay-title="Close window"  { close-window; }
 
+    //disable this in favor of mod shift j, k
+    // Mod+Ctrl+Down { move-column-to-workspace-down; }
+    // Mod+Ctrl+Up   { move-column-to-workspace-up; }
+    // Mod+Ctrl+U         { move-column-to-workspace-down; }
+    // Mod+Ctrl+I         { move-column-to-workspace-up; }
     // move window down or up
     Mod+Shift+j  { move-column-to-workspace-down; }
     Mod+Shift+k  { move-column-to-workspace-up; }
@@ -69,16 +71,16 @@ binds {
     // Mod+F12 { spawn "dms" "ipc" "call" "powermenu" "toggle";}
     Mod+Shift+T { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+S { toggle-column-tabbed-display; }
 
-    // === Focus Navigation ===
+    // #"Focus Navigation"
     Mod+H     { focus-column-or-monitor-left; }
     //replaced by focus workspace up or down
-    // Mod+J     { focus-window-down; }
-    // Mod+K     { focus-window-up; }
     Mod+L     { focus-column-or-monitor-right; }
+    Mod+Ctrl+J     { focus-window-down; }
+    Mod+Ctrl+K     { focus-window-up; }
     
-    // === Window Movement ===
+    // #"Window Movement"
     Mod+Shift+Left  { move-column-left; }
     Mod+Shift+Down  { move-window-down; }
     Mod+Shift+Up    { move-window-up; }
@@ -100,8 +102,8 @@ binds {
     //Mod+Ctrl+Up    { focus-monitor-up; }
     Mod+Ctrl+Right { focus-monitor-right; }
     Mod+Ctrl+H     { focus-monitor-left; }
-    Mod+Ctrl+J     { focus-monitor-down; }
-    Mod+Ctrl+K     { focus-monitor-up; }
+    // Mod+Ctrl+J     { focus-monitor-down; }
+    // Mod+Ctrl+K     { focus-monitor-up; }
     Mod+Ctrl+L     { focus-monitor-right; }
 
     // === Move to Monitor ===
