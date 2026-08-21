@@ -189,7 +189,7 @@ eval "$(intelli-shell init zsh)"
 eval "$(gopass completion zsh)"
 
 if (($+commands[jk] )); then
-	source <(jk completions zsh)
+	source <(jk completion zsh)
 fi
 # pnpm                                                                                   
 export PNPM_HOME="/home/oscar/.local/share/pnpm"                                         
