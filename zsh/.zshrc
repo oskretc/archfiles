@@ -152,6 +152,9 @@ eval "$(zoxide init zsh)"
 if (($+commands[niri] )); then
 	source <(niri completions zsh)
 fi
+if (($+commands[noctalia] )); then
+	source <(noctalia completions zsh)
+fi
 # eval "$(zellij setup --generate-completion zsh)"
 zellij_toggle() {
 	za
@@ -184,7 +187,10 @@ export INTELLI_HOME="/home/osto/.local/share/intelli-shell"
 export PATH="$INTELLI_HOME/bin:$PATH"
 eval "$(intelli-shell init zsh)"
 eval "$(gopass completion zsh)"
-eval "$(jk completion zsh)"
+
+if (($+commands[jk] )); then
+	source <(jk completions zsh)
+fi
 # pnpm                                                                                   
 export PNPM_HOME="/home/oscar/.local/share/pnpm"                                         
 case ":$PATH:" in                                                                        
