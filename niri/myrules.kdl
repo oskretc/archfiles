@@ -7,12 +7,12 @@ window-rule {
 }
 // @id=wr_1778153830626297462 @name=chrome-pkooggnaalmfkidjmlhoelhdllpphaga-Default
 window-rule {
-    match app-id="^chrome-pkooggnaalmfkidjmlhoelhdllpphaga-Default$" title="^Outlook.*"
+    match app-id="^chrome-faolnafnngnfdaknnbpnkhgohbobgegn-Default$" title="^Outlook.*"
     open-on-workspace "comms"
 }
 // @id=wr_1778153908748318226 @name=chrome-ompifgpmddkgmclendfeacglnodjjndh-Default
 window-rule {
-    match app-id="^chrome-ompifgpmddkgmclendfeacglnodjjndh-Default$" title="^Microsoft Teams.*"
+    match app-id="^chrome-cifhbcnohmdccbgoicgdjpfamggdegmo-Default$" title="^Microsoft Teams.*"
     open-on-workspace "comms"
 }
 // @id=wr_1779175332472890082 @name=gopass window
