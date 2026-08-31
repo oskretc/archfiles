@@ -54,7 +54,7 @@ tabline.apply_to_config(config)
 -- For example, changing the color scheme:
 -- config.color_scheme = 'Batman'
 -- config.color_scheme = 'Later This Evening (Gogh)'
-config.color_scheme = 'dank-theme'
+config.color_scheme = "Noctalia"
 
 -- DIsable all bindings for debugging
 config.disable_default_key_bindings = false

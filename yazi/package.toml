@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "b564235"
-hash = "7b625412411be411153886894d9acaf"
+rev = "efa4d79"
+hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[plugin.deps]]
 use = "llanosrocas/githead"
@@ -15,37 +15,37 @@ hash = "33982a6e2d6df07619a2a0fc163a0950"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mime-ext"
-rev = "b564235"
-hash = "a7bf2e1ae72ff22eb21700e12416508e"
+rev = "efa4d79"
+hash = "94d994483dd84ddb2a47a52b59feaae6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "b564235"
+rev = "efa4d79"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "b564235"
-hash = "b97710d0734c380d0a1f58c13dab0da2"
+rev = "efa4d79"
+hash = "853240b2454c93a93fd03fc9fd7e06e8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "b564235"
-hash = "a2b67c52fc36d4c7d3ccb8940d9a140"
+rev = "efa4d79"
+hash = "14558d2829c0aa05e99c57de8f74d199"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "b564235"
-hash = "15e5b67a241172cbb86b8fbf9e63692"
+rev = "efa4d79"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "b564235"
-hash = "336548d9f67926e12d5584f60b790f1"
+rev = "efa4d79"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "b564235"
+rev = "efa4d79"
 hash = "46cbdc05596a3ecd730b288e28c7079d"
 
 [[plugin.deps]]

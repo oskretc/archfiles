@@ -152,9 +152,9 @@ eval "$(zoxide init zsh)"
 if (($+commands[niri] )); then
 	source <(niri completions zsh)
 fi
-# if (($+commands[noctalia] )); then
-# 	source <(noctalia completions zsh)
-# fi
+if (($+commands[noctalia] )); then
+	source <(noctalia completions zsh)
+fi
 # eval "$(zellij setup --generate-completion zsh)"
 zellij_toggle() {
 	za
@@ -169,7 +169,7 @@ zle -N edit-command-line
 bindkey '^e^e' edit-command-line
 
 
-# source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
+source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
 export EDITOR='hx'
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -203,3 +203,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm                       
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion 
 
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/osto/.local/bin:$PATH"
