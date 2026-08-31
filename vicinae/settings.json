@@ -14,40 +14,49 @@
    "pop_to_root_on_close": true,
    "font": {
       "normal": {
-         "size": 14
+         "family": "Fira Code"
       }
    },
    "theme": {
       "dark": {
-         "name": "tokyo-night-storm"
+         "name": "vicinae-dark"
       }
    },
    "telemetry": {
       "system_info": false
    },
+   "favorites": [
+      "applications:chrome-pkooggnaalmfkidjmlhoelhdllpphaga-Default",
+      "applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default",
+      "clipboard:history"
+   ],
    "providers": {
-      "@tonka3000/store.raycast.homeassistant": {
+      "@c4n4m1/store.vicinae.zoxide-recent-directories": {
          "preferences": {
-            "camerarefreshinterval": "3000",
-            "ignorecerts": false,
-            "instance": "https://oystr.one",
-            "preferredapp": "browser",
-            "showEntityId": false,
-            "usePing": true
+            "application": "y"
          }
       },
-      "applications": {
+      "@oscar/markdown-viewer": {
+         "preferences": {
+            "editor": "hx $FILE:$LINE",
+            "markdownDirectory": "/home/osto/secondbrain",
+            "recursive": true,
+            "terminalEmulator": "wezterm start -- $CMD",
+            "templateFile": "/home/osto/secondbrain/template.md"
+         },
          "entrypoints": {
-            "vim": {
-               "enabled": false
+            "open-folder": {
+               "alias": "s",
+               "enabled": true
+            },
+            "search-markdown": {
+               "alias": "m"
             }
          }
       },
-      "core": {
-         "entrypoints": {
-            "sponsor": {
-               "enabled": false
-            }
+      "@yuercl/store.raycast.bitbucket-search-self-hosted": {
+         "preferences": {
+            "baseURL": "https://projecttools.nordicsemi.no/bitbucket"
          }
       }
    }
