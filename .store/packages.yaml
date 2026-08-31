@@ -4,13 +4,17 @@ packages:
         when: {distro: [CachyOS]}
     core-deb:
         brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx, dra, television, gopass  ] 
-        apt: [fonts-hack, input-remapper]
+        apt: [fonts-hack, input-remapper, wl-clipboard]
         go: ['github.com/TimothyYe/skm/cmd/skm']
         pipx: [tldr]
         when: {distro: [debian, ubuntu]}
     gui-linux:
         pacman: [browserpass, browserpass-chromium, google-chrome, helium-browser-bin, nautilus,nautilus-open-any-terminal, vicinae-bin, wezterm, wayvnc]
         when: {distro: [CachyOS]}
+    gui-linux_ubuntu:
+        apt: [wl-clipboard]
+        when: {distro: [ubuntu]}
+
     withdocking:
         pacman: [ddcutil, displaylink, i2c-tools]
     deving:
