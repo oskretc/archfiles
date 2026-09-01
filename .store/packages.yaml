@@ -4,7 +4,7 @@ packages:
         when: {distro: [CachyOS]}
     core-deb:
         brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx, dra, television, gopass  ] 
-        apt: [fonts-hack, input-remapper, wl-clipboard, ddgr]
+        apt: [fonts-hack, input-remapper, wl-clipboard, ddgr, pass, python-is-python3]
         go: ['github.com/TimothyYe/skm/cmd/skm']
         pipx: [tldr, ruff, jedi-language-server]
         when: {distro: [debian, ubuntu]}
@@ -24,8 +24,12 @@ packages:
         go: ['golang.org/x/tools/gopls@latest', 'github.com/xaaha/hulak@latest']
         when: {distro: [CachyOS]}
     deving_deb:
-        go: ['golang.org/x/tools/gopls@latest', 'github.com/xaaha/hulak@latest']
-        cargo: ['hx-lsp']
+        go:
+          - 'golang.org/x/tools/gopls@latest'
+          - 'github.com/xaaha/hulak@latest'
+          - 'github.com/netmute/ctags-lsp@latest'
+          - 'github.com/sqlc-dev/sqlc/cmd/sqlc@latest'
+        cargo: ['hx-lsp','sleek']
         when: {distro: [ubuntu]}
     
         
