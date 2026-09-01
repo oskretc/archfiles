@@ -4,7 +4,7 @@ packages:
         when: {distro: [CachyOS]}
     core-deb:
         brew: [helix,yazi, git-delta, atuin, eza, duf,  intelli-shell, lazygit, pass,   restic, scooter, stow, zoxide, pipx, dra, television, gopass  ] 
-        apt: [fonts-hack, input-remapper, wl-clipboard]
+        apt: [fonts-hack, input-remapper, wl-clipboard, ddgr]
         go: ['github.com/TimothyYe/skm/cmd/skm']
         pipx: [tldr]
         when: {distro: [debian, ubuntu]}
