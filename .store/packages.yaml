@@ -31,7 +31,8 @@ packages:
           - 'github.com/xaaha/hulak@latest'
           - 'github.com/netmute/ctags-lsp@latest'
           - 'github.com/sqlc-dev/sqlc/cmd/sqlc@latest'
-          - 'go install github.com/air-verse/air@latest'
+          - 'github.com/air-verse/air@latest'
+          - 'github.com/swaggo/swag/cmd/swag@latest'
         cargo: ['hx-lsp','sleek']
         when: {distro: [ubuntu]}
     

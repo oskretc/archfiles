@@ -1,4 +1,4 @@
 #!/bin/sh
 
-dms clipboard copy "$1"
+noctalia msg clipboard-copy $2
 

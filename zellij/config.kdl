@@ -288,8 +288,7 @@ web_client {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "gruvbox-dark"
-theme "transparent-dynamic"
+theme "noctalia"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -576,4 +575,6 @@ themes {
         orange 255 165 0
     }
 }
+stacked_pane_list false
 
+pane_frame_style "full"
