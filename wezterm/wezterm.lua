@@ -171,7 +171,8 @@ else
 end
 
 
-
+-- Set transparency (0.0 is fully transparent, 1.0 is fully opaque)
+config.window_background_opacity = 0.95
 
 -- and finally, return the configuration to wezterm
 return config

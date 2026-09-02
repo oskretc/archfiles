@@ -15,8 +15,8 @@ binds {
 
     // #"Applications"
     Mod+b hotkey-overlay-title="Open Chrome" { spawn "google-chrome-stable"; }
-    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "rio"; }
-    // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "wezterm"; }
+    // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "rio"; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "wezterm"; }
     // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
 
     // monitors

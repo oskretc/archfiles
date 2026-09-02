@@ -307,9 +307,9 @@ include "myrules.kdl"
 
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "google-chrome-stable"
-// spawn-sh-at-startup "wezterm"
+spawn-sh-at-startup "wezterm"
 // spawn-sh-at-startup "kitty"
-spawn-sh-at-startup "rio"
+// spawn-sh-at-startup "rio"
 spawn-sh-at-startup "noctalia"
 // spawn-sh-at-startup "kitten desktop-ui run-server"
 // spawn-sh-at-startup "kitten quick-access-terminal -o hide_on_focus_loss=yes"
@@ -320,3 +320,6 @@ include "noctalia.kdl"
 binds {
     Mod+g hotkey-overlay-title="Open btop" { spawn-sh "antares"; }
 }
+
+// Monique monitor configuration
+include "monitors.kdl"
