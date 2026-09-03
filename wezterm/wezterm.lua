@@ -71,7 +71,7 @@ config.window_padding = {
   left=2,
   right= 2,
   top=2,
-  bottom=0
+  bottom='1cell'
 }
 config.hide_tab_bar_if_only_one_tab = true
 
@@ -173,7 +173,10 @@ end
 
 -- Set transparency (0.0 is fully transparent, 1.0 is fully opaque)
 config.window_background_opacity = 0.95
-
+-- config.tab_bar_at_bottom = true
+config.window_decorations = "RESIZE"
+-- Disable strict snapping to terminal cell heights
+config.use_resize_increments = false
 -- and finally, return the configuration to wezterm
 return config
 
