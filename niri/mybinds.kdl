@@ -50,6 +50,7 @@ binds {
     
     Mod+d hotkey-overlay-title="Previous Workspace" { focus-workspace-previous; }
     // === Window Management ===
+    // #"Window Management "
     Mod+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
 
@@ -90,12 +91,14 @@ binds {
     // Mod+Shift+K     { move-window-up; }
     Mod+Shift+L     { move-column-right; }
 
+    // #"Column Navigation"
     // === Column Navigation ===
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
+    // #"Monitor Navigation"
     // === Monitor Navigation ===
     Mod+Ctrl+Left  { focus-monitor-left; }
     //Mod+Ctrl+Down  { focus-monitor-down; }
@@ -106,6 +109,7 @@ binds {
     // Mod+Ctrl+K     { focus-monitor-up; }
     Mod+Ctrl+L     { focus-monitor-right; }
 
+    // #"Move to Monitor"
     // === Move to Monitor ===
     Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
@@ -117,12 +121,14 @@ binds {
     Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
     
     
+    // #"Move Workspaces"
     // === Move Workspaces ===
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
 
+    // #"Mouse Wheel Navigation"
     // === Mouse Wheel Navigation ===
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
@@ -139,6 +145,7 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
+    // #"Numbered Workspaces"
     // === Numbered Workspaces ===
     Mod+1 { focus-workspace 1; }
     // Mod+2 { focus-workspace 2; }
@@ -150,6 +157,7 @@ binds {
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
 
+    // #"Move to Numbered Workspaces"
     // === Move to Numbered Workspaces ===
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
@@ -161,11 +169,13 @@ binds {
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
 
+    // #"Column Management"
     // === Column Management ===
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
     Mod+Period { expel-window-from-column; }
 
+    // #"Sizing & Layout"
     // === Sizing & Layout ===
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
@@ -174,12 +184,14 @@ binds {
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
+    // #"Manual Sizing"
     // === Manual Sizing ===
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
+    // #"Screenshots"
     // === Screenshots ===
     XF86Launch1 { screenshot; }
     Ctrl+XF86Launch1 { screenshot-screen; }
@@ -187,6 +199,7 @@ binds {
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
+    // #"System Controls"
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
