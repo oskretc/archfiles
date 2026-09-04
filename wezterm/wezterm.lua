@@ -2,11 +2,12 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 
--- local mydomains = require 'mydomains'
+-- local custom_domains = require 'mydomains'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+-- config.ssh_domains=custom_domains.ssh_domains
 -- mydomains.apply_to_config(config)
--- config.color_scheme = "dank-theme"
+config.color_scheme = "Noctalia"
 ----------------------------------------------------------------------------------------------------
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup({
@@ -14,6 +15,7 @@ tabline.setup({
     icons_enabled = true,
     -- theme = 'Catppuccin Mocha',
     theme = 'GruvboxDark',
+    -- theme = 'colors/Noctalia',
     tabs_enabled = true,
     theme_overrides = {},
     section_separators = {
@@ -61,8 +63,8 @@ config.disable_default_key_bindings = false
 
 
 -- config.font = wezterm.font 'AdwaitaMono'
-config.font = wezterm.font 'JetBrains Mono NF'
--- config.font = wezterm.font 'Fira Code'
+-- config.font = wezterm.font 'JetBrains Mono NF'
+config.font = wezterm.font 'Fira Code'
 -- config.font = wezterm.font 'monospace'
 -- config.font = wezterm.font 'Hack Nerd Font'
 config.font_size = 12
@@ -156,7 +158,7 @@ else
   -- config.background = {
   --   {
   --     -- source = { File = '.config/wezterm/bg.jpg'},
-  --     source = { File = '.config/wezterm/wpl2.jpg'},
+  --     -- source = { File = '.config/wezterm/wpl2.jpg'},
 
   --     repeat_x = 'Mirror',
   --     hsb = dimmer,
@@ -170,6 +172,7 @@ else
 
 end
 
+config.window_background_opacity = 0.93
 
 -- Set transparency (0.0 is fully transparent, 1.0 is fully opaque)
 config.window_background_opacity = 0.95

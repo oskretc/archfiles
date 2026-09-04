@@ -1,7 +1,11 @@
 git:
-  diffRenderers:
+  pagers:
     - colorArg: always
-      command: delta --dark --paging=never --syntax-theme base16-256 -s
+      pager: delta --dark --paging=never --line-numbers --syntax-theme base16-256 -s
+      # diffRenderers:
+      #   # - colorArg: always
+      #   - name: delta
+      #     command: "delta --dark --paging=never --line-numbers --side-by-side --syntax-theme base16-256 -s"
 keybinding:
   universal:
     prevItem-alt: e

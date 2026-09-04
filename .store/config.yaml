@@ -83,8 +83,8 @@ stores:
             - wpl2.jpg
             - wpl3.jpg
             - colors/dank-theme.toml
-        when:
-            distro: CachyOS
+        # when:
+        #     distro: CachyOS
     yazi:
         targets:
             - target: ~/.config/yazi
