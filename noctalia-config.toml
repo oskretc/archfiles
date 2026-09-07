@@ -2,153 +2,86 @@
 ui_scale = 1.1000000089406967
 
 [backdrop]
+blur_intensity = 0.1099999975413084
 enabled = true
+tint_intensity = 0.0
 
-[bar.default]
-capsule = true
-center = [ "clock", "date" ]
-end = [
-    "media",
-    "tray",
-    "notifications",
-    "clipboard",
-    "network",
-    "bluetooth",
-    "volume",
-    "brightness",
-    "battery",
-    "control-center",
-    "session",
-    "sysmon"
-]
-font_family = "0xProto Nerd Font Propo"
-font_weight = 400
-margin_ends = 0
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    capsule = true
+    center = [ "clock", "date", "widget", "shelly" ]
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "cpu",
+        "temp",
+        "session"
+    ]
+    font_family = "Overpass Nerd Font Propo"
+    font_weight = 300
+    margin_ends = 0.0
+    panel_overlap = -2
+    scale = 1.5000000149011612
+    start = [ "launcher", "wallpaper", "workspaces", "notes", "check_repos" ]
 
 [control_center]
 sidebar = "full"
-sidebar_section = "full"
-
-[desktop_widgets]
-schema_version = 2
-widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-0000000000000002", "desktop-widget-0000000000000003" ]
-
-    [desktop_widgets.grid]
-    cell_size = 16
-    major_interval = 4
-    visible = true
-
-    [desktop_widgets.widget.desktop-widget-0000000000000001]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1796.0
-    cy = 957.5
-    output = "DVI-I-1"
-    rotation = 0.0
-    type = "sysmon"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
-        background = false
-        stat = "cpu_usage"
-        stat2 = "cpu_temp"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000002]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1796.0
-    cy = 830.0
-    output = "DVI-I-1"
-    rotation = 0.0
-    type = "weather"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
-        background = false
-
-    [desktop_widgets.widget.desktop-widget-0000000000000003]
-    box_height = 496.0
-    box_width = 528.0
-    cx = 1640.0
-    cy = 508.0
-    output = "DVI-I-1"
-    rotation = 0.0
-    type = "calendar"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
-        background = false
-        show_events = false
 
 [dock]
-enabled = false
+launcher_position = "start"
+reserve_space = false
+smart_auto_hide = true
+
+[idle]
+behavior_order = [ "lock", "screen-off", "suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660
+
+    [idle.behavior.suspend]
+    action = "suspend"
+    enabled = false
+    lock_before_suspend = true
+    timeout = 900
 
 [location]
 address = "Trondheim, Norway"
 
 [lockscreen_widgets]
-enabled = true
+enabled = false
 schema_version = 2
-widget_order = [ "lockscreen-login-box@DVI-I-1", "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1" ]
+widget_order = [ "lockscreen-login-box@DVI-I-1", "lockscreen-login-box@eDP-1" ]
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
 
-    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-    box_height = 196.0
-    box_width = 810.0
-    cx = 960.0
-    cy = 898.0
-    output = "DP-1"
-    rotation = 0.0
-    type = "login_box"
-
-        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_variant"
-        background_opacity = 0.88
-        background_radius = 12.0
-        center_password_text = false
-        input_opacity = 1.0
-        input_radius = 6.0
-        layout = "regular"
-        show_caps_lock = true
-        show_keyboard_layout = true
-        show_login_button = true
-        show_media = true
-        show_session_buttons = true
-        show_unlock_hint = true
-        show_weather = true
-
-    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
-    box_height = 196.0
-    box_width = 810.0
-    cx = 960.0
-    cy = 898.0
-    output = "DP-2"
-    rotation = 0.0
-    type = "login_box"
-
-        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
-        background_color = "surface_variant"
-        background_opacity = 0.88
-        background_radius = 12.0
-        center_password_text = false
-        input_opacity = 1.0
-        input_radius = 6.0
-        layout = "regular"
-        show_caps_lock = true
-        show_keyboard_layout = true
-        show_login_button = true
-        show_media = true
-        show_session_buttons = true
-        show_unlock_hint = true
-        show_weather = true
-
     [lockscreen_widgets.widget."lockscreen-login-box@DVI-I-1"]
     box_height = 196.0
-    box_width = 810.0
-    cx = 960.0
-    cy = 898.0
+    box_width = 720.0
+    cx = 1720.0
+    cy = 1321.0
     output = "DVI-I-1"
+    placement_height = 1440.0
+    placement_width = 3440.0
     rotation = 0.0
     type = "login_box"
 
@@ -168,63 +101,99 @@ widget_order = [ "lockscreen-login-box@DVI-I-1", "lockscreen-login-box@DP-2", "l
         show_unlock_hint = true
         show_weather = true
 
-[shell]
-font_family = "Fira Code Retina"
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 768.5601806640625
+    cy = 730.6458740234375
+    output = "eDP-1"
+    placement_height = 864.0
+    placement_width = 1536.0
+    rotation = 0.0
+    type = "login_box"
 
-    [shell.animation]
-    speed = 1.5000000223517418
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugin_settings."tphilippot/git_companion"]
+group = "oskretc"
+
+[plugins]
+enabled = [ "noctalia/notes", "weinguyen/procmon", "blackbartblues/keymap", "joshuaslate/shelly", "tphilippot/git_companion" ]
+
+[shell]
+font_family = "Cantarell"
+niri_overview_type_to_launch_enabled = true
+password_style = "random"
+polkit_agent = true
+ui_scale = 1.2500000111758709
 
     [shell.panel]
     clipboard_placement = "attached"
+    transparency_mode = "soft"
 
 [theme]
-builtin = "Dracula"
-community_palette = "Oxocarbon"
-mode = "dark"
+builtin = "Gruvbox"
 source = "community"
-wallpaper_scheme = "m3-content"
+wallpaper_scheme = "vibrant"
 
     [theme.templates]
-    builtin_ids = [ "alacritty", "btop", "ghostty", "helix", "kitty", "niri", "wezterm" ]
-    community_ids = [ "fastfetch", "zellij", "bat", "lazygit", "rio", "yazi" ]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "helix", "niri", "wezterm" ]
+    community_ids = [ "vicinae", "fastfetch", "zathura", "zellij", "bat", "lazygit", "rio", "yazi" ]
 
 [wallpaper]
-directory = "/home/osto/Downloads"
+directory = "/home/osto/Pictures/Wallpapers"
+fill_mode = "stretch"
 
     [wallpaper.default]
-    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
+    path = "/home/osto/Pictures/Wallpapers/undefined - Imgur.png"
 
     [wallpaper.last]
-    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
-
-    [wallpaper.monitors.DP-1]
-    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
-
-    [wallpaper.monitors.DP-2]
-    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
+    path = "/home/osto/Pictures/Wallpapers/undefined - Imgur.png"
 
     [wallpaper.monitors.DVI-I-1]
-    path = "/home/osto/Downloads/IMG_20260403_192414.jpg"
+    path = "/home/osto/Pictures/Wallpapers/undefined - Imgur.png"
 
-[widget.battery]
-enabled = false
+    [wallpaper.monitors.eDP-1]
+    path = "/home/osto/Pictures/Wallpapers/undefined - Imgur.png"
 
-[widget.bluetooth]
-enabled = false
+[weather]
+address = "Trondheim"
 
-[widget.brightness]
-enabled = false
+[widget.check_repos]
+glyph = "brand-github"
+type = "custom_button"
 
-[widget.control-center]
-enabled = false
+    [widget.check_repos.actions]
+    left = "exec checknotifygit.sh"
 
-[widget.date]
-font_weight = 700
+[widget.launcher]
+glyph = "send"
 
-[widget.network]
-enabled = false
+[widget.notes]
+type = "noctalia/notes:notes"
+
+[widget.shelly]
+type = "joshuaslate/shelly:shelly"
+
+[widget.widget]
+type = "blackbartblues/keymap:widget"
 
 [widget.workspaces]
-active_pill_size = 2.8000000000000003
-label_source = "name"
+empty_color = "tertiary"
 max_label_chars = 10
+scale = 1.5
+style = "focus_hint"

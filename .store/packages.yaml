@@ -22,7 +22,9 @@ packages:
         when: {distro: [CachyOS]}
     deving:
         pacman: [docker, docker-compose]
-        npm: ['@google/gemini-cli']
+        npm:
+            - '@google/gemini-cli'
+            - 'vscode-langservers-extracted'
         go: ['golang.org/x/tools/gopls@latest', 'github.com/xaaha/hulak@latest']
         when: {distro: [CachyOS]}
     deving_deb:
@@ -33,7 +35,12 @@ packages:
           - 'github.com/sqlc-dev/sqlc/cmd/sqlc@latest'
           - 'github.com/air-verse/air@latest'
           - 'github.com/swaggo/swag/cmd/swag@latest'
-        cargo: ['hx-lsp','sleek']
+        cargo:
+            - 'hx-lsp'
+            - 'sleek'
+            - 'iwe'
+            - 'iwes'
+            - 'iwec'
         when: {distro: [ubuntu]}
     
         

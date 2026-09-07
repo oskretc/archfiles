@@ -157,10 +157,18 @@ name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 language-servers = ["ctags-lsp"]
 
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-json-language-server.config]
+json = { validate = { enable = true }, format = { enable = true } }
+provideFormatter = true
+
 [[language]]
 name = "json"
-formatter = { command = 'prettier', args = ["--parser", "json"] }
-language-servers = ["ctags-lsp", "lsp-ai"]
+# formatter = { command = 'prettier', args = ["--parser", "json"] }
+language-servers = ["vscode-json-language-server", "lsp-ai"]
 
 [[language]]
 name = "css"
