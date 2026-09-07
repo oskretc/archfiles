@@ -71,6 +71,8 @@ tab.r = ":reload"
 tab.w = "@<space>ww"
 space.n = "buffer_picker"
 
+"C-g" = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+
 # for colemak
 "m"  = "move_char_left"
 "n"  = "move_visual_line_down"
@@ -165,6 +167,4 @@ a = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_abso
 
 [keys.normal.g]
 v = "jump_backward"
-
-
 

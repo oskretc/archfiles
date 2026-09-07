@@ -27,8 +27,8 @@
       "system_info": false
    },
    "favorites": [
-      "scripts:edit_sb.sh",
       "scripts:read_sb.sh",
+      "scripts:edit_sb.sh",
       "scripts:secondbrain.sh",
       "applications:chrome-pkooggnaalmfkidjmlhoelhdllpphaga-Default",
       "applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default",
