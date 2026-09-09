@@ -35,6 +35,12 @@
       "clipboard:history"
    ],
    "providers": {
+      "@Francois/store.raycast.bitbucket": {
+         "preferences": {
+            "email": "oscar.torresbaca@nordicsemi.no",
+            "workspace": "nordicsemi"
+         }
+      },
       "@c4n4m1/store.vicinae.zoxide-recent-directories": {
          "preferences": {
             "application": "y"

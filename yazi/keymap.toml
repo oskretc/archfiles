@@ -27,6 +27,7 @@ prepend_keymap = [
 
 	{ on = ["g", "n"], run = "cd ~/gitrepos", desc = "Go to gitrepos" },
 	{ on = ["g", "l"], run = "cd ~/svnrepos", desc = "Go to svnrepos" },
+	{ on = ["g", "m"], run = "cd /mnt", desc = "Go to Mnt" },
 	{ on = [ ";", "c" ], run = "shell --block '$EDITOR ~/.config/yazi/keymap.toml'",        desc = "Edit yazi keymap config" },
 	{ on = [ ";", "l" ], run = "shell --block lazygit",        desc = "Lazygit in foreground" },
 	{ on = [ ";", "o" ], run = 'shell --block -- ${HOME}/.config/yazi/yazi-picker_fromyazi.sh "$@"',        desc = "open in hx" },

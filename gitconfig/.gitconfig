@@ -25,3 +25,5 @@
     colorMoved = default
 [safe]
 	directory = /mnt/u2config
+[init]
+	defaultBranch = main
