@@ -321,5 +321,5 @@ binds {
     Mod+g hotkey-overlay-title="Open btop" { spawn-sh "antares"; }
 }
 
-// Monique monitor configuration
-include "monitors.kdl"
+// // Monique monitor configuration
+include optional=true "monitors.kdl"
