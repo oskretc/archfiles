@@ -113,7 +113,22 @@ config.keys = {
     action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|TABS' },
   },
   { key = 'z', mods = 'ALT', action = wezterm.action.ShowLauncher },
-
+  {
+    key = 'p',
+    mods = 'CTRL',
+    action = wezterm.action.QuickSelectArgs {
+      label = 'open url',
+      patterns = {
+        'https?://\\S+',
+      },
+      skip_action_on_paste = true,
+      action = wezterm.action_callback(function(window, pane)
+        local url = window:get_selection_text_for_pane(pane)
+        wezterm.log_info('opening: ' .. url)
+        wezterm.open_with(url)
+      end),
+    },
+  },
 }
 copy_mode = wezterm.gui.default_key_tables().copy_mode
 table.insert(copy_mode, { key = 'm', mods = 'NONE', action = act.CopyMode 'MoveLeft' })
