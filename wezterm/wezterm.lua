@@ -2,11 +2,28 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 
--- local custom_domains = require 'mydomains'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
--- config.ssh_domains=custom_domains.ssh_domains
--- mydomains.apply_to_config(config)
+
+-- Helper function to check if a file exists
+local function file_exists(path)
+  local f = io.open(path, "r")
+  if f ~= nil then
+    io.close(f)
+    return true
+  end
+  return false
+end
+
+local custom_domains_path = wezterm.config_dir .. '/mydomains.lua'
+if file_exists(custom_domains_path) then
+  local custom_domains = require 'mydomains'
+  config.ssh_domains=custom_domains.ssh_domains
+  custom_domains.apply_to_config(config)
+end
+
+
+
 config.color_scheme = "Noctalia"
 ----------------------------------------------------------------------------------------------------
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
@@ -197,5 +214,4 @@ config.window_decorations = "RESIZE"
 config.use_resize_increments = false
 -- and finally, return the configuration to wezterm
 return config
-
 
