@@ -15,6 +15,10 @@ window-rule {
     match app-id="^chrome-cifhbcnohmdccbgoicgdjpfamggdegmo-Default$" title="^Microsoft Teams.*"
     open-on-workspace "comms"
 }
+window-rule {
+    match app-id="^ferdium$"
+    open-on-workspace "comms"
+}
 // @id=wr_1779175332472890082 @name=gopass window
 window-rule {
     match app-id="^chrome.*" title="^gopass bridge$"
