@@ -318,7 +318,7 @@ spawn-sh-at-startup "noctalia"
 
 include "noctalia.kdl"
 binds {
-    Mod+g hotkey-overlay-title="Open btop" { spawn-sh "antares"; }
+    Mod+g hotkey-overlay-title="Open btop" { spawn-sh "btop"; }
 }
 
 // // Monique monitor configuration

@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/go/bin:$HOME/node_modules/.bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 
 ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 if [ ! -d "$ZINIT_HOME" ]; then

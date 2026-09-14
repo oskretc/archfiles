@@ -12,6 +12,7 @@ binds {
     Mod+Comma hotkey-overlay-title="Settings" { spawn-sh "noctalia msg settings-toggle"; }
     Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
     Mod+M hotkey-overlay-title="Task Manager" { spawn-sh "noctalia msg panel-toggle weinguyen/procmon:panel"; }
+    Ctrl+Shift+Escape hotkey-overlay-title="Cheatsheet" { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
 }
 layer-rule {
   match namespace="^noctalia-backdrop"

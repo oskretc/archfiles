@@ -14,28 +14,28 @@ keybinding:
 gui:
   theme:
     activeBorderColor:
-      - "#33b1ff"
+      - "#ffbf83"
       - bold
     inactiveBorderColor:
-      - "#42be65"
+      - "#f0bd8e"
     searchingActiveBorderColor:
-      - "#be95ff"
+      - "#c7d559"
       - bold
     optionsTextColor:
-      - "#dde1e6"
+      - "#d9c2b0"
     selectedLineBgColor:
-      - "#303030"
+      - "#312821"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#dde1e6"
+      - "#d9c2b0"
     cherryPickedCommitBgColor:
-      - "#be95ff"
+      - "#c7d559"
     markedBaseCommitFgColor:
-      - "#be95ff"
+      - "#c7d559"
     markedBaseCommitBgColor:
-      - "#ee5396"
+      - "#ffb4ab"
     unstagedChangesColor:
-      - "#ee5396"
+      - "#ffb4ab"
     defaultFgColor:
-      - "#f2f4f8"
+      - "#f0e0d4"
