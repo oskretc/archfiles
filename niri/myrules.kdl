@@ -29,37 +29,41 @@ window-rule {
     min-height 480
     max-height 480
 }
-// @id=wr_1780376635435741116 @name=LabVIEW64-2026 Controls
-window-rule { match app-id=r"^LabVIEW64-2026$" title=r"^Controls$"; geometry-corner-radius 1; min-width 200; min-height 600; max-width 400; max-height 600; }
+// @id=wr_1780376635435741116 @name=LabVIEW64-2024 Controls
+window-rule { match app-id=r"^LabVIEW64-2024$" title=r"^Controls$"; geometry-corner-radius 1; min-width 200; min-height 600; max-width 400; max-height 600; }
 
-// @id=wr_1780376706829446231 @name=LabVIEW64-2026 Functions
-window-rule { match app-id=r"^LabVIEW64-2026$" title=r"^Functions$"; geometry-corner-radius 1; min-width 200; min-height 600; max-width 400; max-height 600; }
+// @id=wr_1780376706829446231 @name=LabVIEW64-2024 Functions
+window-rule { match app-id=r"^LabVIEW64-2024$" title=r"^Functions$"; geometry-corner-radius 1; min-width 200; min-height 600; max-width 400; max-height 600; }
 
-// @id=wr_1780377007977904843 @name=LabVIEW64-2026 project window
+// @id=wr_1780377007977904843 @name=LabVIEW64-2024 project window
 window-rule {
-    match app-id="^LabVIEW64-2026$" title="Project Explorer"
+    match app-id="^LabVIEW64-2024$" title="Project Explorer"
     default-column-width { fixed 300; }
     geometry-corner-radius 0
 }
 
-// @id=wr_1780377297459946918 @name=LabVIEW64-2026 main window
-window-rule { match app-id=r"^LabVIEW64-2026$" title=r"^LabVIEW$"; open-floating true; clip-to-geometry true; geometry-corner-radius 1; }
+// @id=wr_1780377297459946918 @name=LabVIEW64-2024 main window
+window-rule { match app-id=r"^LabVIEW64-2024$" title=r"^LabVIEW$"; open-floating true; clip-to-geometry true; geometry-corner-radius 1; }
 
-// @id=wr_1780378358182434645 @name=LabVIEW64-2026 search palettes
+// @id=wr_1780378358182434645 @name=LabVIEW64-2024 search palettes
 window-rule {
-    match app-id="^LabVIEW64-2026$" title="^Search Palettes$"
+    match app-id="^LabVIEW64-2024$" title="^Search Palettes$"
     min-width 200
     max-width 400
     min-height 600
     max-height 600
 }
 
-// @id=wr_1780378510100814469 @name=LabVIEW64-2026 quick drop
-window-rule { match app-id=r"^LabVIEW64-2026$" title=r"^Quick Drop$"; open-floating true; clip-to-geometry true; geometry-corner-radius 1; min-width 200; min-height 300; max-width 300; max-height 600; }
+// @id=wr_1780378510100814469 @name=LabVIEW64-2024 quick drop
+window-rule { match app-id=r"^LabVIEW64-2024$" title=r"^Quick Drop$"; open-floating true; clip-to-geometry true; geometry-corner-radius 1; min-width 200; min-height 300; max-width 300; max-height 600; }
 
 // @id=wr_1780659966934410947 @name=wlfreerdp
 window-rule {
     match app-id="^wlfreerdp$" title="^FreeRDP$"
+    open-on-workspace "rdp"
+}
+window-rule {
+    match app-id="^xfreerdp$" title="^FreeRDP$"
     open-on-workspace "rdp"
 }
 // Chrome opens in fullscreen mode
