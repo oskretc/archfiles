@@ -1,4 +1,8 @@
 stores:
+    beekeeper:
+        target: ~/.config/beekeeper-studio
+        files:
+            - .beekeeper.vimrc
     atuin:
         target: ~/.config/atuin
         files:
