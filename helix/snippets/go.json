@@ -1,0 +1,76 @@
+{
+  "If error nil": {
+    "prefix": [
+      "ien",
+      "if err"
+    ],
+    "body": [
+      "if err != nil {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If error is not nil"
+  },
+  "If error print and return": {
+    "prefix": [
+      "iep",
+      "if err"
+    ],
+    "body": [
+      "if err != nil {",
+      "\tlog.Printf(\"err: %v\", err)",
+      "\treturn",
+      "}"
+    ],
+    "description": "If error print and return"
+  },
+  "Function": {
+    "prefix": [
+      "fun"
+    ],
+    "body": [
+      "func $1() {",
+      "\t$2",
+      "}"
+    ],
+    "description": "New Function"
+  },
+  "Type": {
+    "prefix": [
+      "typ"
+    ],
+    "body": [
+      "type $1 struct {",
+      "${2:Name } ${3:string }",
+      "}"
+    ],
+    "description": "New Type"
+  },
+  "Printf": {
+    "prefix": [
+      "lpf"
+    ],
+    "body": [
+      "log.Printf(\"$1: \",$2)"
+    ],
+    "description": "Log Printf"
+  },
+  "And": {
+    "prefix": [
+      "and"
+    ],
+    "body": [
+      "&&"
+    ],
+    "description": "Replace and"
+  },
+  "Or": {
+    "prefix": [
+      "or"
+    ],
+    "body": [
+      "||"
+    ],
+    "description": "Replace or"
+  }
+}

@@ -30,6 +30,10 @@ stores:
             - yazi-picker.sh
             - themes/pop-dark_oscar.toml
             - themes/noctalia.toml
+            - snippets/go.json
+            - snippets/markdown.json
+
+        
     input-remapper-2:
         target: ~/.config/input-remapper-2
     lazygit:

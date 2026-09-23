@@ -64,6 +64,7 @@ mode.select = "SELECT"
 
 
 [keys.normal]
+"Y" = ":clipboard-yank"
 tab.m = ":buffer-previous"
 tab.i = ":buffer-next"
 tab.c = ":bc"

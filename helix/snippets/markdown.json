@@ -1,0 +1,24 @@
+{
+  "sh code": {
+    "prefix": [
+      "shc"
+    ],
+    "body": [
+      "```sh",
+      "$1",
+      "```"
+    ],
+    "description": "code for sh"
+  },
+  "sh code2": {
+    "prefix": [
+      "````"
+    ],
+    "body": [
+      "```sh",
+      "$1",
+      "```"
+    ],
+    "description": "code for sh"
+  }
+}
