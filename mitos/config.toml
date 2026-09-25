@@ -3,13 +3,16 @@
 # theme = "dark_plus_oscar"
 # theme = "pop-dark_oscar"
 theme = "noctalia"
+[editor.breadcrumb]
+enable = true
+path = "full"
 
 [editor]
 mouse = true
 true-color = true
 line-number = "relative"
 color-modes = true
-popup-border = "all"
+# popup-border = "all"
 # rulers = [120]
 
 end-of-line-diagnostics = "hint"
@@ -46,7 +49,7 @@ select = "underline"
 
 [editor.statusline]
 left = ["mode", "spinner"]
-center = ["file-name"]
+# center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "|"
 
@@ -168,4 +171,5 @@ a = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_abso
 
 [keys.normal.g]
 v = "jump_backward"
+
 
