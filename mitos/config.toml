@@ -3,6 +3,11 @@
 # theme = "dark_plus_oscar"
 # theme = "pop-dark_oscar"
 theme = "noctalia"
+
+[editor.spelling]
+languages = ["en_US"]
+min-word-length = 4
+
 [editor.breadcrumb]
 enable = true
 path = "full"

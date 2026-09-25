@@ -38,7 +38,7 @@ language-servers = ["nxml-lsp" ]
 command = "/home/osto/gitrepos/eriksbranch/nxml-lsp"
 # command = "nxml-lsp"
 # args = ["lsp"]
-args = ["lsp" , "-l", "/home/osto/gitrepos/nxml_gounmarshall/log_nxml-lsp.txt"]
+args = ["lsp" , "-l", "/home/osto/log_nxml-lsp.txt"]
 # args = ["--stdio"]
 # enviroment = {"NXML-LSP_LOG"= "${HOME}/gitrepos/nxml_gounmarshall/log_nxml-lsp.txt"}
 
