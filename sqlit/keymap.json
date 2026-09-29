@@ -13,7 +13,7 @@
         "redo": "ctrl+y"
       },
       "navigation": {
-        "focus_explorer": "e",
+        "focus_explorer": "f",
         "focus_query": "q",
         "focus_results": "r"
       },
@@ -23,7 +23,6 @@
         "clear_connection_selection": "escape",
         "select_table": "s",
         "refresh_tree": [
-          "f",
           "R"
         ],
         "edit_connection": "e",
@@ -77,10 +76,10 @@
         "delete_line_end": "D",
         "undo": "u",
         "redo": "U",
-        "cursor_left": "h",
-        "cursor_down": "j",
-        "cursor_up": "k",
-        "cursor_right": "l",
+        "cursor_left": "m",
+        "cursor_down": "n",
+        "cursor_up": "e",
+        "cursor_right": "i",
         "cursor_word_forward": "w",
         "cursor_WORD_forward": "W",
         "cursor_word_back": "b",
@@ -90,7 +89,7 @@
         "cursor_line_end": "$",
         "cursor_last_line": "G",
         "cursor_matching_bracket": "%",
-        "cursor_find_char": "f",
+        "cursor_find_char": null,
         "cursor_find_char_back": "F",
         "cursor_till_char": "t",
         "cursor_till_char_back": "T",
@@ -146,7 +145,7 @@
         "cursor_last_line": "G",
         "g_leader_key": "g",
         "cursor_matching_bracket": "%",
-        "cursor_find_char": "f",
+        "cursor_find_char": null,
         "cursor_find_char_back": "F",
         "cursor_till_char": "t",
         "cursor_till_char_back": "T"
@@ -195,10 +194,10 @@
         "results_yank_leader_key": "y",
         "clear_results": "x",
         "results_filter": "/",
-        "results_cursor_left": "h",
-        "results_cursor_down": "j",
-        "results_cursor_up": "k",
-        "results_cursor_right": "l",
+        "results_cursor_left": "m",
+        "results_cursor_down": "n",
+        "results_cursor_up": "e",
+        "results_cursor_right": "i",
         "rg_leader_key": "g",
         "results_cursor_last_row": "G",
         "results_page_up": "ctrl+u",
@@ -206,7 +205,6 @@
         "results_cursor_first_column": "0",
         "results_cursor_last_column": "$",
         "results_column_picker": [
-          "f",
           "F"
         ],
         "next_result_section": "tab",
