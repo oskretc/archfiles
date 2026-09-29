@@ -18,14 +18,14 @@
         "focus_results": "r"
       },
       "tree": {
-        "new_connection": "n",
+        "new_connection": "a",
         "enter_tree_visual_mode": "v",
         "clear_connection_selection": "escape",
         "select_table": "s",
         "refresh_tree": [
           "R"
         ],
-        "edit_connection": "e",
+        "edit_connection": "c",
         "rename_connection_folder": "M",
         "delete_connection_folder": [
           "d",
@@ -40,11 +40,11 @@
         "disconnect": "x",
         "collapse_tree": "z",
         "tree_cursor_down": [
-          "j",
+          "n",
           "down"
         ],
         "tree_cursor_up": [
-          "k",
+          "e",
           "up"
         ],
         "tree_filter": "/"
@@ -75,7 +75,7 @@
         "change_line_end_motion": "C",
         "delete_line_end": "D",
         "undo": "u",
-        "redo": "U",
+        "redo": "ctrl+r",
         "cursor_left": "m",
         "cursor_down": "n",
         "cursor_up": "e",
@@ -120,19 +120,19 @@
         "visual_change": "c",
         "visual_execute": "enter",
         "cursor_left": [
-          "h",
+          "m",
           "left"
         ],
         "cursor_down": [
-          "j",
+          "n",
           "down"
         ],
         "cursor_up": [
-          "k",
+          "e",
           "up"
         ],
         "cursor_right": [
-          "l",
+          "i",
           "right"
         ],
         "cursor_word_forward": "w",
@@ -163,11 +163,11 @@
         ],
         "visual_line_change": "c",
         "cursor_down": [
-          "j",
+          "n",
           "down"
         ],
         "cursor_up": [
-          "k",
+          "e",
           "up"
         ],
         "cursor_last_line": "G",
@@ -176,11 +176,11 @@
       },
       "autocomplete": {
         "autocomplete_next": [
-          "ctrl+j",
+          "ctrl+n",
           "down"
         ],
         "autocomplete_prev": [
-          "ctrl+k",
+          "ctrl+e",
           "up"
         ],
         "autocomplete_accept": "tab",
@@ -236,8 +236,8 @@
     },
     "leader_commands": {
       "leader": {
-        "toggle_explorer": "e",
-        "toggle_fullscreen": "f",
+        "toggle_explorer": "f",
+        "toggle_fullscreen": "F",
         "show_connection_picker": "c",
         "disconnect": "x",
         "cancel_operation": "z",
@@ -254,24 +254,23 @@
         "WORD": "W",
         "word_back": "b",
         "WORD_back": "B",
-        "word_end": "e",
-        "WORD_end": "E",
+        "word_end": "k",
+        "WORD_end": "K",
         "line_start": "0",
         "line_end_motion": "$",
         "line_end": "D",
         "char": "x",
         "char_back": "X",
-        "left": "h",
-        "down": "j",
-        "up": "k",
-        "right": "l",
+        "left": "m",
+        "down": "n",
+        "up": "e",
+        "right": "i",
         "to_end": "G",
-        "find_char": "f",
         "find_char_back": "F",
         "till_char": "t",
         "till_char_back": "T",
         "matching_bracket": "%",
-        "inner": "i",
+        "inner": "in",
         "around": "a"
       },
       "yank": {
@@ -280,21 +279,20 @@
         "WORD": "W",
         "word_back": "b",
         "WORD_back": "B",
-        "word_end": "e",
-        "WORD_end": "E",
+        "word_end": "k",
+        "WORD_end": "K",
         "line_start": "0",
         "line_end_motion": "$",
-        "left": "h",
-        "down": "j",
-        "up": "k",
-        "right": "l",
+        "left": "m",
+        "down": "n",
+        "up": "e",
+        "right": "i",
         "to_end": "G",
-        "find_char": "f",
         "find_char_back": "F",
         "till_char": "t",
         "till_char_back": "T",
         "matching_bracket": "%",
-        "inner": "i",
+        "inner": "in",
         "around": "a"
       },
       "change": {
@@ -303,27 +301,26 @@
         "WORD": "W",
         "word_back": "b",
         "WORD_back": "B",
-        "word_end": "e",
-        "WORD_end": "E",
+        "word_end": "k",
+        "WORD_end": "K",
         "line_start": "0",
         "line_end_motion": "$",
-        "left": "h",
-        "down": "j",
-        "up": "k",
-        "right": "l",
+        "left": "m",
+        "down": "n",
+        "up": "e",
+        "right": "i",
         "to_end": "G",
-        "find_char": "f",
         "find_char_back": "F",
         "till_char": "t",
         "till_char_back": "T",
         "matching_bracket": "%",
-        "inner": "i",
+        "inner": "in",
         "around": "a"
       },
       "g": {
         "first_line": "g",
-        "word_end_back": "e",
-        "WORD_end_back": "E",
+        "word_end_back": "k",
+        "WORD_end_back": "K",
         "comment": "c",
         "execute_query": "r",
         "execute_single_statement": "s",
@@ -331,8 +328,8 @@
       },
       "gc": {
         "line": "c",
-        "down": "j",
-        "up": "k",
+        "down": "n",
+        "up": "e",
         "to_end": "G",
         "selection": "s",
         "statement": "S"
