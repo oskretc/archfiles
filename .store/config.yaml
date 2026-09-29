@@ -1,4 +1,8 @@
 stores:
+    sqlit:
+        target: ~/.config/sqlit
+        files:
+            - keymap.json
     beekeeper:
         target: ~/.config/beekeeper-studio
         files:
