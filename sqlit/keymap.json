@@ -94,8 +94,8 @@
         "cursor_till_char": "t",
         "cursor_till_char_back": "T",
         "enter_visual_mode": "v",
-        "enter_visual_line_mode": "V",
-        "delete_char": "x",
+        "enter_visual_line_mode": "x",
+        "delete_char": null,
         "append_insert_mode": "a",
         "append_line_end": "A"
       },
