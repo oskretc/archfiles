@@ -65,6 +65,9 @@ stores:
             - svnlog
             - svnst
             - svnup
+            - yazi-picker_mdide.sh
+            - helix-leaf-syncline.sh
+
     niri:
         target: ~/.config/niri
         files:
@@ -145,6 +148,7 @@ stores:
             - layouts/tall.kdl
             - layouts/uni.kdl
             - layouts/newstack.kdl
+            - layouts/markdown-ide.kdl
     zsh:
         target: "~"
         files:

@@ -1,0 +1,29 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Markdown IDE" {
+        pane split_direction="vertical" {
+            // Left pane: Yazi file manager (30%)
+            pane size="30%" command="yazi" {
+                focus true
+            }
+
+            // Right pane: Helix on top, Leaf on bottom (70%)
+            pane size="70%" split_direction="horizontal" {
+                // Top right: Helix editor (50%)
+                pane size="50%" name="Helix" command="hx"
+
+                // Bottom right: Leaf previewer (50%)
+                pane size="50%" name="Leaf Preview" command="leaf"
+            }
+        }
+    }
+}

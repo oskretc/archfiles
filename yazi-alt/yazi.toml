@@ -1,10 +1,17 @@
 [opener]
 open = [
 	{ run = 'yazi-picker_fromyazi.sh %s', desc = "OpenZ" },
+	
+]
+heleaf = [
+	{ run = 'yazi-picker_mdide.sh %s', desc= "Open in heleaf" }
+	
 ]
 [open]
 rules = [
+	{ url = "*.md", use = "heleaf" },
 	{ url = "*", use = "open" },
 	{ url = "*/", use = "open" },
+
 
 ]
