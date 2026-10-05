@@ -43,8 +43,11 @@ if [[ -n "${escaped_paths}" ]]; then
 
 	
   zellij action focus-next-pane
+	zellij action send-keys "Esc" # send <Escape> key to enter NORMAL mode
+	sleep 1
   zellij action write-chars "q"
-	zellij action send-keys "Enter" # send <Enter> key
+	zellij action send-keys "Esc" # send <Enter> key
+	sleep 1
 	zellij action write-chars "leaf -w ${escaped_paths[*]}"
 	zellij action send-keys "Enter" # send <Enter> key
   zellij action focus-previous-pane

@@ -12,7 +12,7 @@ layout {
     tab name="Markdown IDE" {
         pane split_direction="vertical" {
             // Left pane: Yazi file manager (30%)
-            pane size="30%" command="yazi" {
+            pane size="30%" command="yaziii.sh" {
                 focus true
             }
 
