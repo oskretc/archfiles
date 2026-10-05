@@ -183,7 +183,7 @@
           "ctrl+e",
           "up"
         ],
-        "autocomplete_accept": "tab",
+        "autocomplete_accept": "enter",
         "autocomplete_close": "escape"
       },
       "results": {
