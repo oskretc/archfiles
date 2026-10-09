@@ -209,3 +209,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by Antigravity CLI installer
 export PATH="/home/osto/.local/bin:$PATH"
+
+# Keep last: it aliases `main` to its own keymap, so anything binding keys after it (e.g. intelli-shell binds Esc) overrides the plugin.
+# helix-style modal editing (colemak-dh fork), cloned from github.com/oskretc/zsh-helix-mode
+if [[ ! -d ~/.zsh-helix-mode ]]; then
+	git clone git@github.com:oskretc/zsh-helix-mode.git ~/.zsh-helix-mode
+fi
+source_if_exists ~/.zsh-helix-mode/zsh-helix-mode.plugin.zsh
