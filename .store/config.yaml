@@ -60,6 +60,7 @@ stores:
         files:
             - yazi-picker_fromyazi.sh
             - yaziii.sh
+            - zels.sh
             - gopass_clipboard_copy_cmd.sh
             - gopass_clipboard_clear_cmd.sh
             - svnlog
