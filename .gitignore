@@ -22,3 +22,4 @@ lsp-ai-gemini.json
 *.log
 *.tmp
 .cache/
+helix/themes/noctalia.toml

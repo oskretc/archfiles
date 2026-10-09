@@ -12,17 +12,17 @@ layout {
     tab name="Markdown IDE" {
         pane split_direction="vertical" {
             // Left pane: Yazi file manager (30%)
-            pane size="30%" command="zels.sh" {
+            pane size="20%" command="zels_ide.sh" {
                 focus true
             }
 
             // Right pane: Helix on top, Leaf on bottom (70%)
-            pane size="70%" split_direction="horizontal" {
+            pane size="80%" split_direction="horizontal" {
                 // Top right: Helix editor (50%)
-                pane size="50%" name="Mitos" command="ms"
+                pane size="80%" name="Mitos" command="ms"
 
                 // Bottom right: Leaf previewer (50%)
-                pane size="50%" name="Leaf Preview" command="leaf"
+                pane size="20%" name="" 
             }
         }
     }

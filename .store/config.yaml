@@ -61,6 +61,7 @@ stores:
             - yazi-picker_fromyazi.sh
             - yaziii.sh
             - zels.sh
+            - zels_ide.sh
             - gopass_clipboard_copy_cmd.sh
             - gopass_clipboard_clear_cmd.sh
             - svnlog
@@ -150,6 +151,7 @@ stores:
             - layouts/uni.kdl
             - layouts/newstack.kdl
             - layouts/markdown-ide.kdl
+            - layouts/lside.kdl
     zsh:
         target: "~"
         files:

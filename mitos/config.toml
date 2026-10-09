@@ -5,7 +5,7 @@
 theme = "noctalia"
 
 [editor.spelling]
-languages = ["en_US"]
+# languages = ["en_US"]
 min-word-length = 4
 
 [editor.breadcrumb]
@@ -53,7 +53,7 @@ insert = "bar"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "spinner","file-name" ]
 # center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "|"
