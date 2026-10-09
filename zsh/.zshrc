@@ -216,3 +216,23 @@ if [[ ! -d ~/.zsh-helix-mode ]]; then
 	git clone git@github.com:oskretc/zsh-helix-mode.git ~/.zsh-helix-mode
 fi
 source_if_exists ~/.zsh-helix-mode/zsh-helix-mode.plugin.zsh
+
+# zsh-helix-mode compatibility with zinit plugins loaded above
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(
+	zhm_history_prev
+	zhm_history_next
+	zhm_prompt_accept
+	zhm_accept
+	zhm_accept_or_insert_newline
+)
+ZSH_AUTOSUGGEST_ACCEPT_WIDGETS+=(
+	zhm_move_right
+	zhm_clear_selection_move_right
+)
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=(
+	zhm_move_next_word_start
+	zhm_move_next_word_end
+)
+zhm-add-update-region-highlight-hook
+zhm_wrap_widget fzf-tab-complete zhm_fzf_tab_complete
+bindkey '^I' zhm_fzf_tab_complete
