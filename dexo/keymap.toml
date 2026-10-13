@@ -1,0 +1,27 @@
+
+[global]
+"space r" = "focus.results"
+"space e" = "focus.editor"
+"space s" = "focus.explorer"
+"space t" = "focus.tabs"
+"?" = "help.open"
+"; q" = "workbench.quit"
+"; l" = "layout.cycle"
+
+[vim]
+"m" = "h"
+"n" = "j"
+"e" = "k"
+"i" = "l"
+"j" = "i"
+
+[results]
+"m" = "results.left"
+"n" = "results.down"
+"e" = "results.up"
+"i" = "results.right"
+
+
+[editor]
+"enter" = "query.execute_document"
+# "space e" = "focus.explorer"
