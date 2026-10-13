@@ -1,4 +1,8 @@
 stores:
+    dexo:
+        target: ~/.local/share/dexo
+        files:
+            - keymap.toml
     sqlit:
         target: ~/.config/sqlit
         files:

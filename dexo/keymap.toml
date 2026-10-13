@@ -7,6 +7,9 @@
 "?" = "help.open"
 "; q" = "workbench.quit"
 "; l" = "layout.cycle"
+"tab m" = "document.prev"
+"tab i" = "document.next"
+"tab tab" = "focus.tabs"
 
 [vim]
 "m" = "h"
@@ -21,7 +24,27 @@
 "e" = "results.up"
 "i" = "results.right"
 
+"left" = "results.left"
+"down" = "results.down"
+"up" = "results.up"
+"right" = "results.right"
+
+"g l" = "results.bottom"
+
+[explorer]
+"n" ="explorer.down"
+"e" ="explorer.up"
+
+"down" ="explorer.down"
+"up" ="explorer.up"
+"i" = ""
 
 [editor]
-"enter" = "query.execute_document"
-# "space e" = "focus.explorer"
+"; enter" = "query.execute_statement"
+"; j" = "query.execute_document"
+
+[tabs]
+"m" = "document.tab_prev"
+"left" = "document.tab_prev"
+"i" = "document.tab_next"
+"right" = "document.tab_next"
