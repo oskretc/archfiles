@@ -54,7 +54,7 @@ binds {
     Mod+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
 
-    Mod+F4 hotkey-overlay-title="Close window"  { close-window; }
+    // Mod+F4 hotkey-overlay-title="Close window"  { close-window; }
 
     //disable this in favor of mod shift j, k
     // Mod+Ctrl+Down { move-column-to-workspace-down; }

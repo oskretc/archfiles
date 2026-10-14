@@ -31,7 +31,8 @@ layout {
     }
 
     pane_template name="editor" {
-        command "$EDITOR"
+        // command "$EDITOR"
+        command "ms"
     }
     pane_template name="terminal" {
     }
