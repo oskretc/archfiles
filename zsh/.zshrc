@@ -236,3 +236,12 @@ ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=(
 zhm-add-update-region-highlight-hook
 zhm_wrap_widget fzf-tab-complete zhm_fzf_tab_complete
 bindkey '^I' zhm_fzf_tab_complete
+
+# the plugin uses its own keymaps, so rebind edit-command-line (Ctrl+e twice) for them
+zhm_wrap_widget edit-command-line zhm_edit_command_line
+bindkey -M hxins '^e^e' zhm_edit_command_line
+bindkey -M hxnor '^e^e' zhm_edit_command_line
+
+# same for the zellij toggle (overrides the plugin's Ctrl+j accept; Enter still accepts)
+bindkey -M hxins '^j' zellij_toggle_widget
+bindkey -M hxnor '^j' zellij_toggle_widget
