@@ -245,3 +245,14 @@ bindkey -M hxnor '^e^e' zhm_edit_command_line
 # same for the zellij toggle (overrides the plugin's Ctrl+j accept; Enter still accepts)
 bindkey -M hxins '^j' zellij_toggle_widget
 bindkey -M hxnor '^j' zellij_toggle_widget
+
+# intelli-shell hotkeys (Ctrl+space search, Ctrl+b save, Ctrl+l variable, Ctrl+x fix) for the plugin's keymaps
+for w in search save variable fix; do
+	zhm_wrap_widget _intelli_$w zhm_intelli_$w
+done
+for m in hxins hxnor; do
+	bindkey -M $m '^@' zhm_intelli_search
+	bindkey -M $m '^b' zhm_intelli_save
+	bindkey -M $m '^l' zhm_intelli_variable
+	bindkey -M $m '^x' zhm_intelli_fix
+done
