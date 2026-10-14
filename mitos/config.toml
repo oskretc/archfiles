@@ -176,5 +176,6 @@ a = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_abso
 
 [keys.normal.g]
 v = "jump_backward"
+n = "@hiw*/<up><ret>" #find the next word under the cursor
 
 
