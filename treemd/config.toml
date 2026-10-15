@@ -1,5 +1,5 @@
 [ui]
-theme = "CatppuccinMocha"
+theme = "TokyoNight"
 code_theme = "base16-ocean.dark"
 outline_width = 20
 tree_style = "compact"
@@ -11,47 +11,50 @@ warned_terminal_app = false
 
 [theme]
 
+[keybindings.CommandPalette]
+e = "CommandPalettePrev"
+n = "CommandPaletteNext"
+
 [keybindings.Interactive]
-k = "NextMatch"
 n = "InteractiveNext"
+K = "PrevMatch"
+o = "OpenInEditor"
 e = "InteractivePrevious"
 j = "ExitInteractiveMode"
-K = "PrevMatch"
-o= "OpenInEditor"
-[keybindings.InteractiveTable]
-m="InteractiveLeft"
-n="InteractiveNext"
-e="InteractivePrevious"
-i="InteractiveRight"
-
-[keybindings.LinkFollow]
-n="NextLink"
-e="PreviousLink"
-[keybindings.DocSearch]
-k="NextMatch"
-K="PrevMatch"
-n="ScrollDown"
-e="ScrollUp"
-[keybindings.CommandPalette]
-n="CommandPaletteNext"
-e="CommandPalettePrev"
-
-[keybindings.Normal]
-";" = "SetBookmark"
-P = "JumpToParent"
-i = "Expand"
-n = "Next"
-e = "Previous"
-K = "PrevMatch"
-j = "EnterInteractiveMode"
-m = "Collapse"
-o = "OpenInEditor"
-p = "OpenFilePicker"
 k = "NextMatch"
 
+[keybindings.DocSearch]
+e = "ScrollUp"
+k = "NextMatch"
+K = "PrevMatch"
+n = "ScrollDown"
+
 [keybindings.Help]
-n = "HelpScrollDown"
 e = "HelpScrollUp"
+n = "HelpScrollDown"
+
+[keybindings.InteractiveTable]
+i = "InteractiveRight"
+n = "InteractiveNext"
+m = "InteractiveLeft"
+e = "InteractivePrevious"
+
+[keybindings.Normal]
+K = "PrevMatch"
+k = "NextMatch"
+";" = "SetBookmark"
+P = "JumpToParent"
+m = "Collapse"
+o = "OpenInEditor"
+e = "Previous"
+n = "Next"
+j = "EnterInteractiveMode"
+i = "Expand"
+p = "OpenFilePicker"
+
+[keybindings.LinkFollow]
+n = "NextLink"
+e = "PreviousLink"
 
 [editor]
 
