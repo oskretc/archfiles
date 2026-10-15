@@ -56,6 +56,13 @@ p = "OpenFilePicker"
 n = "NextLink"
 e = "PreviousLink"
 
+[keybindings.FilePicker]
+n="Next"
+e="Previous"
+# [keybindings.ImageViewer]
+# m="PreviousFrame"
+# i="NextFrame"
+
 [editor]
 
 [images]
