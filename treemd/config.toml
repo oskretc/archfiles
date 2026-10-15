@@ -1,5 +1,5 @@
 [ui]
-theme = "TokyoNight"
+theme = "OceanDark"
 code_theme = "base16-ocean.dark"
 outline_width = 20
 tree_style = "compact"
@@ -11,57 +11,54 @@ warned_terminal_app = false
 
 [theme]
 
-[keybindings.CommandPalette]
-e = "CommandPalettePrev"
-n = "CommandPaletteNext"
-
-[keybindings.Interactive]
-n = "InteractiveNext"
-K = "PrevMatch"
-o = "OpenInEditor"
-e = "InteractivePrevious"
-j = "ExitInteractiveMode"
-k = "NextMatch"
-
 [keybindings.DocSearch]
-e = "ScrollUp"
 k = "NextMatch"
 K = "PrevMatch"
 n = "ScrollDown"
-
-[keybindings.Help]
-e = "HelpScrollUp"
-n = "HelpScrollDown"
-
-[keybindings.InteractiveTable]
-i = "InteractiveRight"
-n = "InteractiveNext"
-m = "InteractiveLeft"
-e = "InteractivePrevious"
-
-[keybindings.Normal]
-K = "PrevMatch"
-k = "NextMatch"
-";" = "SetBookmark"
-P = "JumpToParent"
-m = "Collapse"
-o = "OpenInEditor"
-e = "Previous"
-n = "Next"
-j = "EnterInteractiveMode"
-i = "Expand"
-p = "OpenFilePicker"
+e = "ScrollUp"
 
 [keybindings.LinkFollow]
 n = "NextLink"
 e = "PreviousLink"
 
 [keybindings.FilePicker]
-n="Next"
-e="Previous"
-# [keybindings.ImageViewer]
-# m="PreviousFrame"
-# i="NextFrame"
+e = "Previous"
+n = "Next"
+
+[keybindings.Help]
+n = "HelpScrollDown"
+e = "HelpScrollUp"
+
+[keybindings.InteractiveTable]
+i = "InteractiveRight"
+e = "InteractivePrevious"
+m = "InteractiveLeft"
+n = "InteractiveNext"
+
+[keybindings.CommandPalette]
+n = "CommandPaletteNext"
+e = "CommandPalettePrev"
+
+[keybindings.Normal]
+i = "Expand"
+n = "Next"
+K = "PrevMatch"
+k = "NextMatch"
+j = "EnterInteractiveMode"
+";" = "SetBookmark"
+m = "Collapse"
+p = "OpenFilePicker"
+P = "JumpToParent"
+e = "Previous"
+o = "OpenInEditor"
+
+[keybindings.Interactive]
+K = "PrevMatch"
+k = "NextMatch"
+o = "OpenInEditor"
+n = "InteractiveNext"
+e = "InteractivePrevious"
+j = "ExitInteractiveMode"
 
 [editor]
 
