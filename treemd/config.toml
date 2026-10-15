@@ -24,6 +24,17 @@ n="InteractiveNext"
 e="InteractivePrevious"
 i="InteractiveRight"
 
+[keybindings.LinkFollow]
+n="NextLink"
+e="PreviousLink"
+[keybindings.DocSearch]
+k="NextMatch"
+K="PrevMatch"
+n="ScrollDown"
+e="ScrollUp"
+[keybindings.CommandPalette]
+n="CommandPaletteNext"
+e="CommandPalettePrev"
 
 [keybindings.Normal]
 ";" = "SetBookmark"
