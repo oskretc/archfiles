@@ -17,6 +17,13 @@ n = "InteractiveNext"
 e = "InteractivePrevious"
 j = "ExitInteractiveMode"
 K = "PrevMatch"
+o= "OpenInEditor"
+[keybindings.InteractiveTable]
+m="InteractiveLeft"
+n="InteractiveNext"
+e="InteractivePrevious"
+i="InteractiveRight"
+
 
 [keybindings.Normal]
 ";" = "SetBookmark"
