@@ -1,5 +1,5 @@
 [ui]
-theme = "TokyoNight"
+theme = "CatppuccinMocha"
 code_theme = "base16-ocean.dark"
 outline_width = 20
 tree_style = "compact"
@@ -11,29 +11,29 @@ warned_terminal_app = false
 
 [theme]
 
-[keybindings.Normal]
-n = "Next"
-o = "OpenInEditor"
-p = "OpenFilePicker"
-m = "Collapse"
-e = "Previous"
+[keybindings.Interactive]
 k = "NextMatch"
+n = "InteractiveNext"
+e = "InteractivePrevious"
+j = "ExitInteractiveMode"
+K = "PrevMatch"
+
+[keybindings.Normal]
 ";" = "SetBookmark"
 P = "JumpToParent"
-j = "EnterInteractiveMode"
 i = "Expand"
+n = "Next"
+e = "Previous"
 K = "PrevMatch"
+j = "EnterInteractiveMode"
+m = "Collapse"
+o = "OpenInEditor"
+p = "OpenFilePicker"
+k = "NextMatch"
 
 [keybindings.Help]
 n = "HelpScrollDown"
 e = "HelpScrollUp"
-[keybindings.Interactive]
-j = "ExitInteractiveMode"
-n = "InteractiveNext"
-e = "InteractivePrevious"
-k = "NextMatch"
-K = "PrevMatch"
-
 
 [editor]
 
