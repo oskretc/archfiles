@@ -1,4 +1,8 @@
 stores:
+    treemd:
+        target: ~/.config/treemd
+        files:
+            - config.toml
     dexo:
         target: ~/.local/share/dexo
         files:

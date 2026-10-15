@@ -40,6 +40,7 @@ alias cd="z"
 
 alias cat="bat"
 alias e='fzf_helix'
+alias u='fzf_second'
 
 alias fuzz="rg . | fzf "
 #alias hx="helix"

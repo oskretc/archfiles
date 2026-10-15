@@ -146,6 +146,17 @@ fzf_helix() {
         hx "$file"
     fi
 }
+fzf_second() {
+    local file
+    cd ~/secondbrain
+    # Run fd and fzf, capturing the output
+    file=$(fd --hidden --strip-cwd-prefix --exclude .git | fzf --preview 'if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi')
+
+    # Only open helix if a file was actually selected (variable is not empty)
+    if [[ -n "$file" ]]; then
+        treemd "$file"
+    fi
+}
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 # zoxide, better cd
