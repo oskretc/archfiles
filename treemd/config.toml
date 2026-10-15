@@ -1,5 +1,5 @@
 [ui]
-theme = "Gruvbox"
+theme = "Monokai"
 code_theme = "base16-ocean.dark"
 outline_width = 20
 tree_style = "compact"
@@ -12,15 +12,17 @@ warned_terminal_app = false
 [theme]
 
 [keybindings.Normal]
-e = "Previous"
-K = "SetBookmark"
-o = "OpenInEditor"
 n = "Next"
-i = "Expand"
 j = "EnterInteractiveMode"
+";" = "SetBookmark"
 P = "JumpToParent"
+o = "OpenInEditor"
 m = "Collapse"
+i = "Expand"
+k = "NextMatch"
+K = "PrevMatch"
 p = "OpenFilePicker"
+e = "Previous"
 
 [editor]
 
