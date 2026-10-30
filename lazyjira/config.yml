@@ -1,0 +1,11 @@
+# keybinding:
+#     universal:
+#         edit: j
+#         new: k
+#     navigation:
+#         down: n
+#         up: e
+#
+projects: ["NTV", "CAS"]
+
+    

@@ -12,6 +12,10 @@ min-word-length = 4
 enable = true
 path = "full"
 
+[editor.rainbow-brackets]
+enable = true
+[editor.gutters]
+layout= ["diagnostics", "spacer", "line-numbers", "spacer", "diff", "spacer", "code-action-hint"]
 [editor]
 mouse = true
 true-color = true
@@ -19,6 +23,7 @@ line-number = "relative"
 color-modes = true
 # popup-border = "all"
 # rulers = [120]
+
 
 end-of-line-diagnostics = "hint"
 
@@ -53,9 +58,9 @@ insert = "bar"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "spinner","file-name" ]
+left = ["mode", "spinner","separator","file-absolute-path","separator", "branch" ]
 # center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["code-action-hint", "separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "|"
 
 mode.normal = "NORMAL"
@@ -165,17 +170,19 @@ e.c = "@ha{"
 q = ":q!"
 c.o = ":config-open"
 c.r = ":config-reload"
-c.l = ":o ~/.config/helix/languages.toml"
+c.l = ":o ~/.config/mitos/languages.toml"
 w = ":toggle soft-wrap.enable"
 # splits the current window with the same file at the same location and goes to definition
 d = "@<space>wvgd"
 # close the curret split, if no splits, it quits
 p = "@<space>wq"
 a = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_absolute} %{cursor_line}"
-
+s = "snippet_picker"
 
 [keys.normal.g]
 v = "jump_backward"
 n = "@hiw*/<up><ret>" #find the next word under the cursor
 
-
+[terminal.launcher]
+command = "zellij"
+# args = ["--"]
