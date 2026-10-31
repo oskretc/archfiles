@@ -4,6 +4,9 @@
 # theme = "pop-dark_oscar"
 theme = "noctalia"
 
+[editor.clipboard]
+provider = "wayland"
+
 [editor.spelling]
 # languages = ["en_US"]
 min-word-length = 4
@@ -60,7 +63,8 @@ select = "underline"
 [editor.statusline]
 left = ["mode", "spinner","separator","file-absolute-path","separator", "branch" ]
 # center = ["file-name"]
-right = ["code-action-hint", "separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = [ "separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+# right = ["code-action-hint", "separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "|"
 
 mode.normal = "NORMAL"
@@ -88,11 +92,12 @@ space.n = "buffer_picker"
 "C-g" = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 
 # for colemak
-"m"  = "move_char_left"
-"n"  = "move_visual_line_down"
-"e"  = "move_visual_line_up"
-"i"  = "move_char_right"
+"m" = "move_char_left"
+"n" = "move_visual_line_down"
+"e" = "move_visual_line_up"
+"i" = "move_char_right"
 "l" = "move_next_word_end"
+"L" = "move_next_long_word_end"
 "j" = "insert_mode"
 "J" = "insert_at_line_start"
 "k" = "search_next"
@@ -136,8 +141,11 @@ F2 = [":write", ":sh sqlrun.sh"]
 # [keys.normal."["]
 # "[" = [":bp"]
 
+
+
 # for colemak
 [keys.normal."h"]
+label = "Match"
 "m" = "match_brackets"
 "s" = "surround_add"
 "r" = "surround_replace"
@@ -145,9 +153,11 @@ F2 = [":write", ":sh sqlrun.sh"]
 "a" = "select_textobject_around"
 "i" = "select_textobject_inner"
 
-e.u = "@hi\""
-e.U = "@ha\""
-e.c = "@ha{"
+[keys.normal.h.e]
+label = "Common Used"
+u = {label ="Match inside double quotes", command = "@hi\""}
+U = {label ="Match outside double quotes", command = "@ha\""}
+c = {label ="Match inside curly brackets", command = "@ha{"}
 
 
 
@@ -168,21 +178,26 @@ e.c = "@ha{"
 
 [keys.normal.";"]
 q = ":q!"
-c.o = ":config-open"
-c.r = ":config-reload"
-c.l = ":o ~/.config/mitos/languages.toml"
-w = ":toggle soft-wrap.enable"
+w = { label="Toggle wrap word", command = ":toggle soft-wrap.enable"}
 # splits the current window with the same file at the same location and goes to definition
-d = "@<space>wvgd"
+d = {label = "Goto Definition in split view" , command = "@<space>wvgd"}
 # close the curret split, if no splits, it quits
-p = "@<space>wq"
-a = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_absolute} %{cursor_line}"
+p = {label ="Close split view" , command= "@<space>wq"}
+a = {label ="Suggest doc with claude", command= ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_absolute} %{cursor_line}"}
 s = "snippet_picker"
+x = { label = "File outline", command = ":insert-output %sh_interactive{makeselector.sh}" }
+
+[keys.normal.";".c]
+label = "Configuration"
+o = {label = "Open", command = ":config-open"}
+r = {label = "Reload", command = ":config-reload"}
+l = {label = "Open Languages", command = ":o ~/.config/mitos/languages.toml"}
 
 [keys.normal.g]
 v = "jump_backward"
-n = "@hiw*/<up><ret>" #find the next word under the cursor
+n = {label ="Find next word under the cursor", command = "@hiw*/<up><ret>"} #find the next word under the cursor
 
 [terminal.launcher]
 command = "zellij"
 # args = ["--"]
+
