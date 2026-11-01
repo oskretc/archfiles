@@ -4,6 +4,21 @@
 # theme = "pop-dark_oscar"
 theme = "noctalia"
 
+[editor]
+mouse = true
+true-color = true
+line-number = "relative"
+color-modes = true
+# popup-border = "all"
+# rulers = [120]
+
+end-of-line-diagnostics = "hint"
+
+path-completion = false
+jump-label-alphabet = "ntesirmghdlpuf"
+
+bufferline = "always"
+
 [editor.clipboard]
 provider = "wayland"
 
@@ -17,24 +32,9 @@ path = "full"
 
 [editor.rainbow-brackets]
 enable = true
+
 [editor.gutters]
-layout= ["diagnostics", "spacer", "line-numbers", "spacer", "diff", "spacer", "code-action-hint"]
-[editor]
-mouse = true
-true-color = true
-line-number = "relative"
-color-modes = true
-# popup-border = "all"
-# rulers = [120]
-
-
-end-of-line-diagnostics = "hint"
-
-path-completion = false
-jump-label-alphabet = "ntesirmghdlpuf"
-
-bufferline = "always"
-
+layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff", "spacer", "code-action-hint"]
 
 [editor.inline-diagnostics]
 # cursor-line = "error"
@@ -43,7 +43,6 @@ prefix-len = 10
 
 other-lines = "warning"
 
-
 [editor.file-picker]
 hidden = false
 
@@ -51,7 +50,7 @@ hidden = false
 enable = false
 
 [editor.indent-guides]
-render = true 
+render = true
 character = "⸽"
 skip-levels = 1
 
@@ -61,34 +60,19 @@ insert = "bar"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "spinner","separator","file-absolute-path","separator", "branch" ]
+left = ["mode", "spinner", "separator", "file-absolute-path", "separator", "branch"]
 # center = ["file-name"]
-right = [ "separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 # right = ["code-action-hint", "separator", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "|"
 
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
-# [keys.normal]
-
-# Open the file(s) in the current window
-# C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
-# Open the file(s) in a vertical pane
-# v = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh vsplit"
-# Open the file(s) in a horizontal pane
-# h = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh hsplit"
-
 
 [keys.normal]
 "Y" = ":clipboard-yank"
-tab.m = ":buffer-previous"
-tab.i = ":buffer-next"
-tab.c = ":bc"
-tab.r = ":reload"
-tab.w = "@<space>ww"
 space.n = "buffer_picker"
-
 "C-g" = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 
 # for colemak
@@ -103,14 +87,12 @@ space.n = "buffer_picker"
 "k" = "search_next"
 "K" = "search_prev"
 
-
-# delete from cursor to end of line 
-"D" = ["extend_to_line_end" , "delete_selection"]
-
+# delete from cursor to end of line
+"D" = ["extend_to_line_end", "delete_selection"]
 
 # F2 = [":write lazysql.sql", ":sh sqlrun.sh"]
 # C-e = ":sh ~/.config/helix/sqlrun.sh"
-C-n = "@hiw*/<up><ret>" #find the next word under the cursor
+C-n = "@hiw*/<up><ret>"  # find the next word under the cursor
 C-y = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh open"
 C-k = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/rfvh open"
 C-l = ":sh zellij run -c -f --width 80%% --height 80%% -- lazygit"
@@ -127,21 +109,13 @@ C-space = "insert_at_line_end"
 S-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 S-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
-[keys.insert]
-C-s = ["normal_mode", ":write"]
-C-space = "normal_mode"
-
-F2 = [":write", ":sh sqlrun.sh"]
-# [keys.normal.b]
-# c = ":bc"
-
-# [keys.normal.space]
-# [keys.normal."]"]
-# "]" = [":bn"]
-# [keys.normal."["]
-# "[" = [":bp"]
-
-
+[keys.normal.tab]
+label = "Tab mode"
+m = ":buffer-previous"
+i = ":buffer-next"
+c = ":bc"
+r = ":reload"
+w = { label = "Goto next split", command = "@<space>ww" }
 
 # for colemak
 [keys.normal."h"]
@@ -155,49 +129,69 @@ label = "Match"
 
 [keys.normal.h.e]
 label = "Common Used"
-u = {label ="Match inside double quotes", command = "@hi\""}
-U = {label ="Match outside double quotes", command = "@ha\""}
-c = {label ="Match inside curly brackets", command = "@ha{"}
-
-
-
+u = { label = "Match inside double quotes", command = "@hi\"" }
+U = { label = "Match outside double quotes", command = "@ha\"" }
+c = { label = "Match inside curly brackets", command = "@ha{" }
 
 # for colemak
 
+[keys.normal.";"]
+label = "Commands"
+q = ":q!"
+w = { label = "Toggle wrap word", command = ":toggle soft-wrap.enable" }
+# splits the current window with the same file at the same location and goes to definition
+d = { label = "Goto Definition in split view", command = "@<space>wvgd" }
+# close the curret split, if no splits, it quits
+p = { label = "Close split view", command = "@<space>wq" }
+a = { label = "Suggest doc with claude", command = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_absolute} %{cursor_line}" }
+s = "snippet_picker"
+x = { label = "File outline", command = ":insert-output %sh_interactive{makeselector.sh}" }
+
+# g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+g = [":noop %sh_interactive{lazygit}"]
+
+[keys.normal.";".c]
+label = "Configuration"
+o = { label = "Open", command = ":config-open" }
+r = { label = "Reload", command = ":config-reload" }
+l = { label = "Open Languages", command = ":o ~/.config/mitos/languages.toml" }
+
+[keys.normal.g]
+v = "jump_backward"
+n = { label = "Find next word under the cursor", command = "@hiw*/<up><ret>" }  # find the next word under the cursor
+
+[keys.insert]
+C-s = ["normal_mode", ":write"]
+C-space = "normal_mode"
+
+F2 = [":write", ":sh sqlrun.sh"]
+
 [keys.select]
-"m"  = "extend_char_left"
-"n"  = "extend_visual_line_down"
-"e"  = "extend_visual_line_up"
-"i"  = "extend_char_right"
+"m" = "extend_char_left"
+"n" = "extend_visual_line_down"
+"e" = "extend_visual_line_up"
+"i" = "extend_char_right"
 "l" = "extend_next_word_end"
 "j" = "insert_mode"
 "J" = "insert_at_line_start"
 "k" = "extend_search_next"
 "K" = "extend_search_prev"
 
+# args = ["--"]
+[keys.select."h"]
+label = "Match"
+"m" = "match_brackets"
+"s" = "surround_add"
+"r" = "surround_replace"
+"d" = "surround_delete"
+"a" = "select_textobject_around"
+"i" = "select_textobject_inner"
 
-[keys.normal.";"]
-q = ":q!"
-w = { label="Toggle wrap word", command = ":toggle soft-wrap.enable"}
-# splits the current window with the same file at the same location and goes to definition
-d = {label = "Goto Definition in split view" , command = "@<space>wvgd"}
-# close the curret split, if no splits, it quits
-p = {label ="Close split view" , command= "@<space>wq"}
-a = {label ="Suggest doc with claude", command= ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_absolute} %{cursor_line}"}
-s = "snippet_picker"
-x = { label = "File outline", command = ":insert-output %sh_interactive{makeselector.sh}" }
-
-[keys.normal.";".c]
-label = "Configuration"
-o = {label = "Open", command = ":config-open"}
-r = {label = "Reload", command = ":config-reload"}
-l = {label = "Open Languages", command = ":o ~/.config/mitos/languages.toml"}
-
-[keys.normal.g]
-v = "jump_backward"
-n = {label ="Find next word under the cursor", command = "@hiw*/<up><ret>"} #find the next word under the cursor
+[keys.select.h.e]
+label = "Common Used"
+u = { label = "Match inside double quotes", command = "@hi\"" }
+U = { label = "Match outside double quotes", command = "@ha\"" }
+c = { label = "Match inside curly brackets", command = "@ha{" }
 
 [terminal.launcher]
 command = "zellij"
-# args = ["--"]
-
