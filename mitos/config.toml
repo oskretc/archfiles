@@ -4,17 +4,6 @@
 # theme = "pop-dark_oscar"
 theme = "noctalia"
 
-[editor.lsp]
-display-code-lenses = true
-
-[editor.spelling]
-# languages = ["en_US"]
-min-word-length = 4
-
-[editor.breadcrumb]
-enable = true
-path = "full"
-
 [editor]
 mouse = true
 true-color = true
@@ -30,8 +19,8 @@ jump-label-alphabet = "ntesirmghdlpuf"
 
 bufferline = "always"
 
-[editor.clipboard]
-provider = "wayland"
+[editor.lsp]
+display-code-lenses = true
 
 [editor.spelling]
 # languages = ["en_US"]
@@ -40,6 +29,9 @@ min-word-length = 4
 [editor.breadcrumb]
 enable = true
 path = "full"
+
+[editor.clipboard]
+provider = "wayland"
 
 [editor.rainbow-brackets]
 enable = true
