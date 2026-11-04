@@ -150,7 +150,6 @@ a = { label = "Suggest doc with claude", command = ":insert-output suggest_doc.s
 s = "snippet_picker"
 x = { label = "File outline", command = ":insert-output %sh_interactive{makeselector.sh}" }
 
-# g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 g = [":noop %sh_interactive{lazygit}"]
 
 [keys.normal.";".c]

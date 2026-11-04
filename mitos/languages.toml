@@ -190,10 +190,10 @@ comment-token = "#"
 indent = { tab-width = 4, unit = "\t" }
 language-servers = ["ctags-lsp", "scls"]
 
-[[language]]
-name = "markdown"
-formatter = { command = "prettier", args = ["--parser", "markdown"] }
-language-servers = ["markdown-oxide", "lsp-ai", "hx-lsp"]
+# [[language]]
+# name = "markdown"
+# formatter = { command = "prettier", args = ["--parser", "markdown"] }
+# language-servers = ["markdown-oxide", "lsp-ai", "hx-lsp"]
 
 [[language]]
 name = "html"
