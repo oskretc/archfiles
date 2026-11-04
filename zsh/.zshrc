@@ -150,7 +150,7 @@ fzf_second() {
     local file
     cd ~/secondbrain
     # Run fd and fzf, capturing the output
-    file=$(fd --hidden --strip-cwd-prefix --exclude .git | fzf --preview 'if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi')
+    file=$(fd --type file -e md --hidden --strip-cwd-prefix --exclude .git | fzf --preview 'if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi')
 
     # Only open helix if a file was actually selected (variable is not empty)
     if [[ -n "$file" ]]; then

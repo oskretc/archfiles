@@ -22,6 +22,14 @@ feature_citations = false  # enable citation completion (only on `citation` feat
 RUST_LOG = "info,simple-completion-language-server=info"
 LOG_FILE = "/tmp/completion.log"
 
+[[language]]
+name = "nxml"
+scope = "source.nxml"
+file-types = ["nxml"]
+language-servers = ["nxml-lsp" ]
+# language-servers = ["nxml-lsp", "xml"]
+grammar = "xml"
+
 [language-server.nxml-lsp]
 # command = "${HOME}/gitrepos/nxml_gounmarshall/nxml-lsp"
 command = "/home/osto/gitrepos/eriksbranch/nxml-lsp"

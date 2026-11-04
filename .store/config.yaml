@@ -101,6 +101,7 @@ stores:
     systemdvars:
         target: ~/.config/environment.d
         files:
+            - 991-path.conf
             - gopass.conf
     television:
         target: ~/.config/television

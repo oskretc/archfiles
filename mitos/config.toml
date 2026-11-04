@@ -4,10 +4,21 @@
 # theme = "pop-dark_oscar"
 theme = "noctalia"
 
+[editor.lsp]
+display-code-lenses = true
+
+[editor.spelling]
+# languages = ["en_US"]
+min-word-length = 4
+
+[editor.breadcrumb]
+enable = true
+path = "full"
+
 [editor]
 mouse = true
 true-color = true
-line-number = "relative"
+line-number = "absolute"
 color-modes = true
 # popup-border = "all"
 # rulers = [120]

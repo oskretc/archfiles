@@ -11,54 +11,54 @@ warned_terminal_app = false
 
 [theme]
 
-[keybindings.DocSearch]
-k = "NextMatch"
-K = "PrevMatch"
-n = "ScrollDown"
-e = "ScrollUp"
+[keybindings.CommandPalette]
+n = "CommandPaletteNext"
+e = "CommandPalettePrev"
 
 [keybindings.LinkFollow]
 n = "NextLink"
 e = "PreviousLink"
 
+[keybindings.Help]
+e = "HelpScrollUp"
+n = "HelpScrollDown"
+
 [keybindings.FilePicker]
 e = "Previous"
 n = "Next"
 
-[keybindings.Help]
-n = "HelpScrollDown"
-e = "HelpScrollUp"
-
-[keybindings.InteractiveTable]
-i = "InteractiveRight"
-e = "InteractivePrevious"
-m = "InteractiveLeft"
-n = "InteractiveNext"
-
-[keybindings.CommandPalette]
-n = "CommandPaletteNext"
-e = "CommandPalettePrev"
-
-[keybindings.Normal]
-i = "Expand"
-n = "Next"
-K = "PrevMatch"
-k = "NextMatch"
-j = "EnterInteractiveMode"
-";" = "SetBookmark"
-m = "Collapse"
-p = "OpenFilePicker"
-P = "JumpToParent"
-e = "Previous"
-o = "OpenInEditor"
-
 [keybindings.Interactive]
-K = "PrevMatch"
 k = "NextMatch"
-o = "OpenInEditor"
-n = "InteractiveNext"
 e = "InteractivePrevious"
 j = "ExitInteractiveMode"
+n = "InteractiveNext"
+o = "OpenInEditor"
+K = "PrevMatch"
+
+[keybindings.DocSearch]
+K = "PrevMatch"
+k = "NextMatch"
+e = "ScrollUp"
+n = "ScrollDown"
+
+[keybindings.Normal]
+p = "OpenFilePicker"
+";" = "SetBookmark"
+e = "Previous"
+i = "Expand"
+P = "JumpToParent"
+K = "PrevMatch"
+n = "Next"
+j = "EnterInteractiveMode"
+o = "OpenInEditor"
+k = "NextMatch"
+m = "Collapse"
+
+[keybindings.InteractiveTable]
+m = "InteractiveLeft"
+n = "InteractiveNext"
+e = "InteractivePrevious"
+i = "InteractiveRight"
 
 [editor]
 

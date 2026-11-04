@@ -53,9 +53,10 @@ alias cch="cp ~/.config/helix/config.toml ~/.local/share/chezmoi/.chezmoitemplat
 
 # --- programs ---
 alias lg="lazygit"
+alias lj="lazyjira"
 alias hk="hx"
 alias en="y"
-alias lj="lumo"
+# alias lj="lumo"
 alias iss="intelli-shell"
 alias ns="niri-session"
 alias lt='lazytail "$(fd -I -e log | fzf --preview "bat {}")"'
