@@ -7,7 +7,7 @@ binds {
     Mod+Shift+Escape                     { show-hotkey-overlay; }
     // Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
     // Mod+Shift+Escape  hotkey-overlay-title="Show cheatsheet"   { spawn-sh "dms ipc call keybinds toggle niri"; }
-    Super+L hotkey-overlay-title="Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
+    Super+y hotkey-overlay-title="Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
     // Super+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Super+Tab repeat=false { toggle-overview; }
     Mod+Space hotkey-overlay-title="Vicinae" { spawn "vicinae" "toggle"; }
@@ -18,6 +18,7 @@ binds {
     // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "rio"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "wezterm"; }
     // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
+    Mod+e hotkey-overlay-title="Open Terminal" { spawn "nautilus"; }
 
     // monitors
     // workspaces
@@ -48,7 +49,7 @@ binds {
     Mod+5 hotkey-overlay-title="WS: Terminal" { focus-workspace "terminal"; }
     Mod+4 hotkey-overlay-title="WS: Comms" { focus-workspace "comms"; }
     
-    Mod+d hotkey-overlay-title="Previous Workspace" { focus-workspace-previous; }
+    // Mod+d hotkey-overlay-title="Previous Workspace" { focus-workspace-previous; }
     // === Window Management ===
     // #"Window Management "
     Mod+Q repeat=false { close-window; }
@@ -201,8 +202,23 @@ binds {
     Alt+Print { screenshot-window; }
     // #"System Controls"
     // === System Controls ===
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
     Mod+Shift+P { power-off-monitors; }
     Ctrl+Alt+Delete { quit skip-confirmation=false; }
     // Mod+Shift+E { quit skip-confirmation=true; }
+}
+
+recent-windows {
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+    binds {
+        Super+D         { next-window; }
+        // Alt+Tab         { next-window scope="output"; }
+        // Alt+Shift+Tab   { previous-window scope="output"; }
+        Super+Shift+D   { previous-window; }
+        // Alt+grave       { next-window filter="app-id"; }
+        // Alt+Shift+grave { previous-window filter="app-id"; }
+    }
 }

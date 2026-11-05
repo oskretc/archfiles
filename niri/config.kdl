@@ -36,7 +36,7 @@ gestures {
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 input {
-    mod-key "Alt"
+    mod-key "Super"
     keyboard {
         xkb {
             // You can set rules, model, layout, variant and options.
@@ -284,14 +284,15 @@ debug {
 }
 
 // Override to disable super+tab
-recent-windows {
-    binds {
-        // Alt+Tab         { next-window scope="output"; }
-        Alt+Shift+Tab   { previous-window scope="output"; }
-        Alt+grave       { next-window filter="app-id"; }
-        Alt+Shift+grave { previous-window filter="app-id"; }
-    }
-}
+// recent-windows {
+//     binds {
+//         Super+D         { next-window scope="output"; }
+//         // Alt+Tab         { next-window scope="output"; }
+//         // Alt+Shift+Tab   { previous-window scope="output"; }
+//         // Alt+grave       { next-window filter="app-id"; }
+//         // Alt+Shift+grave { previous-window filter="app-id"; }
+//     }
+// }
 
 // Include dms files
 // include "dms/colors.kdl"
