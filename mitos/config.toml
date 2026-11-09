@@ -5,22 +5,12 @@
 theme = "noctalia"
 
 [editor]
-mouse = true
-true-color = true
 line-number = "absolute"
-color-modes = true
-# popup-border = "all"
-# rulers = [120]
-
-end-of-line-diagnostics = "hint"
-
-path-completion = false
 jump-label-alphabet = "ntesirmghdlpuf"
 
-bufferline = "always"
-
 [editor.lsp]
-display-code-lenses = true
+[editor.lsp.code-lenses]
+enable = true
 
 [editor.spelling]
 # languages = ["en_US"]
@@ -39,12 +29,21 @@ enable = true
 [editor.gutters]
 layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff", "spacer", "code-action-hint"]
 
-[editor.inline-diagnostics]
+[editor.diagnostics.inline]
 # cursor-line = "error"
 cursor-line = "hint"
 prefix-len = 10
 
 other-lines = "warning"
+
+[editor.diagnostics.end-of-line]
+# popup-border = "all"
+# rulers = [120]
+
+severity = "hint"
+
+[editor.bufferline]
+show = "always"
 
 [editor.file-picker]
 hidden = false
@@ -57,10 +56,13 @@ render = true
 character = "⸽"
 skip-levels = 1
 
-[editor.cursor-shape]
+[editor.cursor.shape]
 normal = "block"
 insert = "bar"
 select = "underline"
+
+[editor.completion.path]
+enable = false
 
 [editor.statusline]
 left = ["mode", "spinner", "separator", "file-absolute-path", "separator", "branch"]
@@ -72,6 +74,10 @@ separator = "|"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+mode.color = true
+
+[editor.mouse]
+enable = true
 
 [keys.normal]
 "Y" = ":clipboard-yank"
@@ -130,7 +136,7 @@ label = "Match"
 "a" = "select_textobject_around"
 "i" = "select_textobject_inner"
 
-[keys.normal.h.e]
+[keys.normal."h".e]
 label = "Common Used"
 u = { label = "Match inside double quotes", command = "@hi\"" }
 U = { label = "Match outside double quotes", command = "@ha\"" }
@@ -190,11 +196,14 @@ label = "Match"
 "a" = "select_textobject_around"
 "i" = "select_textobject_inner"
 
-[keys.select.h.e]
+[keys.select."h".e]
 label = "Common Used"
 u = { label = "Match inside double quotes", command = "@hi\"" }
 U = { label = "Match outside double quotes", command = "@ha\"" }
 c = { label = "Match inside curly brackets", command = "@ha{" }
+
+[terminal]
+true-color = true
 
 [terminal.launcher]
 command = "zellij"
