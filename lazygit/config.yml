@@ -1,7 +1,8 @@
 git:
-  diffRenderers:
+  pagers:
     - colorArg: always
       command: delta --dark --paging=never --syntax-theme base16-256 -s
+      pager: delta --dark --paging=never --syntax-theme base16-256 -s
 keybinding:
   universal:
     prevItem-alt: e
