@@ -88,7 +88,7 @@ space.n = "buffer_picker"
 "j" = "insert_mode"
 "J" = "insert_at_line_start"
 "k" = "search_next"
-"K" = "search_prev"
+"K" = "search_previous"
 
 # delete from cursor to end of line
 "D" = ["extend_to_line_end", "delete_selection"]
@@ -149,8 +149,9 @@ p = { label = "Close split view", command = "@<space>wq" }
 a = { label = "Suggest doc with claude", command = ":insert-output suggest_doc.sh %{current_working_directory} %{file_path_absolute} %{cursor_line}" }
 s = "snippet_picker"
 x = { label = "File outline", command = ":insert-output %sh_interactive{makeselector.sh}" }
+j = { label = "Just chooser", command = ":sh %sh_interactive{just --choose}" }
 
-g = [":noop %sh_interactive{lazygit}"]
+m = [":noop %sh_interactive{lazygit}"]
 
 [keys.normal.";".c]
 label = "Configuration"
@@ -177,7 +178,7 @@ F2 = [":write", ":sh sqlrun.sh"]
 "j" = "insert_mode"
 "J" = "insert_at_line_start"
 "k" = "extend_search_next"
-"K" = "extend_search_prev"
+"K" = "extend_search_previous"
 
 # args = ["--"]
 [keys.select."h"]

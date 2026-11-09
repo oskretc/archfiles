@@ -183,7 +183,7 @@ bindkey '^e^e' edit-command-line
 
 
 # source ~/.zsh-ai-cmd/zsh-ai-cmd.plugin.zsh
-export EDITOR='hx'
+export EDITOR='ms'
 GPG_TTY=$(tty)
 export GPG_TTY
 
