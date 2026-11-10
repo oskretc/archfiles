@@ -143,7 +143,7 @@ fzf_helix() {
 
     # Only open helix if a file was actually selected (variable is not empty)
     if [[ -n "$file" ]]; then
-        hx "$file"
+        ms "$file"
     fi
 }
 fzf_second() {
