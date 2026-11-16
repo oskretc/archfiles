@@ -1,4 +1,8 @@
+
 // Custom window rules
+window-rule {
+    open-maximized true
+}
 // @id=wr_1778144979453654191 @name=wlfreerdp
 window-rule {
     match app-id="^wlfreerdp$"

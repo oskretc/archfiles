@@ -135,11 +135,13 @@ stores:
                 - package.toml
                 - theme.toml
                 - yazi.toml
+                - plugins/folder-rules.yazi/main.lua
             - target: ~/.config/yazi-alt
               files:
                 - init.lua
                 - package.toml
                 - theme.toml
+                - plugins/folder-rules.yazi/main.lua
             - target: ~/.config/che
               files:
                 - keymap.toml
