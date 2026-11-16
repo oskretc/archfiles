@@ -1,8 +1,4 @@
 stores:
-    lazyjira:
-        target: ~/.config/lazyjira
-        files:
-            - config.yml
     treemd:
         target: ~/.config/treemd
         files:
