@@ -268,7 +268,7 @@ ui {
     }
 }
 web_client {
-    font "monospace"
+    font "Hack"
 }
  
 // Use a simplified UI without special fonts (arrow glyphs)
@@ -578,3 +578,13 @@ themes {
 stacked_pane_list false
 
 pane_frame_style "full"
+web_server true
+terminal {
+    font "ComicCaret Nerd Font"
+    opacity 0.9
+    opacity_mode "everything"
+    blur true
+    font_size 14
+}
+web_sharing "on"
+web_server_port 8083

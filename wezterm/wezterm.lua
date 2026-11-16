@@ -52,7 +52,7 @@ tabline.setup({
     tabline_a = { 'mode' },
     tabline_b = { 'workspace' },
     tabline_c = { 'u' },
-    tab_active = {{ Background = { Color = 'brown' } },
+    tab_active = { { Background = { Color = 'brown' } },
       'index',
       { 'process', padding = 1},
       '/',
@@ -81,10 +81,12 @@ config.disable_default_key_bindings = false
 
 -- config.font = wezterm.font 'AdwaitaMono'
 -- config.font = wezterm.font 'JetBrains Mono NF'
-config.font = wezterm.font 'Fira Code'
+config.font = wezterm.font 'Comic Caret Nerd Font'
+-- config.font = wezterm.font 'Fira Code'
+config.warn_about_missing_glyphs = false
 -- config.font = wezterm.font 'monospace'
 -- config.font = wezterm.font 'Hack Nerd Font'
-config.font_size = 12
+config.font_size = 14
 -- config.font = wezterm.font("MesloLGS NF")
 config.window_padding = {
   left=2,
