@@ -1,4 +1,8 @@
-require("folder-rules"):setup()
+local ok, folderrules = pcall(require, "folder-rules")
+if ok then
+    folderrules:setup()
+end
+-- require("folder-rules"):setup()
 require("full-border"):setup()
 require("git"):setup {
 	-- Order of status signs showing in the linemode
