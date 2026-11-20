@@ -17,3 +17,9 @@ upgrade_only = false
 show_hash = true
 asset_filters = ["x86_64", ".tar.gz", "^.tar.gz.sha256"]
 file = "dexo"
+
+["metaory/treg"]
+upgrade_only = false
+show_hash = true
+asset_filters = ["x86_64", ".tar.gz", "^.sha256"]
+file = "treg"
