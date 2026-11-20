@@ -69,3 +69,9 @@ description = "git rewritten in rust"
 
 [tool.gopass]
 description = "password store in go"
+
+[tool.treg]
+description = "registry of tools"
+
+[tool.eget]
+description = "tool to install binaries directly from github"
