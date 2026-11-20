@@ -1,0 +1,71 @@
+[tool.tongo]
+description = "MongoDB TUI #db"
+
+[tool.air]
+description = "go reloader"
+
+[tool.atuin]
+description = "cli history with sync"
+
+[tool.beekeeper-studio]
+description = "DB tool with gui"
+
+[tool."blabrepos.sh"]
+description = "browse labops repos from bitbucket cloud"
+
+[tool.JLinkExe]
+description = "swdp and nordic"
+
+[tool.JFlashExe]
+description = "segger"
+
+[tool.cargo-binstall]
+description = "cargo tool to install binaries"
+
+[tool."casdeletereport.sh"]
+description = "mongo delete report #db #cas"
+
+[tool."casreportnames.sh"]
+description = "mongo get reports #db #cas"
+
+[tool."casrvdt.sh"]
+description = "get all test cases from a cas report"
+
+[tool.ctags-lsp]
+description = "minimum lsp for helix"
+
+[tool.dexo]
+description = "sql db workbench #db"
+
+[tool.mongosh]
+description = "mongo shell #db"
+
+[tool.treemd]
+description = "Nice markdown viewer #md"
+
+[tool.eilmeldung]
+description = "rss viewer #tui"
+
+[tool.ein]
+description = "the rusty git"
+
+[tool.hulak]
+description = "a file-based API client for the terminal #api #dev"
+
+[tool.whosthere]
+description = "Local Area Network discovery tool with an interactive Terminal User Interface (TUI) written in Go."
+
+[tool.tuisvn]
+description = "lets you see the svn log"
+
+[tool.termscp]
+description = "tui to trasfer files using scp #tui #network"
+
+[tool.tldr]
+description = "mini man pages for commands too long didnt read"
+
+[tool.gix]
+description = "git rewritten in rust"
+
+[tool.gopass]
+description = "password store in go"

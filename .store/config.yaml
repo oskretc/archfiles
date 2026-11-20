@@ -1,4 +1,8 @@
 stores:
+    treg:
+        target: ~/.config/treg
+        files:
+            - tools.toml
     eget:
         target: ~/
         files:
