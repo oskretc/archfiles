@@ -11,3 +11,9 @@ target = "~/.local/bin/micro"
 upgrade_only = false
 show_hash = true
 asset_filters = [".tar.gz", "^.tar.gz.sbom.json"]
+
+["KingDasWinx/Dexo"]
+upgrade_only = false
+show_hash = true
+asset_filters = ["x86_64", ".tar.gz", "^.tar.gz.sha256"]
+file = "dexo"
