@@ -1,0 +1,13 @@
+[global]
+target = "~/.local/bin"
+
+["zyedidia/micro"]
+upgrade_only = false
+show_hash = true
+asset_filters = ["static", ".tar.gz", "^.tar.gz.sha"]
+target = "~/.local/bin/micro"
+
+["gopasspw/gopass"]
+upgrade_only = false
+show_hash = true
+asset_filters = [".tar.gz", "^.tar.gz.sbom.json"]

@@ -1,4 +1,8 @@
 stores:
+    eget:
+        target: ~/
+        files:
+            - .eget.toml
     treemd:
         target: ~/.config/treemd
         files:
