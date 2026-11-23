@@ -23,3 +23,9 @@ upgrade_only = false
 show_hash = true
 asset_filters = ["x86_64", ".tar.gz", "^.sha256"]
 file = "treg"
+
+["drewzemke/tongo"]
+upgrade_only = false
+show_hash = true
+asset_filters = ["x86_64", ".tar.gz", "musl", "^.sha256"]
+file = "tongo"

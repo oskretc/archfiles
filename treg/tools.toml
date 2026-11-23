@@ -1,5 +1,5 @@
 [tool.tongo]
-description = "MongoDB TUI #db"
+description = "MongoDB TUI #db #eget"
 
 [tool.air]
 description = "go reloader"
@@ -35,7 +35,7 @@ description = "get all test cases from a cas report"
 description = "minimum lsp for helix"
 
 [tool.dexo]
-description = "sql db workbench #db"
+description = "sql db workbench #db #eget"
 
 [tool.mongosh]
 description = "mongo shell #db"
@@ -75,3 +75,6 @@ description = "registry of tools"
 
 [tool.eget]
 description = "tool to install binaries directly from github"
+
+[tool.micro]
+description = "text editor #editor #eget"
