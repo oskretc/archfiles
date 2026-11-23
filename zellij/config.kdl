@@ -588,3 +588,7 @@ terminal {
 }
 web_sharing "on"
 web_server_port 8083
+terminal {
+    font "ComicCaret Nerd Font"
+    font_size 14
+}
