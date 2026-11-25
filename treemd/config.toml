@@ -1,5 +1,5 @@
 [ui]
-theme = "OceanDark"
+theme = "GitHubDark"
 code_theme = "base16-ocean.dark"
 outline_width = 20
 tree_style = "compact"
@@ -66,7 +66,7 @@ i = "InteractiveRight"
 enabled = true
 
 [content]
-hide_frontmatter = true
+hide_frontmatter = false
 hide_latex = true
 latex_aggressive = true
 code_fences = "full"
