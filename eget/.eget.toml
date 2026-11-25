@@ -40,6 +40,13 @@ target = "~/.local/bin/treemd"
 ["TimothyYe/skm"]
 upgrade_only = false
 show_hash = true
-asset_filters = ["x86_64", ".tar.gz", "musl", "^.sha256"]
+asset_filters = ["amd64", ".tar.gz", "^.sha256"]
 # file = "skm"
-# target = "~/.local/bin/treemd"
+# target = "~/.local/bin/skm"
+
+["restic/restic"]
+upgrade_only = false
+show_hash = true
+asset_filters = ["amd64", ".bz2", "^.sha256"]
+# file = ""
+# target = "~/.local/bin/restic"
