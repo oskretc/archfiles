@@ -36,3 +36,10 @@ show_hash = true
 asset_filters = ["x86_64", ".tar.gz", "musl", "^.sha256"]
 file = "treemd-x86_64-unknown-linux-musl"
 target = "~/.local/bin/treemd"
+
+["TimothyYe/skm"]
+upgrade_only = false
+show_hash = true
+asset_filters = ["x86_64", ".tar.gz", "musl", "^.sha256"]
+# file = "skm"
+# target = "~/.local/bin/treemd"
